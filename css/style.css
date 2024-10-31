@@ -59,7 +59,8 @@ img
 .align-items-center
 {
     align-items: center;
-    height: 500px;
+    text-align: center;
+    height: 600px;
 }
 .title-company{
     font-family: Playfair Display;
@@ -298,9 +299,7 @@ img
 .home-section .home-text,
 .home-section .home-image
 {
-    flex: 0 0 50%;
     max-width: 50%;
-    padding: 0 25px;
 }
 .home-section .home-text h4
 {
@@ -310,12 +309,13 @@ img
     color: var(--main-color);
     width: max-content;
 }
-.home-section .home-text h1
+.home-section .home-text .title-company
 {
     font-size: 50px;
     font-weight: 700;
-    margin-top: 15px;
-    color: var(--black-900);
+    color: white;
+    width: max-content;
+    position: relative;
 }
 .home-section .home-text span
 {
@@ -351,6 +351,8 @@ img
     right: 0;
     width: 50%;
     height: 100%;
+    display: flex;
+    justify-content: center;
 }
 .header-hero-shape::before
 {
@@ -904,7 +906,7 @@ img
 /*===== contact =====*/
 .contact-section
 {
-    min-height: 100vh;
+    min-height: 100%;
     background-color: var(--black-100);
 }
 .contact-section .contact-item
@@ -1008,22 +1010,34 @@ footer .copyright-text
     margin: 10px 0 0;
 }
 /*Responsive*/
-@media  (min-width:1300px) and (max-width:1399px)
+@media  (min-width:1120px) and (max-width:2199px)
 {
     .header-social
     {
         left: 10px;
     }
+    .align-items-center {
+        height: 600px;
+    }
 }
-@media  (max-width:1300px)
+@media  (max-width:1120px)
 {
     .header-social
     {
         display: none;
     }
+    .align-items-center {
+        height: 450px;
+    }
 }
 @media(max-width: 991px)
 {
+    .align-items-center {
+        height: 300px;
+    }
+    .service-section {
+        margin-top: 160px;
+    }
     .navbar .menu
     {
         position: fixed;
@@ -1110,6 +1124,9 @@ footer .copyright-text
 }
 @media(max-width: 767px)
 {
+    .home-section{
+        height: 320px;
+    }
     .header-social
     {
         left: 85%;
