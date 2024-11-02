@@ -127,6 +127,7 @@ img
     font-size: 35px;
     font-weight: 600;
     margin-top: 10px;
+    color: var(--main-color);
 }
 .section-title .line 
 {
@@ -175,7 +176,8 @@ img
 }
 .navbar .logo a span
 {
-    color: #FF5F1F;
+    /* color: #FF5F1F; */
+    color: var(--main-color);
 }
 .navbar .menu .nav-item
 {
@@ -185,7 +187,7 @@ img
 }
 .navbar .menu .nav-item .nav-link
 {
-    color: var(--white);
+    color: var(--main-color);
     font-size: 16px;
     font-weight: 600;
     display: block;
@@ -200,7 +202,7 @@ img
 {
     width: 0;
     height: 2px;
-    background-color: var(--white);
+    background-color: var(--main-color);
     position: absolute;
     left: 0;
     bottom: 0;
@@ -215,7 +217,7 @@ img
     content: '';
     width: 0;
     height: 2px;
-    background-color: var(--white);
+    background-color: var(--main-color);
     left: 110%;
 }
 .navbar .nav-item .nav-link span::after
@@ -224,7 +226,7 @@ img
     content: '';
     width: 0;
     height: 2px;
-    background-color: var(--white);
+    background-color: var(--main-color);
     left: 140%;
 }
 .navbar.sticky .nav-item a span,.navbar.sticky .nav-item a span::before,.navbar.sticky .nav-item a span::after
@@ -360,7 +362,7 @@ img
     content: '';
     width: 1000%;
     height: 100%;
-    background-color: #FF5F1F;
+    /* background-color: #FF5F1F; */
     transform: skewX(20deg);
     top: 0;
     left: 0;
@@ -562,7 +564,7 @@ img
 }
 .portfolio .portfolio-filter button
 {
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     margin-top: -20px;
     outline: none;
     border: 1px solid;
