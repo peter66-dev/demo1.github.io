@@ -17,7 +17,7 @@ html
 }
 body
 {
-    font-family: "Roboto Mono", cursive;
+    font-family: Montserrat;
     font-size: 16px;
     font-weight: normal;
     overflow-x: hidden;
@@ -61,9 +61,6 @@ img
     align-items: center;
     text-align: center;
     height: 600px;
-}
-.title-company{
-    font-family: Playfair Display;
 }
 .btn-1
 {
@@ -480,7 +477,8 @@ img
 /*===== Services =====*/
 .service-section
 {
-    min-height: 100vh;
+    /* We can expand view height of Service section to 100vh here */
+    min-height: 70vh;
     background-color: var(--black-alpha-100);
 }
 .service-section .service-item
