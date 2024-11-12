@@ -6,17 +6,19 @@ window.onscroll = () => {
 }
 /*===== Nav Toggler =====*/
 const navMenu = document.querySelector(".menu");
-navToggle = document.querySelector(".menu-btn");
-if (navToggle) {
-    navToggle.addEventListener("click", () => {
+var mobileBtn = document.querySelector(".menu-btn");
+if (mobileBtn) {
+    mobileBtn.addEventListener("click", () => {
         navMenu.classList.toggle("active");
+        mobileBtn.classList.toggle("active");
     })
 }
 // closing menu when link is clicked
 const navLink = document.querySelectorAll(".nav-link");
 function linkAction() {
     const navMenu = document.querySelector(".menu");
-    navMenu.classList.remove("active")
+    navMenu.classList.remove("active");
+    mobileBtn.classList.remove("active")
 }
 navLink.forEach(n => n.addEventListener("click", linkAction))
 /*===== Scroll Section Active Link =====*/
@@ -60,8 +62,8 @@ function skillsEffect() {
 /*===== Portfolio Item Filter =====*/
 const FilterContainer = document.querySelector(".portfolio-filter"),
     filterBtns = FilterContainer.children;
-    totalFilterBtn = filterBtns.length;
-    PortfolioItems = document.querySelectorAll(".portfolio-item"),
+totalFilterBtn = filterBtns.length;
+PortfolioItems = document.querySelectorAll(".portfolio-item"),
     totalportfolioItem = PortfolioItems.length;
 for (let i = 0; i < totalFilterBtn; i++) {
     filterBtns[i].addEventListener("click", function () {

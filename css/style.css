@@ -263,16 +263,6 @@ img {
 }
 
 .menu-btn {
-    background-color: var(--main-color);
-    height: 34px;
-    width: 44px;
-    box-shadow: var(--shadow-black-100);
-    padding: 0;
-    border-radius: 5px;
-    line-height: 34px;
-    text-align: center;
-    color: var(--white);
-    font-size: 17px;
     display: none;
 }
 
@@ -1028,6 +1018,31 @@ footer .copyright-text {
     margin: 10px 0 0;
 }
 
+.navbar .menu-btn button rect {
+    transform-origin: center;
+    transition: 0.5s;
+}
+
+.navbar .menu-btn button:hover {
+    cursor: pointer;
+}
+
+.navbar .menu-btn.active button:hover .top {
+    x: 5px;
+    y: 10px;
+    rotate: 45deg;
+}
+
+.navbar .menu-btn.active button:hover .middle {
+    display: none;
+}
+
+.navbar .menu-btn.active button:hover .bottom {
+    x: 5px;
+    y: 10px;
+    rotate: -45deg;
+}
+
 /*Responsive*/
 @media (min-width:1120px) and (max-width:2199px) {
     .header-social {
@@ -1130,8 +1145,26 @@ footer .copyright-text {
 
     .navbar .menu-btn {
         display: block;
-        z-index: 999;
+        /* z-index: 999; */
     }
+
+    .navbar .menu-btn:hover {
+        cursor: pointer;
+    }
+
+    .navbar .menu-btn button {
+        border-radius: 5px;
+        border: none;
+        display: inline-flex;
+        background-color: var(--white);
+        padding: 8px 0;
+        box-shadow: var(--shadow-black-100);
+    }
+
+    .navbar .menu-btn button svg rect {
+        fill: var(--main-color);
+    }
+
 
     .header-social {
         display: block;
