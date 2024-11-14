@@ -1129,7 +1129,7 @@ footer .copyright-text {
     .navbar .menu {
         position: fixed;
         left: -100%;
-        top: 80px;
+        top: 124px;
         flex-direction: column;
         background-color: white;
         width: 100%;
