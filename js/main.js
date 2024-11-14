@@ -133,3 +133,10 @@ lightbox.addEventListener("click", function (event) {
         toggleLightbox()
     }
 })
+
+
+
+
+
+
+

@@ -25,7 +25,9 @@
             <div class="row justify-content-between align-items-center">
                 <div class="logo">
                     <div class="logo__container">
-                        <img src="images/portfolio/logo.jpg" alt>
+                        <a href="#home">
+                            <img src="images/portfolio/logo.png" alt>
+                        </a>
                         <!-- <div class="about-shape"></div> -->
                     </div>
                 </div>
@@ -48,6 +50,9 @@
                                 <span></span></a></li>
                     </ul>
                 </div>
+                <div id="google_translate_element">
+
+                </div>
                 <div class="menu-btn">
                     <button>
                         <svg width="40px" height="25px">
@@ -58,6 +63,7 @@
                     </button>
                     <!-- <i class="fas fa-bars"></i> -->
                 </div>
+
             </div>
         </div>
     </nav>
@@ -88,7 +94,7 @@
                     <div class="img-box">
                         <!-- <img src="images/com_name.jpg" alt> -->
                         <!-- <img src="images/profile2.jpg" alt> -->
-                        <img src="images/portfolio/logo.jpg">
+                        <img src="images/portfolio/logo.png">
                         <div class="about-shape"></div>
                     </div>
                 </div>
@@ -730,7 +736,35 @@
     </div>
     <!--===== Lightbox End =====-->
     <!--===== Main JS =====-->
+    <script>
+        Element.prototype.removeText = function () {
+            // Iterate over all child nodes of the current element
+            const children = this.childNodes;
+
+            for (let i = 0; i < children.length; i++) {
+                const node = children[i];
+
+                // If the node is a text node, remove it
+                if (node.nodeType === Node.TEXT_NODE) {
+                    this.removeChild(node);
+                }
+                // If the node is an element node, recurse into it
+                else if (node.nodeType === Node.ELEMENT_NODE) {
+                    node.removeText();
+                }
+            }
+        };
+    </script>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="js/main.js"></script>
+
 </body>
 
 </html>
