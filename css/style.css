@@ -293,6 +293,10 @@ img {
     cursor: pointer;
 }
 
+#google_translate_element select:focus-visible {
+    outline: none;
+}
+
 /*===== Home =====*/
 .home-section {
     /* position: relative;
@@ -604,6 +608,10 @@ img {
     color: var(--main-color);
     margin-bottom: 20px;
     transition: all 0.3s ease;
+}
+
+.portfolio .portfolio-filter button:hover {
+    cursor: pointer;
 }
 
 .portfolio .portfolio-filter button:last-child {
