@@ -1166,6 +1166,17 @@ footer .copyright-text {
 }
 
 @media(max-width: 767px) {
+    .section-title .main-title {
+        margin-top: 20px;
+    }
+
+    .about-section .about-image,
+    .about-section .about-content {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 20px 20px 0 20px;
+    }
+
     .header-social {
         left: 85%;
     }
