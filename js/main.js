@@ -59,7 +59,7 @@ function skillsEffect() {
   skills_bar.forEach(skill => (skill.style.width = skill.dataset.progress));
 }
 /*===== Portfolio Item Filter =====*/
-const FilterContainer = document.querySelector('.portfolio-filter'),
+const FilterContainer = document.querySelector('.filter-tabs'),
   filterBtns = FilterContainer.children;
 totalFilterBtn = filterBtns.length;
 ((PortfolioItems = document.querySelectorAll('.portfolio-item')),
@@ -130,46 +130,175 @@ lightbox.addEventListener('click', function (event) {
   }
 });
 
-// ===== Load more featured product cards =====
-function initLoadMore() {
-  const container = document.querySelector('.featured-products');
-  if (!container) return;
-  const items = Array.from(container.querySelectorAll('.product-card'));
-  const btn = document.getElementById('load-more-btn');
-  if (!btn || items.length === 0) return;
+/* =========================================================
+   Featured Products: Filter + Load More (TOTAL/5) + Smooth Animation
+   - filter tabs: .filter-tabs button[data-filter]
+   - items: .featured-products .product-card[data-category]
+   - load more button: #load-more-btn
+========================================================= */
+function initFeaturedProducts() {
+  const productsContainer = document.querySelector('.featured-products');
+  const loadMoreBtn = document.getElementById('load-more-btn');
+  const filterTabs = document.querySelector('.filter-tabs');
 
-  const initialVisible = 4;
-  const loadCount = 4;
-  let visible = Math.min(initialVisible, items.length);
+  if (!productsContainer || !loadMoreBtn) return;
 
-  function updateVisibility() {
-    items.forEach((it, idx) => {
-      if (idx < visible) it.classList.remove('hidden');
-      else it.classList.add('hidden');
-    });
-    if (visible >= items.length) {
-      btn.style.display = 'none';
-    } else {
-      btn.style.display = '';
-    }
+  const allItems = Array.from(productsContainer.querySelectorAll('.product-card'));
+  if (allItems.length === 0) return;
+
+  // total/5 mỗi lần click (vd: 50/5 = 10)
+  const STEP = Math.max(1, Math.ceil(allItems.length / 5));
+
+  let currentFilter = 'all';
+  let filteredItems = allItems;
+  let visible = 0;
+
+  function setActiveTab(filterValue) {
+    if (!filterTabs) return;
+    const btns = Array.from(filterTabs.querySelectorAll('button[data-filter]'));
+    btns.forEach(b => b.classList.remove('active'));
+    const activeBtn = btns.find(b => (b.dataset.filter || '') === filterValue);
+    if (activeBtn) activeBtn.classList.add('active');
   }
 
-  // initialize
-  updateVisibility();
+  function computeFiltered(filterValue) {
+    if (filterValue === 'all') return allItems;
+    return allItems.filter(it => (it.dataset.category || '') === filterValue);
+  }
 
-  btn.addEventListener('click', function (e) {
+  function hideAll() {
+    allItems.forEach(it => {
+      it.classList.add('hidden');
+      it.classList.remove('pre-reveal', 'reveal');
+    });
+  }
+
+  function renderInitial() {
+    hideAll();
+
+    filteredItems.forEach((it, idx) => {
+      if (idx < visible) it.classList.remove('hidden');
+    });
+
+    loadMoreBtn.style.display = visible >= filteredItems.length ? 'none' : '';
+  }
+
+  function applyFilter(filterValue) {
+    currentFilter = filterValue || 'all';
+    filteredItems = computeFiltered(currentFilter);
+
+    visible = Math.min(STEP, filteredItems.length);
+    renderInitial();
+
+    // scroll nhẹ về list cho cảm giác "đã đổi category"
+    productsContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  // Smooth reveal with stagger (mượt hơn kiểu animationend cũ)
+  function revealRange(fromIndex, toIndex) {
+    const count = toIndex - fromIndex;
+    if (count <= 0) return;
+
+    // tránh spam click
+    loadMoreBtn.disabled = true;
+
+    for (let i = fromIndex; i < toIndex; i++) {
+      const it = filteredItems[i];
+      if (!it) continue;
+
+      // cho item vào layout trước
+      it.classList.remove('hidden');
+
+      // set trạng thái ban đầu (opacity 0, translateY)
+      it.classList.add('pre-reveal');
+
+      // force reflow để browser "nhận" state pre-reveal
+      void it.offsetHeight;
+
+      // stagger từng item 70ms
+      const delay = (i - fromIndex) * 70;
+      setTimeout(() => {
+        it.classList.add('reveal');
+        it.classList.remove('pre-reveal');
+      }, delay);
+    }
+
+    // re-enable sau khi animation xong
+    const totalDelay = (count - 1) * 70 + 380;
+    setTimeout(() => {
+      loadMoreBtn.disabled = false;
+    }, totalDelay);
+  }
+
+  // Click "Xem thêm sản phẩm"
+  loadMoreBtn.addEventListener('click', function (e) {
     e.preventDefault();
-    visible = Math.min(visible + loadCount, items.length);
-    updateVisibility();
-    // scroll to the first newly revealed item
-    const firstNewIdx = visible - loadCount;
-    const target = items[Math.max(0, firstNewIdx)];
-    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+    const prevVisible = visible; // <-- DÒNG BẠN HỎI NẰM Ở ĐÂY
+    visible = Math.min(visible + STEP, filteredItems.length);
+
+    // reveal mượt cho phần mới
+    revealRange(prevVisible, visible);
+
+    // update button
+    loadMoreBtn.style.display = visible >= filteredItems.length ? 'none' : '';
+
+    // scroll đến item mới đầu tiên
+    const firstNew = filteredItems[Math.max(0, prevVisible)];
+    if (firstNew) firstNew.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   });
+
+  // Click tab category
+  if (filterTabs) {
+    filterTabs.addEventListener('click', function (e) {
+      const btn = e.target.closest('button[data-filter]');
+      if (!btn) return;
+
+      e.preventDefault();
+      const filterValue = btn.dataset.filter || 'all';
+
+      setActiveTab(filterValue);
+      applyFilter(filterValue);
+    });
+  }
+
+  // init: dùng tab đang active nếu có, không thì all
+  const activeBtn = filterTabs ? filterTabs.querySelector('button[data-filter].active') : null;
+  const initialFilter = activeBtn ? activeBtn.dataset.filter : 'all';
+
+  setActiveTab(initialFilter || 'all');
+  applyFilter(initialFilter || 'all');
 }
 
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initLoadMore);
+  document.addEventListener('DOMContentLoaded', initFeaturedProducts);
 } else {
-  initLoadMore();
+  initFeaturedProducts();
 }
+
+(function initProductDetailNavigation() {
+  document.addEventListener('click', function (e) {
+    const btn = e.target.closest('.btn-detail');
+    if (!btn) return;
+
+    e.preventDefault();
+
+    const card = btn.closest('.product-card');
+    if (!card) return;
+
+    // Ưu tiên id explicit
+    let id = (card.dataset.productId || '').trim();
+
+    // Fallback: lấy từ title (slug)
+    if (!id) {
+      const title = (card.querySelector('h4')?.textContent || 'san-pham').trim().toLowerCase();
+      id = title
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '') // remove accents
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/(^-|-$)/g, '');
+    }
+
+    window.location.href = `product.html?id=${encodeURIComponent(id)}`;
+  });
+})();

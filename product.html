@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi tiết sản phẩm | Phương Nguyễn Fabrics</title>
+
+    <link rel="icon" href="images/portfolio/logo.jpg" type="image/icon type" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body class="product-detail-page">
+    <!-- Reuse navbar (giống home) -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="row justify-content-between align-items-center">
+          <div class="logo">
+            <div class="logo__container">
+              <a href="index.html#home">
+                <img src="images/portfolio/logo.png" alt />
+              </a>
+            </div>
+          </div>
+
+          <div class="links">
+            <ul class="menu">
+              <li class="nav-item">
+                <a href="index.html#home" class="nav-link">
+                  Trang chủ
+                  <span></span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="index.html#services" class="nav-link">
+                  Dịch vụ
+                  <span></span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="index.html#portfolio" class="nav-link">
+                  Sản phẩm
+                  <span></span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="index.html#contact" class="nav-link">
+                  Liên hệ
+                  <span></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="menu-btn">
+            <button>
+              <svg width="40px" height="25px">
+                <rect class="top" width="30px" height="5" x="5" y="0" rx="2"></rect>
+                <rect class="middle" width="30px" height="5" x="5" y="10" rx="2"></rect>
+                <rect class="bottom" width="30px" height="5" x="5" y="20" rx="2"></rect>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="pd-wrap">
+      <div class="container">
+        <!-- Breadcrumb -->
+        <div class="pd-breadcrumb">
+          <a href="index.html">Trang chủ</a>
+          <span>/</span>
+          <a href="index.html#portfolio">Sản phẩm</a>
+          <span>/</span>
+          <p id="pd-bc-cat">Vải nội thất</p>
+          <span>/</span>
+          <strong id="pd-bc-code">PNF-NT-012</strong>
+        </div>
+
+        <!-- Top layout -->
+        <section class="pd-top">
+          <!-- Gallery -->
+          <div class="pd-gallery">
+            <div class="pd-main-img">
+              <img id="pd-main-img" src="" alt="Product image" />
+              <!-- <button class="pd-real-btn" id="pd-real-btn" type="button">Xem ảnh thực tế</button> -->
+            </div>
+
+            <div class="pd-thumbs" id="pd-thumbs"></div>
+          </div>
+
+          <!-- Summary -->
+          <aside class="pd-summary">
+            <h1 class="pd-title" id="pd-title">Vải nội thất PNF-NT-012</h1>
+
+            <div class="pd-badges">
+              <span class="pd-badge pd-badge--green" id="pd-badge-stock">Có sẵn</span>
+              <span class="pd-badge pd-badge--amber" id="pd-badge-processing">Nhận gia công</span>
+            </div>
+
+            <div class="pd-price">
+              <div class="pd-price-label">
+                Giá:
+                <strong>Liên hệ báo giá</strong>
+              </div>
+              <div class="pd-price-note">Giá theo số lượng & quy cách</div>
+            </div>
+
+            <div class="pd-swatches">
+              <div class="pd-label">Màu / tone</div>
+              <div class="pd-swatch-row" id="pd-swatches"></div>
+            </div>
+
+            <div class="pd-options">
+              <div class="pd-field">
+                <label>Khổ vải</label>
+                <select id="pd-width"></select>
+              </div>
+              <div class="pd-field">
+                <label>Định lượng</label>
+                <select id="pd-gsm"></select>
+              </div>
+              <div class="pd-field">
+                <label>Xuất xứ</label>
+                <div class="pd-pill" id="pd-origin">Việt Nam</div>
+              </div>
+            </div>
+
+            <div class="pd-checks" id="pd-checks"></div>
+
+            <div class="pd-ctas">
+              <a class="btn btn-primary pd-cta-primary" href="index.html#contact">Nhận báo giá</a>
+              <button class="btn btn-secondary pd-cta-secondary" type="button" id="pd-sample-btn">
+                Yêu cầu gửi mẫu
+              </button>
+            </div>
+
+            <div class="pd-mini">
+              <div class="pd-mini-item">
+                <i class="fas fa-box"></i>
+                MOQ:
+                <strong id="pd-moq">Tuỳ mẫu</strong>
+              </div>
+              <div class="pd-mini-item">
+                <i class="fas fa-shipping-fast"></i>
+                Lead time:
+                <strong id="pd-lead">7 - 15 ngày</strong>
+              </div>
+              <div class="pd-mini-item">
+                <i class="fas fa-map-marker-alt"></i>
+                Xuất xứ:
+                <strong id="pd-origin2">Việt Nam</strong>
+              </div>
+            </div>
+          </aside>
+        </section>
+
+        <!-- Tabs + Right column -->
+        <section class="pd-mid">
+          <div class="pd-left">
+            <div class="pd-tabs">
+              <button class="pd-tab active" data-tab="spec">Thông số</button>
+              <!-- <button class="pd-tab" data-tab="cert">Chứng chỉ & kiểm định</button> -->
+            </div>
+
+            <div class="pd-tabpanels">
+              <div class="pd-panel active" id="pd-panel-spec">
+                <div>
+                  <div>
+                    <h3>Thông số kỹ thuật</h3>
+                    <dl class="pd-dl" id="pd-spec"></dl>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pd-panel" id="pd-panel-cert">
+                <div class="pd-cert">
+                  <div class="pd-cert-card">
+                    <div class="pd-cert-title">Chứng chỉ (tham khảo)</div>
+                    <div class="pd-cert-desc">
+                      Có thể cung cấp CO/CQ theo lô hàng (tuỳ loại vải). Vui lòng để lại yêu cầu để
+                      nhận thông tin kiểm định.
+                    </div>
+                  </div>
+
+                  <div class="pd-cert-card">
+                    <div class="pd-cert-title">Test đề xuất</div>
+                    <div class="pd-cert-desc">
+                      Độ bền màu, chống bám bẩn, chống thấm, chống cháy (tuỳ dòng vải nội thất).
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Related -->
+            <div class="pd-related">
+              <div class="pd-related-head">
+                <h3>Sản phẩm liên quan</h3>
+                <a class="pd-more" href="index.html#portfolio">Xem thêm sản phẩm →</a>
+              </div>
+              <div class="pd-related-grid" id="pd-related"></div>
+            </div>
+          </div>
+
+          <aside class="pd-right">
+            <!-- <div class="pd-quote-card">
+              <h3>Tham khảo giá số lượng lớn</h3>
+              <div class="pd-table">
+                <div class="pd-table-row pd-table-head">
+                  <div>Mốc sản phẩm</div>
+                  <div>50m–100m</div>
+                  <div>100m–200m</div>
+                  <div>200m+</div>
+                </div>
+                <div class="pd-table-row">
+                  <div>Giá</div>
+                  <div>Liên hệ</div>
+                  <div>Liên hệ</div>
+                  <div><strong>Ưu đãi</strong></div>
+                </div>
+              </div>
+
+              <ul class="pd-icons">
+                <li>
+                  <i class="fas fa-hotel"></i>
+                  1000+ khách sạn, văn phòng tin dùng
+                </li>
+                <li>
+                  <i class="fas fa-vial"></i>
+                  C8H gửi mẫu nhanh
+                </li>
+                <li>
+                  <i class="fas fa-truck"></i>
+                  Giao hàng tận quốc
+                </li>
+              </ul>
+            </div> -->
+
+            <div class="pd-form-card">
+              <h3>Yêu cầu gửi mẫu</h3>
+              <form id="pd-form">
+                <div class="pd-input">
+                  <label>Họ tên</label>
+                  <input type="text" name="name" placeholder="Nhập họ tên" />
+                </div>
+                <div class="pd-input">
+                  <label>Điện thoại / Zalo</label>
+                  <input type="text" name="phone" placeholder="Nhập số điện thoại" />
+                </div>
+                <div class="pd-input">
+                  <label>Số lượng</label>
+                  <input type="text" name="qty" placeholder="VD: 120m" />
+                </div>
+                <div class="pd-input">
+                  <label>Sản phẩm</label>
+                  <input type="text" name="product" id="pd-form-product" readonly />
+                </div>
+                <div class="pd-input">
+                  <label>Yêu cầu thêm</label>
+                  <textarea
+                    name="note"
+                    rows="3"
+                    placeholder="Màu, khổ, định lượng, deadline..."
+                  ></textarea>
+                </div>
+
+                <button class="btn btn-primary pd-submit" type="submit">Gửi yêu cầu</button>
+                <div class="pd-form-note">Phản hồi trong 15–60 phút giờ hành chính</div>
+              </form>
+            </div>
+          </aside>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row justify-content-center">
+          <p class="copyright-text">&copy; 2023 by Phương Nguyễn</p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="lightbox">
+      <div class="lightbox-content">
+        <div class="lightbox-close">&times;</div>
+        <img src="images/portfolio/portfolio-2.jpg" onclick="nextItem()" class="lightbox-img" alt />
+        <div class="lightbox-caption">
+          <div class="caption-text"></div>
+          <div class="caption-counter"></div>
+        </div>
+      </div>
+      <div class="lightbox-controls">
+        <div class="prev-item" onclick="prevItem()"><i class="fa fa-angle-left"></i></div>
+        <div class="next-item" onclick="nextItem()"><i class="fa fa-angle-right"></i></div>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/product.js"></script>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+{
+  "pnf-nt-012": {
+    "code": "PNF-NT-012",
+    "title": "Vải nội thất PNF-NT-012",
+    "categoryLabel": "Vải nội thất",
+    "stock": true,
+    "processing": true,
+    "origin": "Việt Nam",
+    "moq": "Tuỳ mẫu",
+    "lead": "7 - 15 ngày",
+    "images": [
+      "images/portfolio/v7.jpg",
+      "images/portfolio/v2.png",
+      "images/portfolio/v3.jpg",
+      "images/portfolio/chair1.jpg"
+    ],
+    "swatches": [
+      { "name": "Kem", "hex": "#E9DFD2" },
+      { "name": "Be", "hex": "#D8C6AE" },
+      { "name": "Xám", "hex": "#B6B8BD" },
+      { "name": "Xanh rêu", "hex": "#7A8D70" },
+      { "name": "Nâu", "hex": "#9A7C5C" },
+      { "name": "Than", "hex": "#3C3F45" }
+    ],
+    "widths": ["1.4m (1.6m)", "1.6m", "1.8m"],
+    "gsms": ["220g", "260g", "300g"],
+    "checks": ["Chống thấm", "Chống bám bẩn", "Chống cháy (tuỳ dòng)"],
+    "specs": {
+      "Chất liệu": "100% Polyester",
+      "Dệt": "Dệt vân đoạn",
+      "Khổ": "1.6m",
+      "Độ co": "< 5%",
+      "Độ bền màu": "4 - 5 / 5",
+      "Độ dày": "0.9 mm",
+      "Ứng dụng": "Sofa, nệm ghế, rèm cửa, gối tựa lưng"
+    },
+    "uses": ["Sofa", "Nệm ghế", "Rèm cửa", "Gối tựa lưng", "Vách/ốp nội thất"],
+    "highlights": [
+      "Độ bền cao, ít xù lông",
+      "Dễ vệ sinh",
+      "Mềm mại, đứng form",
+      "Màu ổn định theo lô"
+    ],
+    "related": [
+      { "id": "pnf-nt-013", "title": "Vải nội thất PNF-NT-013", "img": "images/portfolio/v7.jpg" },
+      { "id": "pnf-nt-014", "title": "Vải nội thất PNF-NT-014", "img": "images/portfolio/v7.jpg" }
+    ]
+  },
+
+  "pnf-nt-013": {
+    "code": "PNF-NT-013",
+    "title": "Vải nội thất PNF-NT-013",
+    "categoryLabel": "Vải nội thất",
+    "stock": true,
+    "processing": true,
+    "origin": "Việt Nam",
+    "moq": "Tuỳ mẫu",
+    "lead": "7 - 15 ngày",
+    "images": ["images/portfolio/v7.jpg", "images/portfolio/chair1.jpg"],
+    "swatches": [
+      { "name": "Kem", "hex": "#E9DFD2" },
+      { "name": "Xám", "hex": "#B6B8BD" }
+    ],
+    "widths": ["1.6m"],
+    "gsms": ["260g"],
+    "checks": ["Chống bám bẩn", "Dễ vệ sinh"],
+    "specs": { "Chất liệu": "Polyester blend", "Khổ": "1.6m", "Ứng dụng": "Sofa, rèm" },
+    "uses": ["Sofa", "Rèm"],
+    "highlights": ["Bề mặt đẹp", "Dễ vệ sinh"],
+    "related": [
+      { "id": "pnf-nt-012", "title": "Vải nội thất PNF-NT-012", "img": "images/portfolio/v7.jpg" }
+    ]
+  },
+
+  "pnf-nt-014": {
+    "code": "PNF-NT-014",
+    "title": "Vải nội thất PNF-NT-014",
+    "categoryLabel": "Vải nội thất",
+    "stock": false,
+    "processing": true,
+    "origin": "Việt Nam",
+    "moq": "Tuỳ mẫu",
+    "lead": "10 - 20 ngày",
+    "images": ["images/portfolio/v7.jpg", "images/portfolio/v3.jpg"],
+    "swatches": [
+      { "name": "Nâu", "hex": "#9A7C5C" },
+      { "name": "Than", "hex": "#3C3F45" }
+    ],
+    "widths": ["1.4m (1.6m)"],
+    "gsms": ["300g"],
+    "checks": ["Chống thấm (tuỳ dòng)", "Chống bám bẩn"],
+    "specs": { "Chất liệu": "100% Polyester", "Khổ": "1.4m", "Ứng dụng": "Nệm ghế" },
+    "uses": ["Nệm ghế", "Gối"],
+    "highlights": ["Dày dặn", "Bền màu"],
+    "related": [
+      { "id": "pnf-nt-012", "title": "Vải nội thất PNF-NT-012", "img": "images/portfolio/v7.jpg" }
+    ]
+  }
+}
