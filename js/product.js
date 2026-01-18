@@ -22,12 +22,13 @@ async function loadProductData() {
     if (el) el.textContent = val ?? '';
   }
 
-  const id = (getParam('id') || 'pnf-nt-012').toLowerCase();
-  const product = PRODUCTS[id] || PRODUCTS['pnf-nt-012'];
+  const id = (getParam('id') || 'pnf-6535').toLowerCase();
+  const product = PRODUCTS[id] || PRODUCTS['pnf-6535'];
 
   // Breadcrumb + Title
   setText('#pd-bc-cat', product.categoryLabel);
   setText('#pd-bc-code', product.code);
+  setText('#pd-use', product.use);
   setText('#pd-title', product.title);
   qs('#pd-form-product').value = product.title;
 
@@ -67,11 +68,11 @@ async function loadProductData() {
   }
   renderThumbs();
 
-  // Swatches
-  const swatches = qs('#pd-swatches');
-  if (swatches) {
-    swatches.innerHTML = '';
-    (product.swatches || []).forEach((s, idx) => {
+  // colors
+  const colors = qs('#pd-colors');
+  if (colors) {
+    colors.innerHTML = '';
+    (product.colors || []).forEach((s, idx) => {
       const btn = document.createElement('button');
       btn.type = 'button';
       btn.className = 'pd-swatch' + (idx === 0 ? ' active' : '');
@@ -79,11 +80,11 @@ async function loadProductData() {
       btn.style.background = s.hex;
 
       btn.addEventListener('click', () => {
-        swatches.querySelectorAll('.pd-swatch').forEach(x => x.classList.remove('active'));
+        colors.querySelectorAll('.pd-swatch').forEach(x => x.classList.remove('active'));
         btn.classList.add('active');
       });
 
-      swatches.appendChild(btn);
+      colors.appendChild(btn);
     });
   }
 
@@ -129,27 +130,6 @@ async function loadProductData() {
       dd.textContent = v;
       specDl.appendChild(dt);
       specDl.appendChild(dd);
-    });
-  }
-
-  // Uses + highlights
-  const uses = qs('#pd-uses');
-  if (uses) {
-    uses.innerHTML = '';
-    (product.uses || []).forEach(x => {
-      const li = document.createElement('li');
-      li.textContent = x;
-      uses.appendChild(li);
-    });
-  }
-
-  const highs = qs('#pd-highlights');
-  if (highs) {
-    highs.innerHTML = '';
-    (product.highlights || []).forEach(x => {
-      const li = document.createElement('li');
-      li.textContent = x;
-      highs.appendChild(li);
     });
   }
 

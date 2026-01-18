@@ -1,99 +1,433 @@
 {
-  "pnf-nt-012": {
-    "code": "PNF-NT-012",
-    "title": "Vải nội thất PNF-NT-012",
+  "pnf-6535": {
+    "code": "pnf-6535",
+    "category": "vai",
+    "title": "Vải Mộc 65/35",
     "categoryLabel": "Vải nội thất",
     "stock": true,
-    "processing": true,
-    "origin": "Việt Nam",
-    "moq": "Tuỳ mẫu",
-    "lead": "7 - 15 ngày",
-    "images": [
-      "images/portfolio/v7.jpg",
-      "images/portfolio/v2.png",
-      "images/portfolio/v3.jpg",
-      "images/portfolio/chair1.jpg"
-    ],
-    "swatches": [
-      { "name": "Kem", "hex": "#E9DFD2" },
-      { "name": "Be", "hex": "#D8C6AE" },
-      { "name": "Xám", "hex": "#B6B8BD" },
-      { "name": "Xanh rêu", "hex": "#7A8D70" },
-      { "name": "Nâu", "hex": "#9A7C5C" },
-      { "name": "Than", "hex": "#3C3F45" }
-    ],
-    "widths": ["1.4m (1.6m)", "1.6m", "1.8m"],
-    "gsms": ["220g", "260g", "300g"],
-    "checks": ["Chống thấm", "Chống bám bẩn", "Chống cháy (tuỳ dòng)"],
-    "specs": {
-      "Chất liệu": "100% Polyester",
-      "Dệt": "Dệt vân đoạn",
-      "Khổ": "1.6m",
-      "Độ co": "< 5%",
-      "Độ bền màu": "4 - 5 / 5",
-      "Độ dày": "0.9 mm",
-      "Ứng dụng": "Sofa, nệm ghế, rèm cửa, gối tựa lưng"
-    },
-    "uses": ["Sofa", "Nệm ghế", "Rèm cửa", "Gối tựa lưng", "Vách/ốp nội thất"],
-    "highlights": [
-      "Độ bền cao, ít xù lông",
-      "Dễ vệ sinh",
-      "Mềm mại, đứng form",
-      "Màu ổn định theo lô"
-    ],
-    "related": [
-      { "id": "pnf-nt-013", "title": "Vải nội thất PNF-NT-013", "img": "images/portfolio/v7.jpg" },
-      { "id": "pnf-nt-014", "title": "Vải nội thất PNF-NT-014", "img": "images/portfolio/v7.jpg" }
-    ]
-  },
-
-  "pnf-nt-013": {
-    "code": "PNF-NT-013",
-    "title": "Vải nội thất PNF-NT-013",
-    "categoryLabel": "Vải nội thất",
-    "stock": true,
-    "processing": true,
-    "origin": "Việt Nam",
-    "moq": "Tuỳ mẫu",
-    "lead": "7 - 15 ngày",
-    "images": ["images/portfolio/v7.jpg", "images/portfolio/chair1.jpg"],
-    "swatches": [
-      { "name": "Kem", "hex": "#E9DFD2" },
-      { "name": "Xám", "hex": "#B6B8BD" }
-    ],
-    "widths": ["1.6m"],
-    "gsms": ["260g"],
-    "checks": ["Chống bám bẩn", "Dễ vệ sinh"],
-    "specs": { "Chất liệu": "Polyester blend", "Khổ": "1.6m", "Ứng dụng": "Sofa, rèm" },
-    "uses": ["Sofa", "Rèm"],
-    "highlights": ["Bề mặt đẹp", "Dễ vệ sinh"],
-    "related": [
-      { "id": "pnf-nt-012", "title": "Vải nội thất PNF-NT-012", "img": "images/portfolio/v7.jpg" }
-    ]
-  },
-
-  "pnf-nt-014": {
-    "code": "PNF-NT-014",
-    "title": "Vải nội thất PNF-NT-014",
-    "categoryLabel": "Vải nội thất",
-    "stock": false,
     "processing": true,
     "origin": "Việt Nam",
     "moq": "Tuỳ mẫu",
     "lead": "10 - 20 ngày",
-    "images": ["images/portfolio/v7.jpg", "images/portfolio/v3.jpg"],
-    "swatches": [
-      { "name": "Nâu", "hex": "#9A7C5C" },
-      { "name": "Than", "hex": "#3C3F45" }
+    "images": [
+      "data/product-detail/pnf-6535/main.png",
+      "data/product-detail/pnf-6535/detailed1.png",
+      "data/product-detail/pnf-6535/detailed2.png",
+      "data/product-detail/pnf-6535/detailed3.png",
+      "data/product-detail/pnf-6535/detailed4.png"
     ],
-    "widths": ["1.4m (1.6m)"],
-    "gsms": ["300g"],
-    "checks": ["Chống thấm (tuỳ dòng)", "Chống bám bẩn"],
-    "specs": { "Chất liệu": "100% Polyester", "Khổ": "1.4m", "Ứng dụng": "Nệm ghế" },
-    "uses": ["Nệm ghế", "Gối"],
+    "colors": [
+      {
+        "name": "Nâu",
+        "hex": "#9A7C5C"
+      },
+      {
+        "name": "Than",
+        "hex": "#3C3F45"
+      }
+    ],
+    "widths": ["1.57m"],
+    "gsms": ["150g", "210g"],
+    "checks": ["Thân thiện mới môi trường", "Khả năng thấm nước", "Hút ẩm rất tốt"],
+    "specs": {
+      "Dệt": "Dệt thoi",
+      "Chất liệu": "65% Poly – 35% Cotton",
+      "Ứng dụng": "Chăn ga gối đệm, khăn tắm, rèm cửa - Túi vải, phụ kiện - Khăn lau, vật liệu lót."
+    },
+    "use": "Đồ gia dụng (chăn ga gối đệm, khăn tắm, rèm cửa) vì sự thoáng mát, êm ái; và các sản phẩm thân thiện môi trường (túi vải, phụ kiện) thay thế túi nilon, thể hiện lối sống bền vững. Vải còn dùng để làm phụ kiện trang trí, đồ móc len, vải lót nội thất, y tế (khăn lau, vật liệu lót).",
     "highlights": ["Dày dặn", "Bền màu"],
     "related": [
-      { "id": "pnf-nt-012", "title": "Vải nội thất PNF-NT-012", "img": "images/portfolio/v7.jpg" }
+      {
+        "id": "pnf-vai-gia-day",
+        "title": "Vải Giả Đay",
+        "img": "data/product-detail/pnf-vai-gia-day/main.jpg"
+      },
+      {
+        "id": "pnf-canvas",
+        "title": "Vải Canvas",
+        "img": "data/product-detail/pnf-canvas/main.jpg"
+      }
+    ]
+  },
+  "pnf-ct100": {
+    "code": "pnf-ct100",
+    "category": "vai",
+    "title": "Vải Mộc Cotton 100%",
+    "categoryLabel": "Vải nội thất",
+    "stock": true,
+    "processing": true,
+    "origin": "Việt Nam",
+    "moq": "Tuỳ mẫu",
+    "lead": "10 - 20 ngày",
+    "images": [
+      "data/product-detail/pnf-ct100/main.png",
+      "data/product-detail/pnf-ct100/detailed1.jpg",
+      "data/product-detail/pnf-ct100/detailed2.png",
+      "data/product-detail/pnf-ct100/detailed3.jpg",
+      "data/product-detail/pnf-ct100/detailed4.png",
+      "data/product-detail/pnf-ct100/detailed5.png"
+    ],
+    "colors": [
+      {
+        "name": "Nâu",
+        "hex": "#9A7C5C"
+      },
+      {
+        "name": "Than",
+        "hex": "#3C3F45"
+      }
+    ],
+    "widths": ["1.57m"],
+    "gsms": ["120g", "210g"],
+    "checks": ["Độ lành tính cao", "An toàn khi tiếp xúc"],
+    "specs": {
+      "Dệt": "Dệt thoi",
+      "Chất liệu": "100% Cotton",
+      "Ứng dụng": "Chăn ga gối đệm, khăn tắm, rèm cửa - Túi vải, phụ kiện - Khăn lau, vật liệu lót."
+    },
+    "use": "Đồ gia dụng (chăn ga gối đệm, khăn tắm, rèm cửa) vì sự thoáng mát, êm ái; và các sản phẩm thân thiện môi trường (túi vải, phụ kiện) thay thế túi nilon, thể hiện lối sống bền vững. Vải còn dùng để làm phụ kiện trang trí, đồ móc len, y tế (khăn lau, vật liệu lót).",
+    "highlights": ["Dày dặn", "Bền màu"],
+    "related": [
+      {
+        "id": "pnf-8317",
+        "title": "Vải Mộc 83/17",
+        "img": "data/product-detail/pnf-8317/main.jpg"
+      },
+      {
+        "id": "pnf-khong-det",
+        "title": "Vải Không Dệt",
+        "img": "data/product-detail/pnf-khong-det/main.jpg"
+      }
+    ]
+  },
+  "pnf-8317": {
+    "code": "pnf-8317",
+    "category": "vai",
+    "title": "Vải Mộc 83/17",
+    "categoryLabel": "Vải nội thất",
+    "stock": true,
+    "processing": true,
+    "origin": "Việt Nam",
+    "moq": "Tuỳ mẫu",
+    "lead": "10 - 20 ngày",
+    "images": [
+      "data/product-detail/pnf-8317/main.jpg",
+      "data/product-detail/pnf-8317/detailed1.png",
+      "data/product-detail/pnf-8317/detailed2.jpg",
+      "data/product-detail/pnf-8317/detailed3.jpg"
+    ],
+    "colors": [
+      {
+        "name": "Nâu",
+        "hex": "#9A7C5C"
+      },
+      {
+        "name": "Than",
+        "hex": "#3C3F45"
+      }
+    ],
+    "widths": ["1.58m"],
+    "gsms": ["90g", "180g"],
+    "checks": ["Thân thiện với môi trường", "Khả năng thấm hút tốt", "Giữ màu lâu và bền"],
+    "specs": {
+      "Dệt": "Dệt thoi",
+      "Chất liệu": "83% Poly – 17% Cotton",
+      "Ứng dụng": "Túi xách thời trang - Vải lót."
+    },
+    "use": "Được sử dụng rộng rãi trong ngành may mặc, thủ công mỹ nghệ, may túi xách thời trang; làm vải lót cho các sản phẩm khác với chất lượng tốt, độ bền cao.",
+    "highlights": ["Dày dặn", "Bền màu"],
+    "related": [
+      {
+        "id": "pnf-ct100",
+        "title": "Vải Mộc Cotton 100%",
+        "img": "data/product-detail/pnf-ct100/main.png"
+      },
+      {
+        "id": "pnf-canvas",
+        "title": "Vải Canvas",
+        "img": "data/product-detail/pnf-canvas/main.jpg"
+      }
+    ]
+  },
+  "pnf-vai-day": {
+    "code": "pnf-vai-day",
+    "category": "vai",
+    "title": "Vải Đay",
+    "categoryLabel": "Vải nội thất",
+    "stock": true,
+    "processing": true,
+    "origin": "Việt Nam",
+    "moq": "Tuỳ mẫu",
+    "lead": "10 - 20 ngày",
+    "images": [
+      "data/product-detail/pnf-vai-day/main.jpg",
+      "data/product-detail/pnf-vai-day/detailed1.avif",
+      "data/product-detail/pnf-vai-day/detailed3.jpg",
+      "data/product-detail/pnf-vai-day/detailed4.jpg",
+      "data/product-detail/pnf-vai-day/detailed5.jpg",
+      "data/product-detail/pnf-vai-day/detailed6.jpg",
+      "data/product-detail/pnf-vai-day/detailed7.jpg",
+      "data/product-detail/pnf-vai-day/detailed8.jpg",
+      "data/product-detail/pnf-vai-day/detailed9.jpg",
+      "data/product-detail/pnf-vai-day/detailed10.jpg",
+      "data/product-detail/pnf-vai-day/detailed11.jpg"
+    ],
+    "colors": [
+      {
+        "name": "Nâu",
+        "hex": "#9A7C5C"
+      },
+      {
+        "name": "Than",
+        "hex": "#3C3F45"
+      }
+    ],
+    "widths": ["1.48m"],
+    "gsms": ["120g", "300g"],
+    "checks": ["Tự nhiên", "Thân thiện với môi trường"],
+    "specs": {
+      "Chất liệu": "Sợi đay",
+      "Ứng dụng": "Thời trang, nội thất, nông nghiệp đến nghệ thuật."
+    },
+    "use": "Vải đay có thể ứng dụng trong nhiều lĩnh vực khác nhau, từ thời trang, nội thất, nông nghiệp đến nghệ thuật. Sự đa dạng này giúp vải đay dễ dàng đáp ứng được nhu cầu của nhiều ngành công nghiệp khác nhau.",
+    "highlights": ["Dày dặn", "Bền màu"],
+    "related": [
+      {
+        "id": "pnf-ct100",
+        "title": "Vải Mộc Cotton 100%",
+        "img": "data/product-detail/pnf-ct100/main.png"
+      },
+      {
+        "id": "pnf-6535",
+        "title": "Vải Mộc 65/35",
+        "img": "data/product-detail/pnf-6535/main.webp"
+      }
+    ]
+  },
+  "pnf-vai-day-trang-nhua": {
+    "code": "pnf-vai-day-trang-nhua",
+    "category": "vai",
+    "title": "Vải Đay Tráng Nhựa",
+    "categoryLabel": "Vải nội thất",
+    "stock": true,
+    "processing": true,
+    "origin": "Việt Nam",
+    "moq": "Tuỳ mẫu",
+    "lead": "10 - 20 ngày",
+    "images": [
+      "data/product-detail/pnf-vai-day-trang-nhua/main.jpg",
+      "data/product-detail/pnf-vai-day-trang-nhua/detailed1.jpg",
+      "data/product-detail/pnf-vai-day-trang-nhua/detailed2.jpeg",
+      "data/product-detail/pnf-vai-day-trang-nhua/detailed3.jpeg",
+      "data/product-detail/pnf-vai-day-trang-nhua/detailed4.jpeg",
+      "data/product-detail/pnf-vai-day-trang-nhua/detailed5.jpg",
+      "data/product-detail/pnf-vai-day-trang-nhua/detailed6.jpg",
+      "data/product-detail/pnf-vai-day-trang-nhua/detailed7.jpg",
+      "data/product-detail/pnf-vai-day-trang-nhua/detailed8.jpg"
+    ],
+    "colors": [
+      {
+        "name": "Nâu",
+        "hex": "#9A7C5C"
+      },
+      {
+        "name": "Than",
+        "hex": "#3C3F45"
+      }
+    ],
+    "widths": ["1.50m"],
+    "gsms": ["250g", "380g"],
+    "checks": [
+      "Độ bền và khả năng chống nước cao",
+      "Chống ẩm của nhựa với đặc tính thoáng khí",
+      "Hút ẩm tự nhiên của sợi đay"
+    ],
+    "specs": {
+      "Chất liệu": "Một mặt là vải đay (sợi đay tự nhiên) - Một mặt tráng nhựa (PU) chống nước",
+      "Ứng dụng": "Bạt che phủ (công trình, hàng hóa, máy móc) - Bao bì (nông sản, vật liệu xây dựng) cần chống ẩm - Nội thất (rèm cửa, thảm cho khu vực ẩm ướt) - Sản phẩm ngoài trời (túi đựng đồ, vật liệu cách nhiệt)."
+    },
+    "use": "Ứng dụng chủ yếu làm bạt che phủ (công trình, hàng hóa, máy móc), bao bì (nông sản, vật liệu xây dựng) cần chống ẩm, nội thất (rèm cửa, thảm cho khu vực ẩm ướt), và sản phẩm ngoài trời (túi đựng đồ, vật liệu cách nhiệt), đặc biệt hiệu quả trong môi trường khắc nghiệt và ẩm ướt nhờ tính năng chống mốc và bền bỉ; thân thiện môi trường.",
+    "highlights": ["Dày dặn", "Bền màu"],
+    "related": [
+      {
+        "id": "pnf-ct100",
+        "title": "Vải Mộc Cotton 100%",
+        "img": "data/product-detail/pnf-ct100/main.png"
+      },
+      {
+        "id": "pnf-8317",
+        "title": "Vải Mộc 83/17",
+        "img": "data/product-detail/pnf-8317/main.jpg"
+      }
+    ]
+  },
+  "pnf-vai-gia-day": {
+    "code": "pnf-vai-gia-day",
+    "category": "vai",
+    "title": "Vải Giả Đay",
+    "categoryLabel": "Vải nội thất",
+    "stock": true,
+    "processing": true,
+    "origin": "Việt Nam",
+    "moq": "Tuỳ mẫu",
+    "lead": "10 - 20 ngày",
+    "images": [
+      "data/product-detail/pnf-vai-gia-day/main.jpg",
+      "data/product-detail/pnf-vai-gia-day/detailed1.jpg",
+      "data/product-detail/pnf-vai-gia-day/detailed2.jpg",
+      "data/product-detail/pnf-vai-gia-day/detailed3.jpg",
+      "data/product-detail/pnf-vai-gia-day/detailed4.jpg",
+      "data/product-detail/pnf-vai-gia-day/detailed5.jpg",
+      "data/product-detail/pnf-vai-gia-day/detailed6.jpg",
+      "data/product-detail/pnf-vai-gia-day/detailed7.png"
+    ],
+    "colors": [
+      {
+        "name": "Nâu",
+        "hex": "#9A7C5C"
+      },
+      {
+        "name": "Than",
+        "hex": "#3C3F45"
+      }
+    ],
+    "widths": ["1.50m"],
+    "gsms": ["250g", "380g"],
+    "checks": [
+      "Độ bền và khả năng chống nước cao",
+      "Chống ẩm của nhựa với đặc tính thoáng khí",
+      "Hút ẩm tự nhiên của sợi đay"
+    ],
+    "specs": {
+      "Chất liệu": "Một mặt của vải là vải đay được dệt từ sợi đay tự nhiên với bề mặt thô - Một mặt của vải có dán một lớp tráng nhựa (PU) chống nước. Vải không bị thấm nước.",
+      "Ứng dụng": "Ghế sofa, phụ kiện túi ví, bao bì đựng sản phẩm - Đồ trang trí nội thất - Gói quà - Đồ chống sốc tốt."
+    },
+    "use": "Thích hợp làm ghế sofa, phụ kiện túi ví, bao bì đựng sản phẩm và đồ trang trí nội thất, gói quà… độ chống sốc tốt. Nổi bật bởi tính thẩm mỹ cao, đa dạng màu sắc, thân thiện môi trường và giá thành hợp lý, thích hợp làm quà tặng quảng cáo doanh nghiệp.",
+    "highlights": ["Dày dặn", "Bền màu"],
+    "related": [
+      {
+        "id": "pnf-vai-day-trang-nhua",
+        "title": "Vải Đay Tráng Nhựa",
+        "img": "data/product-detail/pnf-vai-day-trang-nhua/main.jpg"
+      },
+      {
+        "id": "pnf-6535",
+        "title": "Vải Mộc 65/35",
+        "img": "data/product-detail/pnf-6535/main.png"
+      }
+    ]
+  },
+  "pnf-khong-det": {
+    "code": "pnf-khong-det",
+    "category": "vai",
+    "title": "Vải Không Dệt",
+    "categoryLabel": "Vải nội thất",
+    "stock": true,
+    "processing": true,
+    "origin": "Việt Nam",
+    "moq": "Tuỳ mẫu",
+    "lead": "10 - 20 ngày",
+    "images": [
+      "data/product-detail/pnf-khong-det/main.jpg",
+      "data/product-detail/pnf-khong-det/detailed1.jpg",
+      "data/product-detail/pnf-khong-det/detailed2.jpg",
+      "data/product-detail/pnf-khong-det/detailed3.jpg",
+      "data/product-detail/pnf-khong-det/detailed4.png",
+      "data/product-detail/pnf-khong-det/detailed5.png",
+      "data/product-detail/pnf-khong-det/detailed6.jpg"
+    ],
+    "colors": [
+      {
+        "name": "Nâu",
+        "hex": "#9A7C5C"
+      },
+      {
+        "name": "Than",
+        "hex": "#3C3F45"
+      }
+    ],
+    "widths": ["1.60m"],
+    "gsms": ["20g", "200g"],
+    "checks": [
+      "Thân thiện môi trường",
+      "Chống ẩm",
+      "Thoáng khí",
+      "Dẻo nhẹ",
+      "Không cháy",
+      "Không gây kích ứng"
+    ],
+    "specs": {
+      "Dệt": "Được hình thành trên sự tác động của nhiệt hoặc dung môi kết dính các sợi.",
+      "Chất liệu": "Các hạt nhựa tổng hợp như Polypropylene (PP), Polyester (PET), hoặc Polyethylene, kết hợp với một số nguyên liệu xơ khác như xơ công nghiệp.",
+      "Ứng dụng": "Khẩu trang, áo choàng, băng gạc, tã - Túi siêu thị, túi quà, túi đựng rượu - Màng phủ nông nghiệp, túi bọc trái cây - Lót sofa, rèm, thảm, vỏ gối - Khăn lau, giẻ lau công nghiệp - Quần áo, mũ chống hóa chất."
+    },
+    "use": "Được sử dụng trong các ngành yêu cầu an toàn cao như: y tế (khẩu trang, áo choàng, băng gạc, tã), bao bì/túi xách (túi siêu thị, túi quà, túi đựng rượu), nông nghiệp (màng phủ, túi bọc trái cây), nội thất (lót sofa, rèm, thảm, vỏ gối), gia dụng (khăn lau, giẻ lau công nghiệp), và bảo hộ lao động (quần áo, mũ chống hóa chất).",
+    "highlights": ["Dày dặn", "Bền màu"],
+    "related": [
+      {
+        "id": "pnf-canvas",
+        "title": "Vải Canvas",
+        "img": "data/product-detail/pnf-canvas/main.jpg"
+      },
+      {
+        "id": "pnf-vai-gia-day",
+        "title": "Vải Giả Đay",
+        "img": "data/product-detail/pnf-vai-gia-day/main.jpg"
+      }
+    ]
+  },
+  "pnf-canvas": {
+    "code": "pnf-canvas",
+    "category": "vai",
+    "title": "Vải Canvas",
+    "categoryLabel": "Vải nội thất",
+    "stock": true,
+    "processing": true,
+    "origin": "Việt Nam",
+    "moq": "Tuỳ mẫu",
+    "lead": "10 - 20 ngày",
+    "images": [
+      "data/product-detail/pnf-canvas/main.jpg",
+      "data/product-detail/pnf-canvas/detailed1.jpg",
+      "data/product-detail/pnf-canvas/detailed2.jpg",
+      "data/product-detail/pnf-canvas/detailed3.jpg",
+      "data/product-detail/pnf-canvas/detailed4.jpg",
+      "data/product-detail/pnf-canvas/detailed5.jpg",
+      "data/product-detail/pnf-canvas/detailed6.jpg",
+      "data/product-detail/pnf-canvas/detailed7.jpg",
+      "data/product-detail/pnf-canvas/description.jpg"
+    ],
+    "colors": [
+      {
+        "name": "Nâu",
+        "hex": "#9A7C5C"
+      },
+      {
+        "name": "Than",
+        "hex": "#3C3F45"
+      }
+    ],
+    "widths": ["1.58m"],
+    "gsms": ["150g", "430g"],
+    "checks": ["Độ bền cao", "Ít thấm nước", "Thô mộc", "Thân thiện môi trường"],
+    "specs": {
+      "Dệt": "Dệt chặt, độ bền cao; ít thấm nước.",
+      "Chất liệu": "Kết hợp sợi bông tự nhiên (cotton) và sợi gai dầu.",
+      "Ứng dụng": "Túi xách, balo, giày dép thời trang - Bạt che, lều, bọc nội thất - Tranh vẽ nghệ thuật (tranh sơn dầu) - Quần áo (quần tây, áo khoác), rèm cửa, vỏ gối."
+    },
+    "use": "Dùng làm túi xách, balo, giày dép thời trang; bạt che, lều, bọc nội thất; tranh vẽ nghệ thuật (tranh sơn dầu) vì khả năng giữ màu và bảo quản tác phẩm lâu dài; ngoài ra còn làm quần áo (quần tây, áo khoác), rèm cửa, vỏ gối.",
+    "highlights": ["Dày dặn", "Bền màu"],
+    "related": [
+      {
+        "id": "pnf-khong-det",
+        "title": "Vải Không Dệt",
+        "img": "data/product-detail/pnf-khong-det/main.jpg"
+      },
+      {
+        "id": "pnf-vai-gia-day",
+        "title": "Vải Giả Đay",
+        "img": "data/product-detail/pnf-vai-gia-day/main.jpg"
+      }
     ]
   }
 }

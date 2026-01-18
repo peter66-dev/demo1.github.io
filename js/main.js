@@ -130,25 +130,130 @@ lightbox.addEventListener('click', function (event) {
   }
 });
 
+async function loadProductData() {
+  const res = await fetch('data/product-data.json', { cache: 'no-store' });
+  if (!res.ok) throw new Error(`Cannot load product-data.json (${res.status})`);
+  return res.json();
+}
+
 /* =========================================================
-   Featured Products: Filter + Load More (TOTAL/5) + Smooth Animation
-   - filter tabs: .filter-tabs button[data-filter]
-   - items: .featured-products .product-card[data-category]
-   - load more button: #load-more-btn
+   Featured Products (AUTO from JSON)
 ========================================================= */
-function initFeaturedProducts() {
-  const productsContainer = document.querySelector('.featured-products');
+
+// ---------- Data loading (shared) ----------
+async function loadProductData() {
+  const res = await fetch('data/product-data.json', { cache: 'no-store' });
+  if (!res.ok) throw new Error(`Cannot load product-data.json (${res.status})`);
+  return res.json();
+}
+
+let __PRODUCTS_CACHE__ = null;
+async function getProductsCached() {
+  if (__PRODUCTS_CACHE__) return __PRODUCTS_CACHE__;
+  __PRODUCTS_CACHE__ = await loadProductData();
+  return __PRODUCTS_CACHE__;
+}
+
+// ---------- Helpers ----------
+function slugify(str = '') {
+  return String(str)
+    .trim()
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
+}
+
+/**
+ * IMPORTANT:
+ * Your filter tabs use these values: all, vai, sot, dong-phuc, nem-ghe  (in index.html)
+ * If JSON doesn't provide `category`, we try infer from categoryLabel.
+ */
+function resolveCategorySlug(product, productId) {
+  // Best: you add `category` into JSON (vai / sot / dong-phuc / nem-ghe)
+  if (product.category) return String(product.category).trim().toLowerCase();
+
+  const label = (product.categoryLabel || '').toLowerCase();
+
+  // Heuristic mapping (you can adjust)
+  if (label.includes('đồng phục') || label.includes('dong phuc')) return 'dong-phuc';
+  if (
+    label.includes('nệm') ||
+    label.includes('nem') ||
+    label.includes('ghế') ||
+    label.includes('ghe')
+  )
+    return 'nem-ghe';
+  if (
+    label.includes('túi') ||
+    label.includes('tui') ||
+    label.includes('sọt') ||
+    label.includes('sot')
+  )
+    return 'sot';
+  if (label.includes('vải') || label.includes('vai')) return 'vai';
+
+  // Fallback: slugify label (may not match any tab)
+  return slugify(label) || 'all';
+}
+
+function renderProductCard(productId, product) {
+  const categorySlug = resolveCategorySlug(product, productId);
+  const imgSrc = (Array.isArray(product.images) && product.images[0]) || 'images/portfolio/v2.png'; // fallback
+
+  const title = product.title || product.code || productId;
+  const highlights = product.highlights || product.checks || [];
+
+  const card = document.createElement('div');
+  card.className = 'product-card hidden'; // start hidden, controller will reveal
+  card.dataset.category = categorySlug;
+  card.dataset.productId = productId;
+
+  const ul = document.createElement('ul');
+  ul.className = 'product-features';
+
+  // Render up to 3 highlights for home card (adjust if you want more)
+  const items = Array.isArray(highlights) ? highlights.slice(0, 3) : [];
+  ul.innerHTML = items.map(t => `<li>${t}</li>`).join('');
+
+  card.innerHTML = `
+    <div class="product-img">
+      <img src="${imgSrc}" alt="${title}" />
+    </div>
+    <div class="product-body">
+      <h4>${title}</h4>
+    </div>
+  `;
+
+  card.querySelector('.product-body').appendChild(ul);
+
+  const a = document.createElement('a');
+  a.href = '#';
+  a.className = 'btn-detail';
+  a.textContent = 'Xem chi tiết';
+  card.querySelector('.product-body').appendChild(a);
+
+  return card;
+}
+
+// ---------- Controller: filter + load more + reveal ----------
+function initFeaturedProductsController() {
+  const productsContainer =
+    document.getElementById('featured-products') || document.querySelector('.featured-products');
   const loadMoreBtn = document.getElementById('load-more-btn');
   const filterTabs = document.querySelector('.filter-tabs');
 
   if (!productsContainer || !loadMoreBtn) return;
 
   const allItems = Array.from(productsContainer.querySelectorAll('.product-card'));
-  if (allItems.length === 0) return;
+  if (allItems.length === 0) {
+    loadMoreBtn.style.display = 'none';
+    return;
+  }
 
-  // total/5 mỗi lần click (vd: 50/5 = 10)
-  const STEP = Math.max(1, Math.ceil(allItems.length / 5));
-
+  // const STEP = Math.max(1, Math.ceil(allItems.length / 5));
+  const STEP = 4; // show 4 products by default & each "load more"
   let currentFilter = 'all';
   let filteredItems = allItems;
   let visible = 0;
@@ -175,47 +280,34 @@ function initFeaturedProducts() {
 
   function renderInitial() {
     hideAll();
-
     filteredItems.forEach((it, idx) => {
       if (idx < visible) it.classList.remove('hidden');
     });
-
     loadMoreBtn.style.display = visible >= filteredItems.length ? 'none' : '';
   }
 
   function applyFilter(filterValue) {
     currentFilter = filterValue || 'all';
     filteredItems = computeFiltered(currentFilter);
-
     visible = Math.min(STEP, filteredItems.length);
     renderInitial();
-
-    // scroll nhẹ về list cho cảm giác "đã đổi category"
     productsContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }
 
-  // Smooth reveal with stagger (mượt hơn kiểu animationend cũ)
   function revealRange(fromIndex, toIndex) {
     const count = toIndex - fromIndex;
     if (count <= 0) return;
 
-    // tránh spam click
     loadMoreBtn.disabled = true;
 
     for (let i = fromIndex; i < toIndex; i++) {
       const it = filteredItems[i];
       if (!it) continue;
 
-      // cho item vào layout trước
       it.classList.remove('hidden');
-
-      // set trạng thái ban đầu (opacity 0, translateY)
       it.classList.add('pre-reveal');
-
-      // force reflow để browser "nhận" state pre-reveal
       void it.offsetHeight;
 
-      // stagger từng item 70ms
       const delay = (i - fromIndex) * 70;
       setTimeout(() => {
         it.classList.add('reveal');
@@ -223,58 +315,89 @@ function initFeaturedProducts() {
       }, delay);
     }
 
-    // re-enable sau khi animation xong
     const totalDelay = (count - 1) * 70 + 380;
     setTimeout(() => {
       loadMoreBtn.disabled = false;
     }, totalDelay);
   }
 
-  // Click "Xem thêm sản phẩm"
-  loadMoreBtn.addEventListener('click', function (e) {
+  loadMoreBtn.addEventListener('click', e => {
     e.preventDefault();
-
-    const prevVisible = visible; // <-- DÒNG BẠN HỎI NẰM Ở ĐÂY
+    const prevVisible = visible;
     visible = Math.min(visible + STEP, filteredItems.length);
-
-    // reveal mượt cho phần mới
     revealRange(prevVisible, visible);
-
-    // update button
     loadMoreBtn.style.display = visible >= filteredItems.length ? 'none' : '';
 
-    // scroll đến item mới đầu tiên
     const firstNew = filteredItems[Math.max(0, prevVisible)];
     if (firstNew) firstNew.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   });
 
-  // Click tab category
   if (filterTabs) {
-    filterTabs.addEventListener('click', function (e) {
+    filterTabs.addEventListener('click', e => {
       const btn = e.target.closest('button[data-filter]');
       if (!btn) return;
 
       e.preventDefault();
       const filterValue = btn.dataset.filter || 'all';
-
       setActiveTab(filterValue);
       applyFilter(filterValue);
     });
   }
 
-  // init: dùng tab đang active nếu có, không thì all
   const activeBtn = filterTabs ? filterTabs.querySelector('button[data-filter].active') : null;
   const initialFilter = activeBtn ? activeBtn.dataset.filter : 'all';
-
   setActiveTab(initialFilter || 'all');
   applyFilter(initialFilter || 'all');
 }
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initFeaturedProducts);
-} else {
-  initFeaturedProducts();
+// ---------- Main: build the grid from JSON ----------
+async function buildFeaturedProductsFromJson() {
+  const productsContainer =
+    document.getElementById('featured-products') || document.querySelector('.featured-products');
+  if (!productsContainer) return;
+
+  const PRODUCTS = await getProductsCached(); // JSON object keyed by id
+  const entries = Object.entries(PRODUCTS || {});
+  if (entries.length === 0) return;
+
+  productsContainer.innerHTML = '';
+  entries.forEach(([productId, product]) => {
+    const card = renderProductCard(productId.toLowerCase(), product);
+    productsContainer.appendChild(card);
+  });
 }
+
+// ---------- Init ----------
+async function initHomeFeaturedProducts() {
+  await buildFeaturedProductsFromJson();
+  initFeaturedProductsController();
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => {
+    initHomeFeaturedProducts().catch(console.error);
+  });
+} else {
+  initHomeFeaturedProducts().catch(console.error);
+}
+
+/* Keep your existing product detail navigation */
+(function initProductDetailNavigation() {
+  document.addEventListener('click', function (e) {
+    const btn = e.target.closest('.btn-detail');
+    if (!btn) return;
+
+    e.preventDefault();
+
+    const card = btn.closest('.product-card');
+    if (!card) return;
+
+    let id = (card.dataset.productId || '').trim();
+    if (!id) return;
+
+    window.location.href = `product.html?id=${encodeURIComponent(id)}`;
+  });
+})();
 
 (function initProductDetailNavigation() {
   document.addEventListener('click', function (e) {
