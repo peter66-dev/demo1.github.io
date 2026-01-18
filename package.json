@@ -1,0 +1,25 @@
+{
+  "name": "demo1.github.io",
+  "version": "1.0.0",
+  "description": "A simple static GitHub Pages site for \"Phương Nguyễn Fabrics\" (company presentation and product portfolio).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write \"**/*.{js,css,html,json,md,css}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peter66-dev/demo1.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/peter66-dev/demo1.github.io/issues"
+  },
+  "homepage": "https://github.com/peter66-dev/demo1.github.io#readme",
+  "devDependencies": {
+    "prettier": "3.7.4"
+  }
+}
