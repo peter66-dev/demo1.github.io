@@ -1546,6 +1546,9 @@ footer .copyright-text {
     font-size: 1.8rem;
     font-weight: 900;
   }
+  .pd-breadcrumb {
+    padding-left: 1rem;
+  }
 }
 
 @media (max-width: 1100px) {
@@ -1555,7 +1558,10 @@ footer .copyright-text {
 }
 
 @media (max-width: 992px) {
-  /* Make welcome heading more readable on narrower screens */
+  .pd-wrap {
+    padding-top: 1rem !important;
+    padding-left: 1rem;
+  }
   .welcome-heading {
     margin: 0 0 1rem 0;
     color: var(--main-color);
@@ -1807,7 +1813,7 @@ footer .copyright-text {
     position: relative;
     z-index: 4000;
   }
-  .pd-top,
+  /* .pd-top,
   .pd-mid {
     grid-template-columns: 1fr;
   }
@@ -1819,7 +1825,7 @@ footer .copyright-text {
   }
   .pd-related-grid {
     grid-template-columns: 1fr;
-  }
+  } */
 }
 
 @media (max-width: 900px) {
@@ -1886,6 +1892,164 @@ footer .copyright-text {
   }
 }
 
+/* =========================
+   PRODUCT DETAIL - MOBILE PERFECT LAYOUT
+   Image on top, summary below, no broken features
+   ========================= */
+@media (max-width: 820px) {
+  /* 1) Make container breathe on mobile */
+  .product-detail-page .pd-wrap .container {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+
+  /* 2) Breadcrumb: compact (optional but makes it cleaner) */
+  .pd-breadcrumb {
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+    margin-top: 10px !important;
+    margin-bottom: 12px !important;
+  }
+
+  /* 3) TOP: force stack column (gallery -> summary) */
+  .pd-top {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 14px !important;
+  }
+
+  .pd-gallery,
+  .pd-summary {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* 4) Main image: full width, nice ratio, no ugly spacing */
+  .pd-main-img {
+    width: 100% !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+  }
+
+  .pd-main-img img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    object-fit: cover !important;
+  }
+
+  /* 5) Thumbs: horizontal row, scroll, consistent size */
+  .pd-thumbs {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 8px !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    padding: 6px 2px 2px !important;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+
+  .pd-thumb {
+    flex: 0 0 auto !important;
+    scroll-snap-align: start;
+  }
+
+  .pd-thumb img {
+    width: 64px !important;
+    height: 64px !important;
+    border-radius: 12px !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+
+  /* 6) Summary: typography + spacing */
+  .pd-summary {
+    padding: 0 !important;
+  }
+
+  .pd-title {
+    font-size: 22px !important;
+    line-height: 1.25 !important;
+    margin: 4px 0 10px !important;
+  }
+
+  .pd-badges {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .pd-price {
+    margin: 10px 0 12px !important;
+    padding: 12px 12px !important;
+    border-radius: 14px !important;
+  }
+
+  /* 7) “Công dụng” block: read-friendly */
+  #pd-use {
+    display: block !important;
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+  }
+
+  /* 8) Options + pills: stack nicely */
+  .pd-options {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+  }
+
+  .pd-options .pd-field:last-child {
+    grid-column: 1 / -1 !important; /* origin full row */
+  }
+
+  /* 9) CTA buttons: full width, no weird gaps */
+  .pd-ctas {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    margin-top: 12px !important;
+  }
+
+  .pd-cta-primary,
+  .pd-cta-secondary {
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  /* 10) MID section: move right form BELOW instead of side-by-side */
+  .pd-mid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+    margin-top: 16px !important;
+  }
+
+  .pd-left,
+  .pd-right {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* 11) Tabs area padding */
+  .pd-tabs {
+    position: sticky;
+    top: 68px; /* below navbar on mobile */
+    z-index: 5;
+    background: transparent;
+  }
+
+  /* 12) Form card spacing */
+  .pd-form-card {
+    border-radius: 16px !important;
+  }
+}
+
 @media (max-width: 767px) {
   .section-title .main-title {
     margin-top: 20px;
@@ -1921,6 +2085,29 @@ footer .copyright-text {
     text-align: center;
     width: 100%;
   }
+  .pd-ctas {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 12px !important;
+    flex-wrap: nowrap !important; /* luôn 1 hàng */
+    width: 100% !important;
+  }
+
+  /* target exactly the two buttons */
+  .pd-ctas .pd-cta-primary,
+  .pd-ctas .pd-cta-secondary {
+    width: auto !important; /* chặn width:100% cũ */
+    flex: 0 0 auto !important;
+    min-width: 140px !important; /* size vừa */
+    padding: 12px 14px !important;
+    font-size: 14px !important;
+    line-height: 1.2 !important;
+    border-radius: 14px !important;
+    white-space: nowrap !important; /* không xuống dòng */
+    text-align: center !important;
+  }
 }
 
 @media (max-width: 520px) {
@@ -1942,6 +2129,41 @@ footer .copyright-text {
     flex-basis: 100%;
     max-width: 100%;
     width: 100%;
+  }
+  .pd-related-grid {
+    display: grid;
+    grid-template-columns: 1fr !important; /* ✅ 1 sản phẩm / hàng */
+    gap: 16px;
+  }
+
+  /* đảm bảo card chiếm full chiều ngang */
+  .pd-related-grid .product-card {
+    width: 100%;
+  }
+
+  /* ảnh đẹp hơn trên mobile */
+  .pd-related-grid .product-img img {
+    width: 100%;
+    height: 200px; /* chỉnh 180–220 nếu muốn */
+    object-fit: cover;
+  }
+
+  /* căn giữa nội dung cho giống Home */
+  .pd-related-grid .product-body {
+    text-align: center;
+  }
+
+  .pd-related-grid .btn-detail {
+    margin: 12px auto 0;
+    display: inline-block;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .featured-products .product-card,
+  .product-card.reveal {
+    transition: none !important;
   }
 }
 
@@ -2379,8 +2601,8 @@ footer .copyright-text {
 }
 .pd-related-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
 }
 .pd-related-card {
   display: grid;
@@ -2418,6 +2640,7 @@ footer .copyright-text {
     transform 0.15s ease,
     box-shadow 0.15s ease,
     background-color 0.15s ease;
+  text-align: center;
 }
 
 #pd-sample-btn:hover {
@@ -2551,12 +2774,4 @@ footer .copyright-text {
 .portfolio .filter-tabs button {
   margin: 0;
   padding: 10px 14px;
-}
-
-/* Reduced motion support */
-@media (prefers-reduced-motion: reduce) {
-  .featured-products .product-card,
-  .product-card.reveal {
-    transition: none !important;
-  }
 }
