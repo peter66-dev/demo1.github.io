@@ -1714,6 +1714,107 @@ footer .copyright-text {
     flex: 0 0 50%;
     max-width: 50%;
   }
+
+  #google_translate_element {
+    display: block;
+    margin-left: auto;
+    margin-right: 10px;
+  }
+  #google_translate_element select {
+    height: 34px;
+    border-radius: 10px;
+  }
+
+  :root {
+    --nav-h: 64px;
+  } /* adjust if your navbar is taller */
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3000;
+    background: #fff;
+  }
+
+  /* optional: prevent page content hidden under fixed navbar */
+  body {
+    padding-top: var(--nav-h);
+  }
+
+  /* 2) Menu dropdown right under navbar */
+  .navbar .menu {
+    position: fixed;
+    top: var(--nav-h);
+    left: 0;
+    right: 0;
+
+    margin: 0 !important;
+    padding: 10px 14px 14px !important;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* full-width items */
+    justify-content: flex-start; /* IMPORTANT: no space-evenly/center spacing */
+    gap: 6px; /* small consistent spacing */
+
+    background: #fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+    /* closed state should be controlled by your existing .active logic */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition: 0.2s ease;
+
+    max-height: calc(100dvh - var(--nav-h));
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .navbar .menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  /* 3) Remove any spacing on li */
+  .navbar .menu .nav-item {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* 4) Make links tappable + compact (no huge vertical spacing) */
+  .navbar .menu .nav-link {
+    display: block;
+    width: 100%;
+    text-align: center;
+
+    padding: 12px 10px !important;
+    line-height: 1.2;
+    border-radius: 12px;
+
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .navbar .menu .nav-link:hover {
+    background: rgba(217, 194, 16, 0.12);
+  }
+
+  /* Hide underline span inside nav-link on mobile */
+  .navbar .menu .nav-link span {
+    display: none !important;
+  }
+
+  /* 5) Keep menu button always clickable */
+  .navbar .menu-btn {
+    position: relative;
+    z-index: 4000;
+  }
 }
 
 @media (max-width: 900px) {

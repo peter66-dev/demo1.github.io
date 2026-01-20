@@ -11,7 +11,7 @@ https://peter66-dev.github.io/demo1.github.io/
 - `index.html` — main HTML page
 - `css/style.css` — site styles
 - `js/main.js` — interactive behavior (nav, portfolio filter, lightbox)
-- `images/` — image assets (portfolio, logos)
+- `data/` — image assets (portfolio, logos)
 
 ## Features
 
@@ -67,7 +67,7 @@ Push the repository to GitHub and enable GitHub Pages for the `main` (or `gh-pag
 ## Notes for maintainers
 
 - Edit meta tags and social image in `index.html` for SEO.
-- Update images in `images/portfolio` for portfolio items.
+- Update images in `data/` for portfolio items.
 - `js/main.js` assumes `.portfolio-item` elements present; add/remove items accordingly.
 
 ## Custom domain deployment (phuongnguyenfabrics.com)
