@@ -508,7 +508,7 @@ img {
   justify-content: center;
   flex-wrap: wrap;
   gap: 12px;
-  margin-bottom: 1rem;
+  margin: 1rem 0rem;
 }
 
 .hero-ctas .btn {

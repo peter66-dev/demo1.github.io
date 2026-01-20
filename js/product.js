@@ -168,6 +168,7 @@ async function loadProductData() {
   const sampleBtn = qs('#pd-sample-btn');
   if (sampleBtn) {
     sampleBtn.addEventListener('click', () => {
+      // TODO: custom alert form please!
       alert('OK! Bạn để lại số điện thoại/Zalo ở form bên phải để bên mình gửi mẫu nhanh nhé.');
     });
   }
