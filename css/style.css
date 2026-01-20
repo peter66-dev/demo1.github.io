@@ -1807,7 +1807,7 @@ footer .copyright-text {
     position: relative;
     z-index: 4000;
   }
-  .pd-top,
+  /* .pd-top,
   .pd-mid {
     grid-template-columns: 1fr;
   }
@@ -1819,7 +1819,7 @@ footer .copyright-text {
   }
   .pd-related-grid {
     grid-template-columns: 1fr;
-  }
+  } */
 }
 
 @media (max-width: 900px) {
