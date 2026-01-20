@@ -145,22 +145,27 @@ async function loadProductData() {
     });
   });
 
-  // Related cards
+  // Related cards (render like Home product card)
   const related = qs('#pd-related');
   if (related) {
     related.innerHTML = '';
+
     (product.related || []).forEach(r => {
-      const a = document.createElement('a');
-      a.className = 'pd-related-card';
-      a.href = `product.html?id=${encodeURIComponent(r.id)}`;
-      a.innerHTML = `
-        <div class="pd-related-img"><img src="${r.img}" alt="${r.title}" /></div>
-        <div class="pd-related-body">
-          <div class="pd-related-title">${r.title}</div>
-          <div class="pd-related-link">Xem chi tiết</div>
-        </div>
-      `;
-      related.appendChild(a);
+      const card = document.createElement('div');
+      card.className = 'product-card'; // ✅ reuse Home CSS
+      card.dataset.productId = (r.id || '').toLowerCase();
+
+      card.innerHTML = `
+      <div class="product-img">
+        <img src="${r.img}" alt="${r.title}" />
+      </div>
+      <div class="product-body">
+        <h4>${r.title}</h4>
+        <a class="btn-detail" href="product.html?id=${encodeURIComponent(r.id)}">Xem chi tiết</a>
+      </div>
+    `;
+
+      related.appendChild(card);
     });
   }
 
