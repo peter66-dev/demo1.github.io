@@ -21,5 +21,8 @@
   "homepage": "https://github.com/peter66-dev/demo1.github.io#readme",
   "devDependencies": {
     "prettier": "3.7.4"
+  },
+  "dependencies": {
+    "sweetalert2": "^11.26.17"
   }
 }

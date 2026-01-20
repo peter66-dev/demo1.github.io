@@ -508,7 +508,7 @@ img {
   justify-content: center;
   flex-wrap: wrap;
   gap: 12px;
-  margin-bottom: 1rem;
+  margin: 1rem 0rem;
 }
 
 .hero-ctas .btn {
@@ -956,10 +956,8 @@ img {
 }
 
 .portfolio .filter-tabs button {
-  margin: -1rem 1rem 1rem 0;
   outline: none;
   border: 2px solid var(--main-color);
-  padding: 10px 18px;
   font-weight: 600;
   border-radius: 0.5rem;
   background-color: var(--white);
@@ -967,6 +965,8 @@ img {
   transition: all 0.3s ease;
   font-size: 14px;
   letter-spacing: 0.5px;
+  margin: 0;
+  padding: 10px 14px;
 }
 
 .portfolio .filter-tabs button:hover {
@@ -1184,17 +1184,6 @@ img {
   font-size: 1rem;
 }
 
-@media (max-width: 900px) {
-  .featured-products .product-card {
-    width: 48%;
-  }
-}
-@media (max-width: 520px) {
-  .featured-products .product-card {
-    width: 100%;
-  }
-}
-
 /*===== Lightbox =====*/
 .lightbox {
   position: fixed;
@@ -1281,6 +1270,7 @@ img {
   margin-top: -20px;
   z-index: 110;
   transition: all 0.3s ease;
+  right: 30px;
 }
 
 .lightbox .lightbox-controls .next-item:hover,
@@ -1295,10 +1285,6 @@ img {
 
 .lightbox .lightbox-controls .prev-item {
   left: 30px;
-}
-
-.lightbox .lightbox-controls .next-item {
-  right: 30px;
 }
 
 .lightbox .lightbox-controls .next-item .fa,
@@ -1562,7 +1548,13 @@ footer .copyright-text {
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1100px) {
+  .featured-products {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 992px) {
   /* Make welcome heading more readable on narrower screens */
   .welcome-heading {
     margin: 0 0 1rem 0;
@@ -1714,6 +1706,120 @@ footer .copyright-text {
     flex: 0 0 50%;
     max-width: 50%;
   }
+
+  #google_translate_element {
+    display: block;
+    margin-left: auto;
+    margin-right: 10px;
+  }
+  #google_translate_element select {
+    height: 34px;
+    border-radius: 10px;
+  }
+
+  :root {
+    --nav-h: 64px;
+  } /* adjust if your navbar is taller */
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3000;
+    background: #fff;
+  }
+
+  /* optional: prevent page content hidden under fixed navbar */
+  body {
+    padding-top: var(--nav-h);
+  }
+
+  /* 2) Menu dropdown right under navbar */
+  .navbar .menu {
+    position: fixed;
+    top: var(--nav-h);
+    left: 0;
+    right: 0;
+
+    margin: 0 !important;
+    padding: 10px 14px 14px !important;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* full-width items */
+    justify-content: flex-start; /* IMPORTANT: no space-evenly/center spacing */
+    gap: 6px; /* small consistent spacing */
+
+    background: #fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+    /* closed state should be controlled by your existing .active logic */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition: 0.2s ease;
+
+    max-height: calc(100dvh - var(--nav-h));
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .navbar .menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  /* 3) Remove any spacing on li */
+  .navbar .menu .nav-item {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* 4) Make links tappable + compact (no huge vertical spacing) */
+  .navbar .menu .nav-link {
+    display: block;
+    width: 100%;
+    text-align: center;
+
+    padding: 12px 10px !important;
+    line-height: 1.2;
+    border-radius: 12px;
+
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .navbar .menu .nav-link:hover {
+    background: rgba(217, 194, 16, 0.12);
+  }
+
+  /* Hide underline span inside nav-link on mobile */
+  .navbar .menu .nav-link span {
+    display: none !important;
+  }
+
+  /* 5) Keep menu button always clickable */
+  .navbar .menu-btn {
+    position: relative;
+    z-index: 4000;
+  }
+  .pd-top,
+  .pd-mid {
+    grid-template-columns: 1fr;
+  }
+  .pd-thumbs {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .pd-spec-grid {
+    grid-template-columns: 1fr;
+  }
+  .pd-related-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 900px) {
@@ -1747,6 +1853,18 @@ footer .copyright-text {
   }
   .hero-contact-card {
     display: none;
+  }
+  .featured-products {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+  .product-body {
+    padding: 14px;
+  }
+  .featured-products .product-card {
+    flex-basis: 48%;
+    max-width: 48%;
+    width: 48%;
   }
 }
 
@@ -1801,6 +1919,28 @@ footer .copyright-text {
     display: flex;
     justify-content: center;
     text-align: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .featured-products {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 0 10px;
+  }
+  .product-card .product-img {
+    aspect-ratio: 16 / 10;
+  }
+  .btn-detail {
+    height: 46px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .featured-products .product-card {
+    flex-basis: 100%;
+    max-width: 100%;
     width: 100%;
   }
 }
@@ -2271,20 +2411,23 @@ footer .copyright-text {
   font-weight: 800;
 }
 
-@media (max-width: 992px) {
-  .pd-top,
-  .pd-mid {
-    grid-template-columns: 1fr;
-  }
-  .pd-thumbs {
-    grid-template-columns: repeat(4, 1fr);
-  }
-  .pd-spec-grid {
-    grid-template-columns: 1fr;
-  }
-  .pd-related-grid {
-    grid-template-columns: 1fr;
-  }
+/* Pointer + hover for sample CTA */
+#pd-sample-btn {
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background-color 0.15s ease;
+}
+
+#pd-sample-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+#pd-sample-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
 }
 
 .featured-products .product-card {
@@ -2404,51 +2547,10 @@ footer .copyright-text {
   justify-content: center;
   gap: 10px;
 }
+
 .portfolio .filter-tabs button {
   margin: 0;
   padding: 10px 14px;
-}
-
-/* Responsive breakpoints */
-@media (max-width: 1100px) {
-  .featured-products {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-@media (max-width: 900px) {
-  .featured-products {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 14px;
-  }
-  .product-body {
-    padding: 14px;
-  }
-  .featured-products .product-card {
-    flex-basis: 48%;
-    max-width: 48%;
-    width: 48%;
-  }
-}
-@media (max-width: 520px) {
-  .featured-products {
-    grid-template-columns: 1fr;
-    gap: 12px;
-    padding: 0 10px;
-  }
-  .product-card .product-img {
-    aspect-ratio: 16 / 10; /* nicer “banner” feel on phones */
-  }
-  .btn-detail {
-    height: 46px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .featured-products .product-card {
-    flex-basis: 100%;
-    max-width: 100%;
-    width: 100%;
-  }
 }
 
 /* Reduced motion support */

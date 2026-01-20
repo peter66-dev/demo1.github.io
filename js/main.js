@@ -170,7 +170,7 @@ function slugify(str = '') {
  * Your filter tabs use these values: all, vai, sot, dong-phuc, nem-ghe  (in index.html)
  * If JSON doesn't provide `category`, we try infer from categoryLabel.
  */
-function resolveCategorySlug(product, productId) {
+function resolveCategorySlug(product) {
   // Best: you add `category` into JSON (vai / sot / dong-phuc / nem-ghe)
   if (product.category) return String(product.category).trim().toLowerCase();
 
@@ -199,8 +199,10 @@ function resolveCategorySlug(product, productId) {
 }
 
 function renderProductCard(productId, product) {
-  const categorySlug = resolveCategorySlug(product, productId);
-  const imgSrc = (Array.isArray(product.images) && product.images[0]) || 'images/portfolio/v2.png'; // fallback
+  const categorySlug = resolveCategorySlug(product);
+  const imgSrc =
+    (Array.isArray(product.images) && product.images[0]) ||
+    'data/product-detail/pnf-ct100/main.png'; // fallback
 
   const title = product.title || product.code || productId;
   const highlights = product.highlights || product.checks || [];
