@@ -1945,6 +1945,14 @@ footer .copyright-text {
   }
 }
 
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .featured-products .product-card,
+  .product-card.reveal {
+    transition: none !important;
+  }
+}
+
 /* =========================================================
    PRODUCT DETAIL PAGE (PN Fabrics)
 ========================================================= */
@@ -2551,12 +2559,4 @@ footer .copyright-text {
 .portfolio .filter-tabs button {
   margin: 0;
   padding: 10px 14px;
-}
-
-/* Reduced motion support */
-@media (prefers-reduced-motion: reduce) {
-  .featured-products .product-card,
-  .product-card.reveal {
-    transition: none !important;
-  }
 }
