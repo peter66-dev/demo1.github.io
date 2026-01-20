@@ -2167,14 +2167,6 @@ footer .copyright-text {
   }
 }
 
-/* Reduced motion support */
-@media (prefers-reduced-motion: reduce) {
-  .featured-products .product-card,
-  .product-card.reveal {
-    transition: none !important;
-  }
-}
-
 /* =========================================================
    PRODUCT DETAIL PAGE (PN Fabrics)
 ========================================================= */
