@@ -168,12 +168,16 @@ async function loadProductData() {
   const sampleBtn = qs('#pd-sample-btn');
   if (sampleBtn) {
     sampleBtn.addEventListener('click', () => {
-      // TODO: custom alert form please!
-      alert('OK! Bạn để lại số điện thoại/Zalo ở form bên phải để bên mình gửi mẫu nhanh nhé.');
+      Swal.fire({
+        title: 'Chào bạn!',
+        text: 'Bạn để lại số điện thoại (Zalo) ở form bên phải để bên mình gửi mẫu nhanh nhé.',
+        icon: 'warning',
+        showConfirmButton: true,
+        confirmButtonColor: '#d9c210',
+      });
     });
   }
 
-  // Form submit (demo) pd-submit
   const form = qs('#pd-form');
   if (form) {
     form.addEventListener('submit', e => {
