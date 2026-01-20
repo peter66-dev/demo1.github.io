@@ -1,7 +1,7 @@
 {
   "pnf-6535": {
     "code": "pnf-6535",
-    "category": "vai",
+    "category": "fabric",
     "title": "Vải Mộc 65/35",
     "categoryLabel": "Vải nội thất",
     "stock": true,
@@ -51,7 +51,7 @@
   },
   "pnf-ct100": {
     "code": "pnf-ct100",
-    "category": "vai",
+    "category": "fabric",
     "title": "Vải Mộc Cotton 100%",
     "categoryLabel": "Vải nội thất",
     "stock": true,
@@ -102,7 +102,7 @@
   },
   "pnf-8317": {
     "code": "pnf-8317",
-    "category": "vai",
+    "category": "fabric",
     "title": "Vải Mộc 83/17",
     "categoryLabel": "Vải nội thất",
     "stock": true,
@@ -151,7 +151,7 @@
   },
   "pnf-vai-day": {
     "code": "pnf-vai-day",
-    "category": "vai",
+    "category": "fabric",
     "title": "Vải Đay",
     "categoryLabel": "Vải nội thất",
     "stock": true,
@@ -206,7 +206,7 @@
   },
   "pnf-vai-day-trang-nhua": {
     "code": "pnf-vai-day-trang-nhua",
-    "category": "vai",
+    "category": "fabric",
     "title": "Vải Đay Tráng Nhựa",
     "categoryLabel": "Vải nội thất",
     "stock": true,
@@ -263,7 +263,7 @@
   },
   "pnf-vai-gia-day": {
     "code": "pnf-vai-gia-day",
-    "category": "vai",
+    "category": "fabric",
     "title": "Vải Giả Đay",
     "categoryLabel": "Vải nội thất",
     "stock": true,
@@ -319,7 +319,7 @@
   },
   "pnf-khong-det": {
     "code": "pnf-khong-det",
-    "category": "vai",
+    "category": "fabric",
     "title": "Vải Không Dệt",
     "categoryLabel": "Vải nội thất",
     "stock": true,
@@ -378,7 +378,7 @@
   },
   "pnf-canvas": {
     "code": "pnf-canvas",
-    "category": "vai",
+    "category": "fabric",
     "title": "Vải Canvas",
     "categoryLabel": "Vải nội thất",
     "stock": true,
