@@ -773,6 +773,7 @@ img {
 }
 .btn:hover {
   transform: translateY(-2px);
+  cursor: pointer;
 }
 .btn-outline {
   background: transparent;
@@ -1129,6 +1130,7 @@ img {
   color: #6b4f2a;
   font-size: 18px;
   font-weight: 700;
+  text-align: center;
 }
 .product-features {
   list-style: none;
@@ -1174,6 +1176,12 @@ img {
   text-decoration: none;
   font-weight: 700;
   cursor: pointer;
+  font-family:
+    'Montserrat',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
 }
 .see-more-wrap {
   text-align: center;
@@ -1291,6 +1299,12 @@ img {
 .lightbox .lightbox-controls .prev-item .fa {
   font-size: 32px;
   line-height: 40px;
+}
+
+/* Swal alert */
+.swal-text-lg {
+  line-height: 1.8;
+  font-size: 16px;
 }
 
 /*===== pricing =====*/
@@ -1436,6 +1450,8 @@ img {
   line-height: 1.8;
   margin: 0;
   font-weight: 400;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .contact-section .contact-form {
@@ -1488,7 +1504,6 @@ img {
   padding: 0 15px;
 }
 
-/*footer*/
 footer {
   background-color: var(--main-color);
 }
@@ -1524,6 +1539,11 @@ footer .copyright-text {
   x: 5px;
   y: 10px;
   rotate: -45deg;
+}
+
+.importField {
+  color: red;
+  font-weight: 900;
 }
 
 /*Responsive*/
@@ -1565,7 +1585,6 @@ footer .copyright-text {
   .welcome-heading {
     margin: 0 0 1rem 0;
     color: var(--main-color);
-    /* color: var(--black-900); */
     font-size: 28px;
     font-weight: 700;
     text-align: center;
@@ -1573,7 +1592,6 @@ footer .copyright-text {
     justify-content: center;
   }
   .hero-title {
-    /* color: var(--main-color); */
     font-size: 1.4rem;
     padding: 10px 14px;
   }
@@ -1725,7 +1743,7 @@ footer .copyright-text {
 
   :root {
     --nav-h: 64px;
-  } /* adjust if your navbar is taller */
+  }
 
   .navbar {
     position: fixed;
@@ -1736,12 +1754,10 @@ footer .copyright-text {
     background: #fff;
   }
 
-  /* optional: prevent page content hidden under fixed navbar */
   body {
     padding-top: var(--nav-h);
   }
 
-  /* 2) Menu dropdown right under navbar */
   .navbar .menu {
     position: fixed;
     top: var(--nav-h);
@@ -1753,14 +1769,13 @@ footer .copyright-text {
 
     display: flex;
     flex-direction: column;
-    align-items: stretch; /* full-width items */
-    justify-content: flex-start; /* IMPORTANT: no space-evenly/center spacing */
-    gap: 6px; /* small consistent spacing */
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 6px;
 
     background: #fff;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 
-    /* closed state should be controlled by your existing .active logic */
     opacity: 0;
     visibility: hidden;
     transform: translateY(-8px);
@@ -1779,13 +1794,11 @@ footer .copyright-text {
     pointer-events: auto;
   }
 
-  /* 3) Remove any spacing on li */
   .navbar .menu .nav-item {
     margin: 0 !important;
     padding: 0 !important;
   }
 
-  /* 4) Make links tappable + compact (no huge vertical spacing) */
   .navbar .menu .nav-link {
     display: block;
     width: 100%;
@@ -1803,34 +1816,18 @@ footer .copyright-text {
     background: rgba(217, 194, 16, 0.12);
   }
 
-  /* Hide underline span inside nav-link on mobile */
   .navbar .menu .nav-link span {
     display: none !important;
   }
 
-  /* 5) Keep menu button always clickable */
   .navbar .menu-btn {
     position: relative;
     z-index: 4000;
   }
-  /* .pd-top,
-  .pd-mid {
-    grid-template-columns: 1fr;
-  }
-  .pd-thumbs {
-    grid-template-columns: repeat(4, 1fr);
-  }
-  .pd-spec-grid {
-    grid-template-columns: 1fr;
-  }
-  .pd-related-grid {
-    grid-template-columns: 1fr;
-  } */
 }
 
 @media (max-width: 900px) {
   .hero-title {
-    /* color: var(--main-color); */
     font-size: 1.4rem;
     padding: 10px 14px;
   }
@@ -1894,7 +1891,6 @@ footer .copyright-text {
 
 /* =========================
    PRODUCT DETAIL - MOBILE PERFECT LAYOUT
-   Image on top, summary below, no broken features
    ========================= */
 @media (max-width: 820px) {
   /* 1) Make container breathe on mobile */
@@ -2107,6 +2103,11 @@ footer .copyright-text {
     border-radius: 14px !important;
     white-space: nowrap !important; /* không xuống dòng */
     text-align: center !important;
+  }
+  .pd-tabs {
+    position: static !important;
+    top: auto !important;
+    z-index: auto !important;
   }
 }
 
@@ -2559,6 +2560,8 @@ footer .copyright-text {
 .pd-input input,
 .pd-input textarea {
   width: 100%;
+  max-width: 100%;
+  min-height: fit-content;
   border: 1px solid #e7e2d6;
   border-radius: 12px;
   padding: 10px 12px;
@@ -2566,15 +2569,19 @@ footer .copyright-text {
   font-weight: 600;
   font-family: inherit;
   background: #fff;
+  box-sizing: border-box; /* RẤT QUAN TRỌNG */
+  resize: vertical; /* chỉ cho resize chiều cao */
 }
 .pd-input {
   margin-bottom: 10px;
 }
 .pd-submit {
+  text-align: center;
   width: 100%;
   height: 48px;
   border-radius: 14px;
-  font-weight: 900;
+  font-weight: 700;
+  font-size: 1rem;
 }
 .pd-form-note {
   margin-top: 10px;

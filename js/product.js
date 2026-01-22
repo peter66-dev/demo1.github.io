@@ -1,7 +1,16 @@
-// js/product.js
+import { PdFormService } from './pdFormService.js';
+
+const service = new PdFormService({
+  formSelector: '#pd-form',
+  endpointUrl:
+    'https://script.google.com/macros/s/AKfycbw3_exQfnwQlCOreof9fq7Kp_SCSCDivZI5Pag7o8yRxAexzsbV_kEP4fR4lneh_I2g/exec',
+  deploymentId: 'AKfycbw3_exQfnwQlCOreof9fq7Kp_SCSCDivZI5Pag7o8yRxAexzsbV_kEP4fR4lneh_I2g',
+  getProductName: () => product?.title || '',
+});
+
+service.init();
 
 async function loadProductData() {
-  // Đường dẫn JSON: data/product-data.json (cùng level với product.html)
   const res = await fetch('data/product-data.json', { cache: 'no-store' });
   if (!res.ok) throw new Error(`Cannot load product-data.json (${res.status})`);
   return res.json();
@@ -152,7 +161,7 @@ async function loadProductData() {
 
     (product.related || []).forEach(r => {
       const card = document.createElement('div');
-      card.className = 'product-card'; // ✅ reuse Home CSS
+      card.className = 'product-card';
       card.dataset.productId = (r.id || '').toLowerCase();
 
       card.innerHTML = `
@@ -161,7 +170,7 @@ async function loadProductData() {
       </div>
       <div class="product-body">
         <h4>${r.title}</h4>
-        <a class="btn-detail" href="product.html?id=${encodeURIComponent(r.id)}">Xem chi tiết</a>
+        <a class="btn btn-primary pd-submit" href="product.html?id=${encodeURIComponent(r.id)}">Xem chi tiết</a>
       </div>
     `;
 
@@ -175,21 +184,20 @@ async function loadProductData() {
     sampleBtn.addEventListener('click', () => {
       Swal.fire({
         title: 'Chào bạn!',
-        text: 'Bạn để lại số điện thoại (Zalo) ở form bên phải để bên mình gửi mẫu nhanh nhé.',
+        text: 'Bạn để lại SĐT và Email ở form bên phải để bên mình gửi mẫu nhanh nhé.',
         icon: 'warning',
         showConfirmButton: true,
         confirmButtonColor: '#d9c210',
       });
     });
   }
-
-  const form = qs('#pd-form');
-  if (form) {
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      alert('Đã gửi yêu cầu! Bên mình sẽ liên hệ sớm.');
-      form.reset();
-      qs('#pd-form-product').value = product.title;
-    });
-  }
 })();
+
+// Price button -> go to Home #contact
+const priceBtn = document.getElementById('pd-price-btn');
+if (priceBtn) {
+  priceBtn.addEventListener('click', e => {
+    e.preventDefault();
+    window.location.href = 'index.html?from=price#contact';
+  });
+}
