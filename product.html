@@ -145,7 +145,9 @@
             <div class="pd-checks" id="pd-checks"></div>
 
             <div class="pd-ctas">
-              <a class="btn btn-primary pd-cta-primary" href="index.html#contact">Nhận báo giá</a>
+              <a class="btn btn-primary pd-cta-primary" href="index.html#contact" id="pd-price-btn">
+                Nhận báo giá
+              </a>
               <a class="btn btn-secondary pd-cta-secondary" type="button" id="pd-sample-btn">
                 Yêu cầu gửi mẫu
               </a>
@@ -223,16 +225,38 @@
               <h3>Yêu cầu gửi mẫu</h3>
               <form id="pd-form">
                 <div class="pd-input">
-                  <label>Họ tên</label>
-                  <input type="text" name="name" placeholder="Nhập họ tên" />
+                  <label>
+                    Họ tên
+                    <span class="importField">*</span>
+                  </label>
+                  <input type="text" name="fullName" placeholder="Nhập họ tên" />
                 </div>
                 <div class="pd-input">
-                  <label>Điện thoại / Zalo</label>
-                  <input type="text" name="phone" placeholder="Nhập số điện thoại" />
+                  <label>
+                    Điện thoại / Zalo
+                    <span class="importField">*</span>
+                  </label>
+                  <input type="tel" name="phone" placeholder="Nhập số điện thoại" />
                 </div>
                 <div class="pd-input">
-                  <label>Số lượng</label>
-                  <input type="text" name="qty" placeholder="VD: 120m" />
+                  <label>
+                    Email
+                    <span class="importField">*</span>
+                  </label>
+                  <input type="text" name="email" placeholder="Nhập Email" />
+                </div>
+                <div class="pd-input">
+                  <label>
+                    Số lượng
+                    <span class="importField">*</span>
+                  </label>
+                  <input
+                    type="number"
+                    min="0"
+                    name="quantity"
+                    placeholder="VD: 120m"
+                    oninvalid="this.setCustomValidity('Số lượng không hợp lệ!')"
+                  />
                 </div>
                 <div class="pd-input">
                   <label>Sản phẩm</label>
@@ -281,6 +305,7 @@
 
     <script src="js/main.js"></script>
     <script src="js/product.js"></script>
+    <script type="module" src="js/product.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>

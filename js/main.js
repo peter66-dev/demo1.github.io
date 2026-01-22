@@ -427,3 +427,60 @@ if (document.readyState === 'loading') {
     window.location.href = `product.html?id=${encodeURIComponent(id)}`;
   });
 })();
+
+(function () {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('from') !== 'price') return;
+
+  function scrollToContact() {
+    const el = document.getElementById('contact');
+    if (!el) return false;
+
+    // sticky navbar offset (adjust if your navbar height differs)
+    const nav = document.querySelector('.navbar');
+    const offset = nav ? nav.offsetHeight + 8 : 80;
+
+    const y = el.getBoundingClientRect().top + window.pageYOffset - offset;
+
+    window.scrollTo({ top: y, behavior: 'smooth' });
+
+    setTimeout(
+      () =>
+        Swal.fire({
+          title: '<strong>Phương Nguyễn</strong> <u>xin chào!</u>',
+          icon: 'info',
+          iconColor: '#d9c210',
+          html: `
+                  Hãy để lại thông tin ở <b>Zalo</b> hoặc <b>Email</b> để được hỗ trợ sớm nhất bạn nhé!
+                `,
+          customClass: {
+            htmlContainer: 'swal-text-lg',
+          },
+          showCloseButton: true,
+          focusConfirm: true,
+          confirmButtonText: `
+                  <i class="fa fa-thumbs-up"></i> Đồng ý
+                `,
+          confirmButtonAriaLabel: 'Thumbs up, great!',
+          confirmButtonColor: '#d9c210',
+        }),
+      500
+    );
+
+    // optional: remove query so refresh doesn't re-trigger
+    history.replaceState(null, '', window.location.pathname + '#contact');
+
+    return true;
+  }
+
+  // Run after full load to ensure layout/images are ready
+  window.addEventListener('load', () => {
+    // try now; if contact renders later, retry a few times
+    let tries = 0;
+    const timer = setInterval(() => {
+      tries++;
+      const ok = scrollToContact();
+      if (ok || tries >= 10) clearInterval(timer);
+    }, 200);
+  });
+})();
