@@ -48,7 +48,12 @@ export class PdFormService {
           note: data.note,
         });
 
-        const res = await this._sendEmail({ subject, html });
+        await Promise.all([
+          //   this._sendEmail({ subject, html }),
+          new Promise(r => setTimeout(r, 2000)),
+        ]);
+
+        this._setLoading(false);
 
         Swal.fire({
           icon: 'success',
@@ -56,12 +61,11 @@ export class PdFormService {
           html: `<div style="line-height:1.6">Bên mình sẽ liên hệ sớm qua <b>Zalo/Điện thoại</b> bạn đã để lại nhé.</div>`,
           confirmButtonColor: '#d9c210',
         });
-        // this.form.reset();
+        // TODO: handle rate limit for current client IP
       } catch (ex) {
         console.error(ex);
+        this._setLoading(false); // ✅ đóng loading trước
         this._alertError('Gửi yêu cầu chưa thành công. Hãy thử lại lần sau nhé!');
-      } finally {
-        this._setLoading(false);
       }
     });
   }
@@ -125,10 +129,26 @@ export class PdFormService {
 
   _setLoading(isLoading) {
     const btn = this.form.querySelector('button[type="submit"], input[type="submit"]');
-    if (!btn) return;
+    if (btn) {
+      btn.disabled = !!isLoading;
+      btn.style.opacity = isLoading ? '0.7' : '';
+      btn.style.cursor = isLoading ? 'not-allowed' : '';
+    }
 
-    btn.disabled = !!isLoading;
-    btn.style.opacity = isLoading ? '0.7' : '';
-    btn.style.cursor = isLoading ? 'not-allowed' : '';
+    if (isLoading) {
+      Swal.fire({
+        title: 'Đang gửi yêu cầu...',
+        html: '<div style="line-height:1.6">Vui lòng chờ trong giây lát ⏳</div>',
+        allowOutsideClick: false,
+        allowEscapeKey: false,
+        didOpen: () => {
+          Swal.showLoading();
+        },
+      });
+    } else {
+      if (Swal.isVisible()) {
+        Swal.close();
+      }
+    }
   }
 }
