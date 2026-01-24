@@ -1571,6 +1571,13 @@ footer .copyright-text {
   }
 }
 
+.pd-ctas {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+  margin-top: 12px !important;
+}
+
 @media (max-width: 1100px) {
   .featured-products {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -2004,14 +2011,6 @@ footer .copyright-text {
     grid-column: 1 / -1 !important; /* origin full row */
   }
 
-  /* 9) CTA buttons: full width, no weird gaps */
-  .pd-ctas {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 10px !important;
-    margin-top: 12px !important;
-  }
-
   .pd-cta-primary,
   .pd-cta-secondary {
     width: 100% !important;
@@ -2087,21 +2086,21 @@ footer .copyright-text {
     justify-content: center !important;
     align-items: center !important;
     gap: 12px !important;
-    flex-wrap: nowrap !important; /* luôn 1 hàng */
+    flex-wrap: nowrap !important;
     width: 100% !important;
   }
 
   /* target exactly the two buttons */
   .pd-ctas .pd-cta-primary,
   .pd-ctas .pd-cta-secondary {
-    width: auto !important; /* chặn width:100% cũ */
+    /* width: auto !important; chặn width:100% cũ */
     flex: 0 0 auto !important;
-    min-width: 140px !important; /* size vừa */
+    min-width: 140px !important;
     padding: 12px 14px !important;
     font-size: 14px !important;
     line-height: 1.2 !important;
     border-radius: 14px !important;
-    white-space: nowrap !important; /* không xuống dòng */
+    white-space: nowrap !important;
     text-align: center !important;
   }
   .pd-tabs {
@@ -2641,7 +2640,8 @@ footer .copyright-text {
 }
 
 /* Pointer + hover for sample CTA */
-#pd-sample-btn {
+#pd-sample-btn,
+#pd-price-btn {
   cursor: pointer;
   transition:
     transform 0.15s ease,

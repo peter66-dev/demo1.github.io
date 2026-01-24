@@ -15,22 +15,23 @@ export function buildEmailPayload({ fullName, phone, quantity, productName, note
       <hr style="border:none;border-top:1px solid #eee;margin:14px 0" />
 
       <div style="margin-top:10px;">
-        <div style="margin-bottom:6px;">KHÁCH HÀNG</div>
-        <div>Họ và tên: <b>${escapeHtml(fullName)}</b></div>
-        <div>Điện thoại / Zalo: <b>${escapeHtml(phone)}</b></div>
+        <div style="margin-bottom:6px;">Khách hàng</div>
+        <div>- Họ và tên: <b>${escapeHtml(fullName)}</b></div>
+        <div>- Điện thoại / Zalo: <b>${escapeHtml(phone)}</b></div>
+        <div>- Email: <b>${escapeHtml(phone)}</b></div>
       </div>
 
       <div style="margin-top:12px;">
-        <div style="margin-bottom:6px;">SẢN PHẨM QUAN TÂM</div>
-        <div>Tên sản phẩm: <b>${escapeHtml(productName || '')}</b></div>
-        <div>Số lượng dự kiến: <b>${escapeHtml(quantity)}</b></div>
+        <div style="margin-bottom:6px;">Sản phẩm quan tâm: </div>
+        <div>- Tên sản phẩm: <b>${escapeHtml(productName || '')}</b></div>
+        <div>- Số lượng dự kiến: <b>${escapeHtml(quantity)}</b></div>
       </div>
 
       ${
         note
           ? `
         <div style="margin-top:12px;">
-          <div style="margin-bottom:6px;">GHI CHÚ TỪ KHÁCH HÀNG</div>
+          <div style="margin-bottom:6px;">Ghi chú từ khách hàng: </div>
           <div style="padding:10px; background:#fafafa; border-left:4px solid #d9c210;">
             ${escapeHtml(note)}
           </div>

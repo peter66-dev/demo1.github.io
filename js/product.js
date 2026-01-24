@@ -3,7 +3,8 @@ import { PdFormService } from './pdFormService.js';
 const service = new PdFormService({
   formSelector: '#pd-form',
   endpointUrl:
-    'https://script.google.com/macros/s/AKfycbw3_exQfnwQlCOreof9fq7Kp_SCSCDivZI5Pag7o8yRxAexzsbV_kEP4fR4lneh_I2g/exec',
+    // 'https://script.google.com/macros/s/AKfycbw3_exQfnwQlCOreof9fq7Kp_SCSCDivZI5Pag7o8yRxAexzsbV_kEP4fR4lneh_I2g/exec',
+    'https://script.google.com/macros/s/AKfycbz6OxMb48_YsnDxsuSAw_RsJgPvwlnBfMtStk54nUU9HcyGhx_YPW1BLI9ZPznsPbb3/exec',
   deploymentId: 'AKfycbw3_exQfnwQlCOreof9fq7Kp_SCSCDivZI5Pag7o8yRxAexzsbV_kEP4fR4lneh_I2g',
   getProductName: () => product?.title || '',
 });
@@ -178,26 +179,43 @@ async function loadProductData() {
     });
   }
 
-  // Sample button
-  const sampleBtn = qs('#pd-sample-btn');
-  if (sampleBtn) {
-    sampleBtn.addEventListener('click', () => {
+  // Click Price button - scroll to form smoothly
+  const priceBtn = qs('#pd-price-btn');
+  const formEl = qs('#form-id');
+
+  if (priceBtn && formEl) {
+    priceBtn.addEventListener('click', e => {
+      e.preventDefault(); // ❌ không reload page
+
+      // Optional: show small hint
       Swal.fire({
-        title: 'Chào bạn!',
-        text: 'Bạn để lại SĐT và Email ở form bên phải để bên mình gửi mẫu nhanh nhé.',
-        icon: 'warning',
-        showConfirmButton: true,
+        title: 'Nhận báo giá',
+        text: 'Vui lòng điền thông tin ở form để nhận báo giá nhanh nhất nhé!',
+        icon: 'info',
+        iconColor: '#d9c210',
         confirmButtonColor: '#d9c210',
+        showConfirmButton: true,
+        focusConfirm: true,
+        showCloseButton: true,
+        returnFocus: false,
       });
+
+      // Scroll after Swal appears (smooth UX)
+      setTimeout(() => {
+        const navbar = document.querySelector('.navbar');
+        const offset = navbar ? navbar.offsetHeight + 12 : 80;
+
+        const y = formEl.getBoundingClientRect().top + window.pageYOffset - offset;
+
+        window.scrollTo({
+          top: y,
+          behavior: 'smooth',
+        });
+
+        // Optional: focus first input
+        const firstInput = formEl.querySelector('input, textarea');
+        if (firstInput) firstInput.focus({ preventScroll: true });
+      }, 300);
     });
   }
 })();
-
-// Price button -> go to Home #contact
-const priceBtn = document.getElementById('pd-price-btn');
-if (priceBtn) {
-  priceBtn.addEventListener('click', e => {
-    e.preventDefault();
-    window.location.href = 'index.html?from=price#contact';
-  });
-}

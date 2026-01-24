@@ -130,12 +130,6 @@ lightbox.addEventListener('click', function (event) {
   }
 });
 
-async function loadProductData() {
-  const res = await fetch('data/product-data.json', { cache: 'no-store' });
-  if (!res.ok) throw new Error(`Cannot load product-data.json (${res.status})`);
-  return res.json();
-}
-
 /* =========================================================
    Featured Products (AUTO from JSON)
 ========================================================= */
@@ -176,30 +170,12 @@ function resolveCategorySlug(product) {
 
   const label = (product.categoryLabel || '').toLowerCase();
 
-  // Heuristic mapping (you can adjust)
-  if (label.includes('đồng phục') || label.includes('dong phuc')) return 'dong-phuc';
-  if (
-    label.includes('nệm') ||
-    label.includes('nem') ||
-    label.includes('ghế') ||
-    label.includes('ghe')
-  )
-    return 'nem-ghe';
-  if (
-    label.includes('túi') ||
-    label.includes('tui') ||
-    label.includes('sọt') ||
-    label.includes('sot')
-  )
-    return 'sot';
-  if (label.includes('vải') || label.includes('vai')) return 'vai';
-
-  // Fallback: slugify label (may not match any tab)
   return slugify(label) || 'all';
 }
 
 function renderProductCard(productId, product) {
   const categorySlug = resolveCategorySlug(product);
+  console.log('Rendering product', productId, 'in category', categorySlug);
   const imgSrc =
     (Array.isArray(product.images) && product.images[0]) ||
     'data/product-detail/pnf-ct100/main.png'; // fallback
@@ -208,7 +184,7 @@ function renderProductCard(productId, product) {
   const highlights = product.highlights || product.checks || [];
 
   const card = document.createElement('div');
-  card.className = 'product-card hidden'; // start hidden, controller will reveal
+  card.className = 'product-card hidden';
   card.dataset.category = categorySlug;
   card.dataset.productId = productId;
 
@@ -254,7 +230,6 @@ function initFeaturedProductsController() {
     return;
   }
 
-  // const STEP = Math.max(1, Math.ceil(allItems.length / 5));
   const STEP = 4; // show 4 products by default & each "load more"
   let currentFilter = 'all';
   let filteredItems = allItems;
@@ -358,7 +333,7 @@ async function buildFeaturedProductsFromJson() {
     document.getElementById('featured-products') || document.querySelector('.featured-products');
   if (!productsContainer) return;
 
-  const PRODUCTS = await getProductsCached(); // JSON object keyed by id
+  const PRODUCTS = await getProductsCached();
   const entries = Object.entries(PRODUCTS || {});
   if (entries.length === 0) return;
 
@@ -411,76 +386,17 @@ if (document.readyState === 'loading') {
     const card = btn.closest('.product-card');
     if (!card) return;
 
-    // Ưu tiên id explicit
     let id = (card.dataset.productId || '').trim();
 
-    // Fallback: lấy từ title (slug)
     if (!id) {
       const title = (card.querySelector('h4')?.textContent || 'san-pham').trim().toLowerCase();
       id = title
         .normalize('NFD')
-        .replace(/[\u0300-\u036f]/g, '') // remove accents
+        .replace(/[\u0300-\u036f]/g, '')
         .replace(/[^a-z0-9]+/g, '-')
         .replace(/(^-|-$)/g, '');
     }
 
     window.location.href = `product.html?id=${encodeURIComponent(id)}`;
-  });
-})();
-
-(function () {
-  const params = new URLSearchParams(window.location.search);
-  if (params.get('from') !== 'price') return;
-
-  function scrollToContact() {
-    const el = document.getElementById('contact');
-    if (!el) return false;
-
-    // sticky navbar offset (adjust if your navbar height differs)
-    const nav = document.querySelector('.navbar');
-    const offset = nav ? nav.offsetHeight + 8 : 80;
-
-    const y = el.getBoundingClientRect().top + window.pageYOffset - offset;
-
-    window.scrollTo({ top: y, behavior: 'smooth' });
-
-    setTimeout(
-      () =>
-        Swal.fire({
-          title: '<strong>Phương Nguyễn</strong> <u>xin chào!</u>',
-          icon: 'info',
-          iconColor: '#d9c210',
-          html: `
-                  Hãy để lại thông tin ở <b>Zalo</b> hoặc <b>Email</b> để được hỗ trợ sớm nhất bạn nhé!
-                `,
-          customClass: {
-            htmlContainer: 'swal-text-lg',
-          },
-          showCloseButton: true,
-          focusConfirm: true,
-          confirmButtonText: `
-                  <i class="fa fa-thumbs-up"></i> Đồng ý
-                `,
-          confirmButtonAriaLabel: 'Thumbs up, great!',
-          confirmButtonColor: '#d9c210',
-        }),
-      500
-    );
-
-    // optional: remove query so refresh doesn't re-trigger
-    history.replaceState(null, '', window.location.pathname + '#contact');
-
-    return true;
-  }
-
-  // Run after full load to ensure layout/images are ready
-  window.addEventListener('load', () => {
-    // try now; if contact renders later, retry a few times
-    let tries = 0;
-    const timer = setInterval(() => {
-      tries++;
-      const ok = scrollToContact();
-      if (ok || tries >= 10) clearInterval(timer);
-    }, 200);
   });
 })();
