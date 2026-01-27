@@ -111,10 +111,9 @@
     "moq": "Tuỳ mẫu",
     "lead": "10 - 20 ngày",
     "images": [
-      "data/product-detail/pnf-8317/main.jpg",
-      "data/product-detail/pnf-8317/detailed1.png",
-      "data/product-detail/pnf-8317/detailed2.jpg",
-      "data/product-detail/pnf-8317/detailed3.jpg"
+      "data/product-detail/pnf-8317/main.png",
+      "data/product-detail/pnf-8317/detailed1.jpg",
+      "data/product-detail/pnf-8317/detailed2.jpg"
     ],
     "colors": [
       {

@@ -49,8 +49,8 @@ export class PdFormService {
         });
 
         await Promise.all([
-          //   this._sendEmail({ subject, html }),
-          new Promise(r => setTimeout(r, 2000)),
+          this._sendEmail({ subject, html }),
+          new Promise(r => setTimeout(r, 3000)),
         ]);
 
         this._setLoading(false);
@@ -61,17 +61,15 @@ export class PdFormService {
           html: `<div style="line-height:1.6">Bên mình sẽ liên hệ sớm qua <b>Zalo/Điện thoại</b> bạn đã để lại nhé.</div>`,
           confirmButtonColor: '#d9c210',
         });
-        // TODO: handle rate limit for current client IP
       } catch (ex) {
         console.error(ex);
-        this._setLoading(false); // ✅ đóng loading trước
+        this._setLoading(false);
         this._alertError('Gửi yêu cầu chưa thành công. Hãy thử lại lần sau nhé!');
       }
     });
   }
 
   _readForm() {
-    // bạn đổi name="" theo form thật của bạn
     const fullName = this.form.querySelector('[name="fullName"]')?.value?.trim() || '';
     const phone = this.form.querySelector('[name="phone"]')?.value?.trim() || '';
     const email = this.form.querySelector('[name="email"]')?.value?.trim() || '';
@@ -92,6 +90,14 @@ export class PdFormService {
     if (!quantity) return 'Bạn vui lòng nhập <b>Số lượng</b>.';
 
     return '';
+  }
+
+  async canSend(key, ttlMs = 60000) {
+    const now = Date.now();
+    const last = Number(localStorage.getItem(key) || 0);
+    if (now - last < ttlMs) return false;
+    localStorage.setItem(key, String(now));
+    return true;
   }
 
   async _sendEmail({ subject, html }) {
