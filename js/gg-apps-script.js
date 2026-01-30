@@ -28,13 +28,14 @@ function doPost(e) {
 }
 
 /**
-    - Add images for custom products
-    - Emails-Qx-2026: history table
-    - Idempotent
-        - READ validation: idempotent (client-id & day > 3 times)
-        - WRITE: idempotent & history
-    - Rate limit: avoid user spam email form
-        - idempotent: check 3 times (client-id & day)
-            - Yes: send email + idempotent record
-            - No: handle error alert -> noti user exceed email sending today! 
+    - Add images for custom products                                                [DONE]
+    - Update product information of custom products                                 [NOT STARTED]
+    - Emails-Qx-2026: history table                                                 [NOT STARTED] 
+    - Idempotent                                                                    [NOT STARTED]
+        - READ validation: idempotent (client-id & day > 3 times)                   [NOT STARTED]
+        - WRITE: idempotent & history record                                        [NOT STARTED]                
+    - Rate limit: avoid user spam email form                                        [NOT STARTED]          
+        - idempotent: check 3 times (client-id & day)                               [NOT STARTED]
+            - Yes: send email + idempotent record                                   [NOT STARTED]
+            - No: handle error alert -> noti user exceed email sending today!       [NOT STARTED]
  */
