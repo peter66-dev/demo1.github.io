@@ -38,6 +38,7 @@ export class PdFormService {
       }
 
       try {
+        const clientKey = this.getOrCreateClientKey();
         this._setLoading(true);
 
         const { subject, html } = buildEmailPayload({
@@ -48,30 +49,55 @@ export class PdFormService {
           note: data.note,
         });
 
-        await Promise.all([
-          //   this._sendEmail({ subject, html }),
-          new Promise(r => setTimeout(r, 2000)),
-        ]);
+        const payload = {
+          subject,
+          html,
+          client_key: clientKey,
+          browser_type: navigator.userAgent || '',
+        };
 
+        const [response] = await Promise.all([
+          this._sendEmail(payload),
+          new Promise(r => setTimeout(r, 3000)),
+        ]);
+        const result = await response.json();
+        console.log('PETER Email send data:', result);
         this._setLoading(false);
 
-        Swal.fire({
-          icon: 'success',
-          title: 'Đã gửi yêu cầu!',
-          html: `<div style="line-height:1.6">Bên mình sẽ liên hệ sớm qua <b>Zalo/Điện thoại</b> bạn đã để lại nhé.</div>`,
-          confirmButtonColor: '#d9c210',
-        });
-        // TODO: handle rate limit for current client IP
+        if (result.status_code === 200 && result.message === 'SUCCESS') {
+          Swal.fire({
+            icon: 'success',
+            title: 'Đã gửi yêu cầu!',
+            html: `<div style="line-height:1.6">Bên mình sẽ liên hệ sớm qua <b>Zalo/Điện thoại</b> bạn đã để lại nhé.</div>`,
+            confirmButtonColor: '#d9c210',
+          });
+        } else {
+          this._alertError('Gửi yêu cầu chưa thành công. Hãy thử lại lần sau nhé!');
+        }
       } catch (ex) {
         console.error(ex);
-        this._setLoading(false); // ✅ đóng loading trước
+        this._setLoading(false);
         this._alertError('Gửi yêu cầu chưa thành công. Hãy thử lại lần sau nhé!');
       }
     });
   }
 
+  async _sendEmail(payload) {
+    if (!this.endpointUrl) throw new Error('Missing endpointUrl');
+
+    const response = await fetch(this.endpointUrl, {
+      method: 'POST',
+      mode: 'cors',
+      headers: {
+        'Content-Type': 'text/plain;charset=utf-8',
+      },
+      body: JSON.stringify(payload),
+    });
+
+    return response;
+  }
+
   _readForm() {
-    // bạn đổi name="" theo form thật của bạn
     const fullName = this.form.querySelector('[name="fullName"]')?.value?.trim() || '';
     const phone = this.form.querySelector('[name="phone"]')?.value?.trim() || '';
     const email = this.form.querySelector('[name="email"]')?.value?.trim() || '';
@@ -94,19 +120,35 @@ export class PdFormService {
     return '';
   }
 
-  async _sendEmail({ subject, html }) {
-    if (!this.endpointUrl) throw new Error('Missing endpointUrl');
+  async canSend(key, ttlMs = 60000) {
+    const now = Date.now();
+    const last = Number(localStorage.getItem(key) || 0);
+    if (now - last < ttlMs) return false;
+    localStorage.setItem(key, String(now));
+    return true;
+  }
 
-    const response = await fetch(this.endpointUrl, {
-      method: 'POST',
-      mode: 'no-cors',
-      headers: {
-        'Content-Type': 'text/plain;charset=utf-8',
-      },
-      body: JSON.stringify({ subject, html }),
+  uuidv4() {
+    if (crypto?.randomUUID) return crypto.randomUUID();
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, c => {
+      const r = (Math.random() * 16) | 0;
+      const v = c === 'x' ? r : (r & 0x3) | 0x8;
+      return v.toString(16);
     });
+  }
 
-    return response;
+  getOrCreateClientKey() {
+    const KEY = 'pnf_client_key';
+    let v = localStorage.getItem(KEY);
+    if (!v) {
+      v = this.uuidv4();
+      localStorage.setItem(KEY, v);
+    }
+    return v;
+  }
+
+  getBrowserType() {
+    return navigator.userAgent || '';
   }
 
   _alertWarning(messageHtml) {
