@@ -263,12 +263,14 @@ function initFeaturedProductsController() {
     loadMoreBtn.style.display = visible >= filteredItems.length ? 'none' : '';
   }
 
-  function applyFilter(filterValue) {
+  function applyFilter(filterValue, shouldScroll = true) {
     currentFilter = filterValue || 'all';
     filteredItems = computeFiltered(currentFilter);
     visible = Math.min(STEP, filteredItems.length);
     renderInitial();
-    productsContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    if (shouldScroll) {
+      productsContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
   }
 
   function revealRange(fromIndex, toIndex) {
@@ -316,15 +318,16 @@ function initFeaturedProductsController() {
 
       e.preventDefault();
       const filterValue = btn.dataset.filter || 'all';
+
       setActiveTab(filterValue);
-      applyFilter(filterValue);
+      applyFilter(filterValue, true);
     });
   }
 
   const activeBtn = filterTabs ? filterTabs.querySelector('button[data-filter].active') : null;
   const initialFilter = activeBtn ? activeBtn.dataset.filter : 'all';
   setActiveTab(initialFilter || 'all');
-  applyFilter(initialFilter || 'all');
+  applyFilter(initialFilter || 'all', false);
 }
 
 // ---------- Main: build the grid from JSON ----------
