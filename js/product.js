@@ -4,7 +4,8 @@ const service = new PdFormService({
   formSelector: '#pd-form',
   endpointUrl:
     // 'https://script.google.com/macros/s/AKfycbw3_exQfnwQlCOreof9fq7Kp_SCSCDivZI5Pag7o8yRxAexzsbV_kEP4fR4lneh_I2g/exec',
-    'https://script.google.com/macros/s/AKfycbz6OxMb48_YsnDxsuSAw_RsJgPvwlnBfMtStk54nUU9HcyGhx_YPW1BLI9ZPznsPbb3/exec',
+    // 'https://script.google.com/macros/s/AKfycbz6OxMb48_YsnDxsuSAw_RsJgPvwlnBfMtStk54nUU9HcyGhx_YPW1BLI9ZPznsPbb3/exec',
+    'https://script.google.com/macros/s/AKfycbzQh3kL9-NS_5A_EJ6iMDJsPaPfnnkUF3vxM_kyVKnFl1zFsw_oH6MTP6ynp7Oy4-5E/exec',
   deploymentId: 'AKfycbw3_exQfnwQlCOreof9fq7Kp_SCSCDivZI5Pag7o8yRxAexzsbV_kEP4fR4lneh_I2g',
   getProductName: () => product?.title || '',
 });

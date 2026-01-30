@@ -428,5 +428,1394 @@
         "img": "data/product-detail/pnf-vai-gia-day/main.jpg"
       }
     ]
+  },
+  "pnf-carpet-01": {
+    "code": "pnf-carpet-01",
+    "category": "custom-fabric",
+    "title": "pnf-carpet-01",
+    "categoryLabel": "pnf-carpet-01",
+    "stock": true,
+    "processing": true,
+    "origin": "Việt Nam",
+    "moq": "Tuỳ mẫu",
+    "lead": "10 - 20 ngày",
+    "images": [
+      "data/custom-product/carpet/main.jpg",
+      "data/custom-product/carpet/detailed1.jpg",
+      "data/custom-product/carpet/detailed2.jpg",
+      "data/custom-product/carpet/detailed3.jpg",
+      "data/custom-product/carpet/detailed4.jpg"
+    ],
+    "colors": [
+      {
+        "name": "Nâu",
+        "hex": "#9A7C5C"
+      },
+      {
+        "name": "Than",
+        "hex": "#3C3F45"
+      }
+    ],
+    "widths": ["1.58m"],
+    "gsms": ["150g", "430g"],
+    "checks": ["Độ bền cao", "Ít thấm nước", "Thô mộc", "Thân thiện môi trường"],
+    "specs": {
+      "Dệt": "Dệt chặt, độ bền cao; ít thấm nước.",
+      "Chất liệu": "Kết hợp sợi bông tự nhiên (cotton) và sợi gai dầu.",
+      "Ứng dụng": "Túi xách, balo, giày dép thời trang - Bạt che, lều, bọc nội thất - Tranh vẽ nghệ thuật (tranh sơn dầu) - Quần áo (quần tây, áo khoác), rèm cửa, vỏ gối."
+    },
+    "use": "Dùng làm túi xách, balo, giày dép thời trang; bạt che, lều, bọc nội thất; tranh vẽ nghệ thuật (tranh sơn dầu) vì khả năng giữ màu và bảo quản tác phẩm lâu dài; ngoài ra còn làm quần áo (quần tây, áo khoác), rèm cửa, vỏ gối.",
+    "highlights": ["Dày dặn", "Bền màu"],
+    "related": [
+      {
+        "id": "pnf-khong-det",
+        "title": "Vải Không Dệt",
+        "img": "data/product-detail/pnf-khong-det/main.jpg"
+      },
+      {
+        "id": "pnf-vai-gia-day",
+        "title": "Vải Giả Đay",
+        "img": "data/product-detail/pnf-vai-gia-day/main.jpg"
+      }
+    ]
+  },
+  "pnf-gn-01": {
+    "code": "pnf-gn-01",
+    "category": "custom-fabric",
+    "title": "pnf-gn-01",
+    "categoryLabel": "pnf-gn-01",
+    "stock": true,
+    "processing": true,
+    "origin": "Việt Nam",
+    "moq": "Tuỳ mẫu",
+    "lead": "10 - 20 ngày",
+    "images": [
+      "data/custom-product/ghe-nem/pnf-gn-01-main.jpg",
+      "data/custom-product/ghe-nem/pnf-gn-01-detailed1.jpg",
+      "data/custom-product/ghe-nem/pnf-gn-01-detailed2.jpg",
+      "data/custom-product/ghe-nem/pnf-gn-01-detailed3.jpg",
+      "data/custom-product/ghe-nem/pnf-gn-01-detailed4.jpg"
+    ],
+    "colors": [
+      {
+        "name": "Nâu",
+        "hex": "#9A7C5C"
+      },
+      {
+        "name": "Than",
+        "hex": "#3C3F45"
+      }
+    ],
+    "widths": ["1.58m"],
+    "gsms": ["150g", "430g"],
+    "checks": ["Độ bền cao", "Ít thấm nước", "Thô mộc", "Thân thiện môi trường"],
+    "specs": {
+      "Dệt": "Dệt chặt, độ bền cao; ít thấm nước.",
+      "Chất liệu": "Kết hợp sợi bông tự nhiên (cotton) và sợi gai dầu.",
+      "Ứng dụng": "Túi xách, balo, giày dép thời trang - Bạt che, lều, bọc nội thất - Tranh vẽ nghệ thuật (tranh sơn dầu) - Quần áo (quần tây, áo khoác), rèm cửa, vỏ gối."
+    },
+    "use": "Dùng làm túi xách, balo, giày dép thời trang; bạt che, lều, bọc nội thất; tranh vẽ nghệ thuật (tranh sơn dầu) vì khả năng giữ màu và bảo quản tác phẩm lâu dài; ngoài ra còn làm quần áo (quần tây, áo khoác), rèm cửa, vỏ gối.",
+    "highlights": ["Dày dặn", "Bền màu"],
+    "related": [
+      {
+        "id": "pnf-khong-det",
+        "title": "Vải Không Dệt",
+        "img": "data/product-detail/pnf-khong-det/main.jpg"
+      },
+      {
+        "id": "pnf-vai-gia-day",
+        "title": "Vải Giả Đay",
+        "img": "data/product-detail/pnf-vai-gia-day/main.jpg"
+      }
+    ]
+  },
+  "pnf-gn-02": {
+    "code": "pnf-gn-02",
+    "category": "custom-fabric",
+    "title": "pnf-gn-02",
+    "categoryLabel": "pnf-gn-02",
+    "stock": true,
+    "processing": true,
+    "origin": "Việt Nam",
+    "moq": "Tuỳ mẫu",
+    "lead": "10 - 20 ngày",
+    "images": [
+      "data/custom-product/ghe-nem/pnf-gn-02-main.jpg",
+      "data/custom-product/ghe-nem/pnf-gn-02-detailed1.png",
+      "data/custom-product/ghe-nem/pnf-gn-02-detailed2.png",
+      "data/custom-product/ghe-nem/pnf-gn-02-detailed3.png",
+      "data/custom-product/ghe-nem/pnf-gn-02-detailed4.png"
+    ],
+    "colors": [
+      {
+        "name": "Nâu",
+        "hex": "#9A7C5C"
+      },
+      {
+        "name": "Than",
+        "hex": "#3C3F45"
+      }
+    ],
+    "widths": ["1.58m"],
+    "gsms": ["150g", "430g"],
+    "checks": ["Độ bền cao", "Ít thấm nước", "Thô mộc", "Thân thiện môi trường"],
+    "specs": {
+      "Dệt": "Dệt chặt, độ bền cao; ít thấm nước.",
+      "Chất liệu": "Kết hợp sợi bông tự nhiên (cotton) và sợi gai dầu.",
+      "Ứng dụng": "Túi xách, balo, giày dép thời trang - Bạt che, lều, bọc nội thất - Tranh vẽ nghệ thuật (tranh sơn dầu) - Quần áo (quần tây, áo khoác), rèm cửa, vỏ gối."
+    },
+    "use": "Dùng làm túi xách, balo, giày dép thời trang; bạt che, lều, bọc nội thất; tranh vẽ nghệ thuật (tranh sơn dầu) vì khả năng giữ màu và bảo quản tác phẩm lâu dài; ngoài ra còn làm quần áo (quần tây, áo khoác), rèm cửa, vỏ gối.",
+    "highlights": ["Dày dặn", "Bền màu"],
+    "related": [
+      {
+        "id": "pnf-khong-det",
+        "title": "Vải Không Dệt",
+        "img": "data/product-detail/pnf-khong-det/main.jpg"
+      },
+      {
+        "id": "pnf-vai-gia-day",
+        "title": "Vải Giả Đay",
+        "img": "data/product-detail/pnf-vai-gia-day/main.jpg"
+      }
+    ]
+  },
+  "pnf-gn-03": {
+    "code": "pnf-gn-03",
+    "category": "custom-fabric",
+    "title": "pnf-gn-03",
+    "categoryLabel": "pnf-gn-03",
+    "stock": true,
+    "processing": true,
+    "origin": "Việt Nam",
+    "moq": "Tuỳ mẫu",
+    "lead": "10 - 20 ngày",
+    "images": [
+      "data/custom-product/ghe-nem/pnf-gn-03-main.jpg",
+      "data/custom-product/ghe-nem/pnf-gn-03-detailed1.png",
+      "data/custom-product/ghe-nem/pnf-gn-03-detailed2.jpg",
+      "data/custom-product/ghe-nem/pnf-gn-03-detailed3.jpg",
+      "data/custom-product/ghe-nem/pnf-gn-03-detailed4.jpg",
+      "data/custom-product/ghe-nem/pnf-gn-03-detailed5.jpg"
+    ],
+    "colors": [
+      {
+        "name": "Nâu",
+        "hex": "#9A7C5C"
+      },
+      {
+        "name": "Than",
+        "hex": "#3C3F45"
+      }
+    ],
+    "widths": ["1.58m"],
+    "gsms": ["150g", "430g"],
+    "checks": ["Độ bền cao", "Ít thấm nước", "Thô mộc", "Thân thiện môi trường"],
+    "specs": {
+      "Dệt": "Dệt chặt, độ bền cao; ít thấm nước.",
+      "Chất liệu": "Kết hợp sợi bông tự nhiên (cotton) và sợi gai dầu.",
+      "Ứng dụng": "Túi xách, balo, giày dép thời trang - Bạt che, lều, bọc nội thất - Tranh vẽ nghệ thuật (tranh sơn dầu) - Quần áo (quần tây, áo khoác), rèm cửa, vỏ gối."
+    },
+    "use": "Dùng làm túi xách, balo, giày dép thời trang; bạt che, lều, bọc nội thất; tranh vẽ nghệ thuật (tranh sơn dầu) vì khả năng giữ màu và bảo quản tác phẩm lâu dài; ngoài ra còn làm quần áo (quần tây, áo khoác), rèm cửa, vỏ gối.",
+    "highlights": ["Dày dặn", "Bền màu"],
+    "related": [
+      {
+        "id": "pnf-khong-det",
+        "title": "Vải Không Dệt",
+        "img": "data/product-detail/pnf-khong-det/main.jpg"
+      },
+      {
+        "id": "pnf-vai-gia-day",
+        "title": "Vải Giả Đay",
+        "img": "data/product-detail/pnf-vai-gia-day/main.jpg"
+      }
+    ]
+  },
+  "pnf-gn-04": {
+    "code": "pnf-gn-04",
+    "category": "custom-fabric",
+    "title": "pnf-gn-04",
+    "categoryLabel": "pnf-gn-04",
+    "stock": true,
+    "processing": true,
+    "origin": "Việt Nam",
+    "moq": "Tuỳ mẫu",
+    "lead": "10 - 20 ngày",
+    "images": [
+      "data/custom-product/ghe-nem/pnf-gn-04-main.png",
+      "data/custom-product/ghe-nem/pnf-gn-04-detailed1.png",
+      "data/custom-product/ghe-nem/pnf-gn-04-detailed2.png",
+      "data/custom-product/ghe-nem/pnf-gn-04-detailed3.png"
+    ],
+    "colors": [
+      {
+        "name": "Nâu",
+        "hex": "#9A7C5C"
+      },
+      {
+        "name": "Than",
+        "hex": "#3C3F45"
+      }
+    ],
+    "widths": ["1.58m"],
+    "gsms": ["150g", "430g"],
+    "checks": ["Độ bền cao", "Ít thấm nước", "Thô mộc", "Thân thiện môi trường"],
+    "specs": {
+      "Dệt": "Dệt chặt, độ bền cao; ít thấm nước.",
+      "Chất liệu": "Kết hợp sợi bông tự nhiên (cotton) và sợi gai dầu.",
+      "Ứng dụng": "Túi xách, balo, giày dép thời trang - Bạt che, lều, bọc nội thất - Tranh vẽ nghệ thuật (tranh sơn dầu) - Quần áo (quần tây, áo khoác), rèm cửa, vỏ gối."
+    },
+    "use": "Dùng làm túi xách, balo, giày dép thời trang; bạt che, lều, bọc nội thất; tranh vẽ nghệ thuật (tranh sơn dầu) vì khả năng giữ màu và bảo quản tác phẩm lâu dài; ngoài ra còn làm quần áo (quần tây, áo khoác), rèm cửa, vỏ gối.",
+    "highlights": ["Dày dặn", "Bền màu"],
+    "related": [
+      {
+        "id": "pnf-khong-det",
+        "title": "Vải Không Dệt",
+        "img": "data/product-detail/pnf-khong-det/main.jpg"
+      },
+      {
+        "id": "pnf-vai-gia-day",
+        "title": "Vải Giả Đay",
+        "img": "data/product-detail/pnf-vai-gia-day/main.jpg"
+      }
+    ]
+  },
+  "pnf-gn-05": {
+    "code": "pnf-gn-05",
+    "category": "custom-fabric",
+    "title": "pnf-gn-05",
+    "categoryLabel": "pnf-gn-05",
+    "stock": true,
+    "processing": true,
+    "origin": "Việt Nam",
+    "moq": "Tuỳ mẫu",
+    "lead": "10 - 20 ngày",
+    "images": [
+      "data/custom-product/ghe-nem/pnf-gn-05-main.jpg",
+      "data/custom-product/ghe-nem/pnf-gn-05-detailed1.png",
+      "data/custom-product/ghe-nem/pnf-gn-05-detailed2.jpg",
+      "data/custom-product/ghe-nem/pnf-gn-05-detailed3.jpg"
+    ],
+    "colors": [
+      {
+        "name": "Nâu",
+        "hex": "#9A7C5C"
+      },
+      {
+        "name": "Than",
+        "hex": "#3C3F45"
+      }
+    ],
+    "widths": ["1.58m"],
+    "gsms": ["150g", "430g"],
+    "checks": ["Độ bền cao", "Ít thấm nước", "Thô mộc", "Thân thiện môi trường"],
+    "specs": {
+      "Dệt": "Dệt chặt, độ bền cao; ít thấm nước.",
+      "Chất liệu": "Kết hợp sợi bông tự nhiên (cotton) và sợi gai dầu.",
+      "Ứng dụng": "Túi xách, balo, giày dép thời trang - Bạt che, lều, bọc nội thất - Tranh vẽ nghệ thuật (tranh sơn dầu) - Quần áo (quần tây, áo khoác), rèm cửa, vỏ gối."
+    },
+    "use": "Dùng làm túi xách, balo, giày dép thời trang; bạt che, lều, bọc nội thất; tranh vẽ nghệ thuật (tranh sơn dầu) vì khả năng giữ màu và bảo quản tác phẩm lâu dài; ngoài ra còn làm quần áo (quần tây, áo khoác), rèm cửa, vỏ gối.",
+    "highlights": ["Dày dặn", "Bền màu"],
+    "related": [
+      {
+        "id": "pnf-khong-det",
+        "title": "Vải Không Dệt",
+        "img": "data/product-detail/pnf-khong-det/main.jpg"
+      },
+      {
+        "id": "pnf-vai-gia-day",
+        "title": "Vải Giả Đay",
+        "img": "data/product-detail/pnf-vai-gia-day/main.jpg"
+      }
+    ]
+  },
+  "pnf-poly-100": {
+    "code": "pnf-poly-100",
+    "category": "custom-fabric",
+    "title": "Vải Poly 100%",
+    "categoryLabel": "Vải Poly 100%",
+    "stock": true,
+    "processing": true,
+    "origin": "Việt Nam",
+    "moq": "Tuỳ mẫu",
+    "lead": "10 - 20 ngày",
+    "images": [
+      "data/custom-product/poly-100/pnf-poly-main.png",
+      "data/custom-product/poly-100/pnf-poly-detailed1.jpg",
+      "data/custom-product/poly-100/pnf-poly-detailed2.png",
+      "data/custom-product/poly-100/pnf-poly-detailed3.png",
+      "data/custom-product/poly-100/pnf-poly-detailed4.png"
+    ],
+    "colors": [
+      {
+        "name": "Nâu",
+        "hex": "#9A7C5C"
+      },
+      {
+        "name": "Than",
+        "hex": "#3C3F45"
+      }
+    ],
+    "widths": ["1.58m"],
+    "gsms": ["150g", "430g"],
+    "checks": ["Độ bền cao", "Ít thấm nước", "Thô mộc", "Thân thiện môi trường"],
+    "specs": {
+      "Dệt": "Dệt chặt, độ bền cao; ít thấm nước.",
+      "Chất liệu": "Kết hợp sợi bông tự nhiên (cotton) và sợi gai dầu.",
+      "Ứng dụng": "Túi xách, balo, giày dép thời trang - Bạt che, lều, bọc nội thất - Tranh vẽ nghệ thuật (tranh sơn dầu) - Quần áo (quần tây, áo khoác), rèm cửa, vỏ gối."
+    },
+    "use": "Dùng làm túi xách, balo, giày dép thời trang; bạt che, lều, bọc nội thất; tranh vẽ nghệ thuật (tranh sơn dầu) vì khả năng giữ màu và bảo quản tác phẩm lâu dài; ngoài ra còn làm quần áo (quần tây, áo khoác), rèm cửa, vỏ gối.",
+    "highlights": ["Dày dặn", "Bền màu"],
+    "related": [
+      {
+        "id": "pnf-khong-det",
+        "title": "Vải Không Dệt",
+        "img": "data/product-detail/pnf-khong-det/main.jpg"
+      },
+      {
+        "id": "pnf-vai-gia-day",
+        "title": "Vải Giả Đay",
+        "img": "data/product-detail/pnf-vai-gia-day/main.jpg"
+      }
+    ]
+  },
+  "pnf-custom-product": {
+    "code": "pnf-custom-product",
+    "category": "custom-fabric",
+    "title": "Vải Tùy Chỉnh",
+    "categoryLabel": "Vải Tùy Chỉnh",
+    "stock": true,
+    "processing": true,
+    "origin": "Việt Nam",
+    "moq": "Tuỳ mẫu",
+    "lead": "10 - 20 ngày",
+    "images": [
+      "data/custom-product/pnf-custom-product-main.jpg",
+      "data/custom-product/pnf-custom-product-detailed1.jpg",
+      "data/custom-product/pnf-custom-product-detailed2.jpg"
+    ],
+    "colors": [
+      {
+        "name": "Nâu",
+        "hex": "#9A7C5C"
+      },
+      {
+        "name": "Than",
+        "hex": "#3C3F45"
+      }
+    ],
+    "widths": ["1.58m"],
+    "gsms": ["150g", "430g"],
+    "checks": ["Độ bền cao", "Ít thấm nước", "Thô mộc", "Thân thiện môi trường"],
+    "specs": {
+      "Dệt": "Dệt chặt, độ bền cao; ít thấm nước.",
+      "Chất liệu": "Kết hợp sợi bông tự nhiên (cotton) và sợi gai dầu.",
+      "Ứng dụng": "Túi xách, balo, giày dép thời trang - Bạt che, lều, bọc nội thất - Tranh vẽ nghệ thuật (tranh sơn dầu) - Quần áo (quần tây, áo khoác), rèm cửa, vỏ gối."
+    },
+    "use": "Dùng làm túi xách, balo, giày dép thời trang; bạt che, lều, bọc nội thất; tranh vẽ nghệ thuật (tranh sơn dầu) vì khả năng giữ màu và bảo quản tác phẩm lâu dài; ngoài ra còn làm quần áo (quần tây, áo khoác), rèm cửa, vỏ gối.",
+    "highlights": ["Dày dặn", "Bền màu"],
+    "related": [
+      {
+        "id": "pnf-khong-det",
+        "title": "Vải Không Dệt",
+        "img": "data/product-detail/pnf-khong-det/main.jpg"
+      },
+      {
+        "id": "pnf-vai-gia-day",
+        "title": "Vải Giả Đay",
+        "img": "data/product-detail/pnf-vai-gia-day/main.jpg"
+      }
+    ]
+  },
+  "pnf-sot-01": {
+    "code": "pnf-sot-01",
+    "category": "custom-fabric",
+    "title": "pnf-sot-01",
+    "categoryLabel": "pnf-sot-01",
+    "stock": true,
+    "processing": true,
+    "origin": "Việt Nam",
+    "moq": "Tuỳ mẫu",
+    "lead": "10 - 20 ngày",
+    "images": [
+      "data/custom-product/pnf-sot-01-main.png",
+      "data/custom-product/pnf-sot-01-detailed1.png",
+      "data/custom-product/pnf-sot-01-detailed2.jpg",
+      "data/custom-product/pnf-sot-01-detailed3.png",
+      "data/custom-product/pnf-sot-01-detailed4.png",
+      "data/custom-product/pnf-sot-01-detailed5.png",
+      "data/custom-product/pnf-sot-01-detailed6.jpg",
+      "data/custom-product/pnf-sot-01-detailed7.jpg",
+      "data/custom-product/pnf-sot-01-detailed8.jpg"
+    ],
+    "colors": [
+      {
+        "name": "Nâu",
+        "hex": "#9A7C5C"
+      },
+      {
+        "name": "Than",
+        "hex": "#3C3F45"
+      }
+    ],
+    "widths": ["1.58m"],
+    "gsms": ["150g", "430g"],
+    "checks": ["Độ bền cao", "Ít thấm nước", "Thô mộc", "Thân thiện môi trường"],
+    "specs": {
+      "Dệt": "Dệt chặt, độ bền cao; ít thấm nước.",
+      "Chất liệu": "Kết hợp sợi bông tự nhiên (cotton) và sợi gai dầu.",
+      "Ứng dụng": "Túi xách, balo, giày dép thời trang - Bạt che, lều, bọc nội thất - Tranh vẽ nghệ thuật (tranh sơn dầu) - Quần áo (quần tây, áo khoác), rèm cửa, vỏ gối."
+    },
+    "use": "Dùng làm túi xách, balo, giày dép thời trang; bạt che, lều, bọc nội thất; tranh vẽ nghệ thuật (tranh sơn dầu) vì khả năng giữ màu và bảo quản tác phẩm lâu dài; ngoài ra còn làm quần áo (quần tây, áo khoác), rèm cửa, vỏ gối.",
+    "highlights": ["Dày dặn", "Bền màu"],
+    "related": [
+      {
+        "id": "pnf-khong-det",
+        "title": "Vải Không Dệt",
+        "img": "data/product-detail/pnf-khong-det/main.jpg"
+      },
+      {
+        "id": "pnf-vai-gia-day",
+        "title": "Vải Giả Đay",
+        "img": "data/product-detail/pnf-vai-gia-day/main.jpg"
+      }
+    ]
+  },
+
+  "pnf-sot-02": {
+    "code": "pnf-sot-02",
+    "category": "custom-fabric",
+    "title": "pnf-sot-02",
+    "categoryLabel": "pnf-sot-02",
+    "stock": true,
+    "processing": true,
+    "origin": "Việt Nam",
+    "moq": "Tuỳ mẫu",
+    "lead": "10 - 20 ngày",
+    "images": [
+      "data/custom-product/pnf-sot-02-main.jpg",
+      "data/custom-product/pnf-sot-02-detailed1.jpg",
+      "data/custom-product/pnf-sot-02-detailed2.jpg",
+      "data/custom-product/pnf-sot-02-detailed3.jpg"
+    ],
+    "colors": [
+      {
+        "name": "Nâu",
+        "hex": "#9A7C5C"
+      },
+      {
+        "name": "Than",
+        "hex": "#3C3F45"
+      }
+    ],
+    "widths": ["1.58m"],
+    "gsms": ["150g", "430g"],
+    "checks": ["Độ bền cao", "Ít thấm nước", "Thô mộc", "Thân thiện môi trường"],
+    "specs": {
+      "Dệt": "Dệt chặt, độ bền cao; ít thấm nước.",
+      "Chất liệu": "Kết hợp sợi bông tự nhiên (cotton) và sợi gai dầu.",
+      "Ứng dụng": "Túi xách, balo, giày dép thời trang - Bạt che, lều, bọc nội thất - Tranh vẽ nghệ thuật (tranh sơn dầu) - Quần áo (quần tây, áo khoác), rèm cửa, vỏ gối."
+    },
+    "use": "Dùng làm túi xách, balo, giày dép thời trang; bạt che, lều, bọc nội thất; tranh vẽ nghệ thuật (tranh sơn dầu) vì khả năng giữ màu và bảo quản tác phẩm lâu dài; ngoài ra còn làm quần áo (quần tây, áo khoác), rèm cửa, vỏ gối.",
+    "highlights": ["Dày dặn", "Bền màu"],
+    "related": [
+      {
+        "id": "pnf-khong-det",
+        "title": "Vải Không Dệt",
+        "img": "data/product-detail/pnf-khong-det/main.jpg"
+      },
+      {
+        "id": "pnf-vai-gia-day",
+        "title": "Vải Giả Đay",
+        "img": "data/product-detail/pnf-vai-gia-day/main.jpg"
+      }
+    ]
+  },
+  "pnf-sot-03": {
+    "code": "pnf-sot-03",
+    "category": "custom-fabric",
+    "title": "pnf-sot-03",
+    "categoryLabel": "pnf-sot-03",
+    "stock": true,
+    "processing": true,
+    "origin": "Việt Nam",
+    "moq": "Tuỳ mẫu",
+    "lead": "10 - 20 ngày",
+    "images": [
+      "data/custom-product/pnf-sot-03-main.jpg",
+      "data/custom-product/pnf-sot-03-detailed1.jpg",
+      "data/custom-product/pnf-sot-03-detailed2.jpg"
+    ],
+    "colors": [
+      {
+        "name": "Nâu",
+        "hex": "#9A7C5C"
+      },
+      {
+        "name": "Than",
+        "hex": "#3C3F45"
+      }
+    ],
+    "widths": ["1.58m"],
+    "gsms": ["150g", "430g"],
+    "checks": ["Độ bền cao", "Ít thấm nước", "Thô mộc", "Thân thiện môi trường"],
+    "specs": {
+      "Dệt": "Dệt chặt, độ bền cao; ít thấm nước.",
+      "Chất liệu": "Kết hợp sợi bông tự nhiên (cotton) và sợi gai dầu.",
+      "Ứng dụng": "Túi xách, balo, giày dép thời trang - Bạt che, lều, bọc nội thất - Tranh vẽ nghệ thuật (tranh sơn dầu) - Quần áo (quần tây, áo khoác), rèm cửa, vỏ gối."
+    },
+    "use": "Dùng làm túi xách, balo, giày dép thời trang; bạt che, lều, bọc nội thất; tranh vẽ nghệ thuật (tranh sơn dầu) vì khả năng giữ màu và bảo quản tác phẩm lâu dài; ngoài ra còn làm quần áo (quần tây, áo khoác), rèm cửa, vỏ gối.",
+    "highlights": ["Dày dặn", "Bền màu"],
+    "related": [
+      {
+        "id": "pnf-khong-det",
+        "title": "Vải Không Dệt",
+        "img": "data/product-detail/pnf-khong-det/main.jpg"
+      },
+      {
+        "id": "pnf-vai-gia-day",
+        "title": "Vải Giả Đay",
+        "img": "data/product-detail/pnf-vai-gia-day/main.jpg"
+      }
+    ]
+  },
+  "pnf-sot-04": {
+    "code": "pnf-sot-04",
+    "category": "custom-fabric",
+    "title": "pnf-sot-04",
+    "categoryLabel": "pnf-sot-04",
+    "stock": true,
+    "processing": true,
+    "origin": "Việt Nam",
+    "moq": "Tuỳ mẫu",
+    "lead": "10 - 20 ngày",
+    "images": [
+      "data/custom-product/pnf-sot-04-main.jpg",
+      "data/custom-product/pnf-sot-04-detailed1.jpg",
+      "data/custom-product/pnf-sot-04-detailed2.jpg",
+      "data/custom-product/pnf-sot-04-detailed3.jpg",
+      "data/custom-product/pnf-sot-04-detailed4.jpg",
+      "data/custom-product/pnf-sot-04-detailed5.jpg"
+    ],
+    "colors": [
+      {
+        "name": "Nâu",
+        "hex": "#9A7C5C"
+      },
+      {
+        "name": "Than",
+        "hex": "#3C3F45"
+      }
+    ],
+    "widths": ["1.58m"],
+    "gsms": ["150g", "430g"],
+    "checks": ["Độ bền cao", "Ít thấm nước", "Thô mộc", "Thân thiện môi trường"],
+    "specs": {
+      "Dệt": "Dệt chặt, độ bền cao; ít thấm nước.",
+      "Chất liệu": "Kết hợp sợi bông tự nhiên (cotton) và sợi gai dầu.",
+      "Ứng dụng": "Túi xách, balo, giày dép thời trang - Bạt che, lều, bọc nội thất - Tranh vẽ nghệ thuật (tranh sơn dầu) - Quần áo (quần tây, áo khoác), rèm cửa, vỏ gối."
+    },
+    "use": "Dùng làm túi xách, balo, giày dép thời trang; bạt che, lều, bọc nội thất; tranh vẽ nghệ thuật (tranh sơn dầu) vì khả năng giữ màu và bảo quản tác phẩm lâu dài; ngoài ra còn làm quần áo (quần tây, áo khoác), rèm cửa, vỏ gối.",
+    "highlights": ["Dày dặn", "Bền màu"],
+    "related": [
+      {
+        "id": "pnf-khong-det",
+        "title": "Vải Không Dệt",
+        "img": "data/product-detail/pnf-khong-det/main.jpg"
+      },
+      {
+        "id": "pnf-vai-gia-day",
+        "title": "Vải Giả Đay",
+        "img": "data/product-detail/pnf-vai-gia-day/main.jpg"
+      }
+    ]
+  },
+  "pnf-sot-05": {
+    "code": "pnf-sot-05",
+    "category": "custom-fabric",
+    "title": "pnf-sot-05",
+    "categoryLabel": "pnf-sot-05",
+    "stock": true,
+    "processing": true,
+    "origin": "Việt Nam",
+    "moq": "Tuỳ mẫu",
+    "lead": "10 - 20 ngày",
+    "images": [
+      "data/custom-product/pnf-sot-05-main.jpg",
+      "data/custom-product/pnf-sot-05-detailed1.jpg",
+      "data/custom-product/pnf-sot-05-detailed2.jpg",
+      "data/custom-product/pnf-sot-05-detailed3.jpg",
+      "data/custom-product/pnf-sot-05-detailed4.jpg"
+    ],
+    "colors": [
+      {
+        "name": "Nâu",
+        "hex": "#9A7C5C"
+      },
+      {
+        "name": "Than",
+        "hex": "#3C3F45"
+      }
+    ],
+    "widths": ["1.58m"],
+    "gsms": ["150g", "430g"],
+    "checks": ["Độ bền cao", "Ít thấm nước", "Thô mộc", "Thân thiện môi trường"],
+    "specs": {
+      "Dệt": "Dệt chặt, độ bền cao; ít thấm nước.",
+      "Chất liệu": "Kết hợp sợi bông tự nhiên (cotton) và sợi gai dầu.",
+      "Ứng dụng": "Túi xách, balo, giày dép thời trang - Bạt che, lều, bọc nội thất - Tranh vẽ nghệ thuật (tranh sơn dầu) - Quần áo (quần tây, áo khoác), rèm cửa, vỏ gối."
+    },
+    "use": "Dùng làm túi xách, balo, giày dép thời trang; bạt che, lều, bọc nội thất; tranh vẽ nghệ thuật (tranh sơn dầu) vì khả năng giữ màu và bảo quản tác phẩm lâu dài; ngoài ra còn làm quần áo (quần tây, áo khoác), rèm cửa, vỏ gối.",
+    "highlights": ["Dày dặn", "Bền màu"],
+    "related": [
+      {
+        "id": "pnf-khong-det",
+        "title": "Vải Không Dệt",
+        "img": "data/product-detail/pnf-khong-det/main.jpg"
+      },
+      {
+        "id": "pnf-vai-gia-day",
+        "title": "Vải Giả Đay",
+        "img": "data/product-detail/pnf-vai-gia-day/main.jpg"
+      }
+    ]
+  },
+  "pnf-sot-06": {
+    "code": "pnf-sot-06",
+    "category": "custom-fabric",
+    "title": "pnf-sot-06",
+    "categoryLabel": "pnf-sot-06",
+    "stock": true,
+    "processing": true,
+    "origin": "Việt Nam",
+    "moq": "Tuỳ mẫu",
+    "lead": "10 - 20 ngày",
+    "images": [
+      "data/custom-product/pnf-sot-06-main.jpg",
+      "data/custom-product/pnf-sot-06-detailed1.jpg",
+      "data/custom-product/pnf-sot-06-detailed2.jpg"
+    ],
+    "colors": [
+      {
+        "name": "Nâu",
+        "hex": "#9A7C5C"
+      },
+      {
+        "name": "Than",
+        "hex": "#3C3F45"
+      }
+    ],
+    "widths": ["1.58m"],
+    "gsms": ["150g", "430g"],
+    "checks": ["Độ bền cao", "Ít thấm nước", "Thô mộc", "Thân thiện môi trường"],
+    "specs": {
+      "Dệt": "Dệt chặt, độ bền cao; ít thấm nước.",
+      "Chất liệu": "Kết hợp sợi bông tự nhiên (cotton) và sợi gai dầu.",
+      "Ứng dụng": "Túi xách, balo, giày dép thời trang - Bạt che, lều, bọc nội thất - Tranh vẽ nghệ thuật (tranh sơn dầu) - Quần áo (quần tây, áo khoác), rèm cửa, vỏ gối."
+    },
+    "use": "Dùng làm túi xách, balo, giày dép thời trang; bạt che, lều, bọc nội thất; tranh vẽ nghệ thuật (tranh sơn dầu) vì khả năng giữ màu và bảo quản tác phẩm lâu dài; ngoài ra còn làm quần áo (quần tây, áo khoác), rèm cửa, vỏ gối.",
+    "highlights": ["Dày dặn", "Bền màu"],
+    "related": [
+      {
+        "id": "pnf-khong-det",
+        "title": "Vải Không Dệt",
+        "img": "data/product-detail/pnf-khong-det/main.jpg"
+      },
+      {
+        "id": "pnf-vai-gia-day",
+        "title": "Vải Giả Đay",
+        "img": "data/product-detail/pnf-vai-gia-day/main.jpg"
+      }
+    ]
+  },
+  "pnf-sot-07": {
+    "code": "pnf-sot-07",
+    "category": "custom-fabric",
+    "title": "pnf-sot-07",
+    "categoryLabel": "pnf-sot-07",
+    "stock": true,
+    "processing": true,
+    "origin": "Việt Nam",
+    "moq": "Tuỳ mẫu",
+    "lead": "10 - 20 ngày",
+    "images": [
+      "data/custom-product/pnf-sot-07-main.jpg",
+      "data/custom-product/pnf-sot-07-detailed1.jpg",
+      "data/custom-product/pnf-sot-07-detailed2.jpg",
+      "data/custom-product/pnf-sot-07-detailed3.jpg",
+      "data/custom-product/pnf-sot-07-detailed4.jpg"
+    ],
+    "colors": [
+      {
+        "name": "Nâu",
+        "hex": "#9A7C5C"
+      },
+      {
+        "name": "Than",
+        "hex": "#3C3F45"
+      }
+    ],
+    "widths": ["1.58m"],
+    "gsms": ["150g", "430g"],
+    "checks": ["Độ bền cao", "Ít thấm nước", "Thô mộc", "Thân thiện môi trường"],
+    "specs": {
+      "Dệt": "Dệt chặt, độ bền cao; ít thấm nước.",
+      "Chất liệu": "Kết hợp sợi bông tự nhiên (cotton) và sợi gai dầu.",
+      "Ứng dụng": "Túi xách, balo, giày dép thời trang - Bạt che, lều, bọc nội thất - Tranh vẽ nghệ thuật (tranh sơn dầu) - Quần áo (quần tây, áo khoác), rèm cửa, vỏ gối."
+    },
+    "use": "Dùng làm túi xách, balo, giày dép thời trang; bạt che, lều, bọc nội thất; tranh vẽ nghệ thuật (tranh sơn dầu) vì khả năng giữ màu và bảo quản tác phẩm lâu dài; ngoài ra còn làm quần áo (quần tây, áo khoác), rèm cửa, vỏ gối.",
+    "highlights": ["Dày dặn", "Bền màu"],
+    "related": [
+      {
+        "id": "pnf-khong-det",
+        "title": "Vải Không Dệt",
+        "img": "data/product-detail/pnf-khong-det/main.jpg"
+      },
+      {
+        "id": "pnf-vai-gia-day",
+        "title": "Vải Giả Đay",
+        "img": "data/product-detail/pnf-vai-gia-day/main.jpg"
+      }
+    ]
+  },
+  "pnf-sot-08": {
+    "code": "pnf-sot-08",
+    "category": "custom-fabric",
+    "title": "pnf-sot-08",
+    "categoryLabel": "pnf-sot-08",
+    "stock": true,
+    "processing": true,
+    "origin": "Việt Nam",
+    "moq": "Tuỳ mẫu",
+    "lead": "10 - 20 ngày",
+    "images": [
+      "data/custom-product/pnf-sot-08-main.jpg",
+      "data/custom-product/pnf-sot-08-detailed1.jpg",
+      "data/custom-product/pnf-sot-08-detailed2.jpg",
+      "data/custom-product/pnf-sot-08-detailed3.jpg",
+      "data/custom-product/pnf-sot-08-detailed4.jpg",
+      "data/custom-product/pnf-sot-08-detailed5.jpg",
+      "data/custom-product/pnf-sot-08-detailed6.jpg"
+    ],
+    "colors": [
+      {
+        "name": "Nâu",
+        "hex": "#9A7C5C"
+      },
+      {
+        "name": "Than",
+        "hex": "#3C3F45"
+      }
+    ],
+    "widths": ["1.58m"],
+    "gsms": ["150g", "430g"],
+    "checks": ["Độ bền cao", "Ít thấm nước", "Thô mộc", "Thân thiện môi trường"],
+    "specs": {
+      "Dệt": "Dệt chặt, độ bền cao; ít thấm nước.",
+      "Chất liệu": "Kết hợp sợi bông tự nhiên (cotton) và sợi gai dầu.",
+      "Ứng dụng": "Túi xách, balo, giày dép thời trang - Bạt che, lều, bọc nội thất - Tranh vẽ nghệ thuật (tranh sơn dầu) - Quần áo (quần tây, áo khoác), rèm cửa, vỏ gối."
+    },
+    "use": "Dùng làm túi xách, balo, giày dép thời trang; bạt che, lều, bọc nội thất; tranh vẽ nghệ thuật (tranh sơn dầu) vì khả năng giữ màu và bảo quản tác phẩm lâu dài; ngoài ra còn làm quần áo (quần tây, áo khoác), rèm cửa, vỏ gối.",
+    "highlights": ["Dày dặn", "Bền màu"],
+    "related": [
+      {
+        "id": "pnf-khong-det",
+        "title": "Vải Không Dệt",
+        "img": "data/product-detail/pnf-khong-det/main.jpg"
+      },
+      {
+        "id": "pnf-vai-gia-day",
+        "title": "Vải Giả Đay",
+        "img": "data/product-detail/pnf-vai-gia-day/main.jpg"
+      }
+    ]
+  },
+  "pnf-sot-09": {
+    "code": "pnf-sot-09",
+    "category": "custom-fabric",
+    "title": "pnf-sot-09",
+    "categoryLabel": "pnf-sot-09",
+    "stock": true,
+    "processing": true,
+    "origin": "Việt Nam",
+    "moq": "Tuỳ mẫu",
+    "lead": "10 - 20 ngày",
+    "images": [
+      "data/custom-product/pnf-sot-09-main.jpg",
+      "data/custom-product/pnf-sot-09-detailed1.jpg",
+      "data/custom-product/pnf-sot-09-detailed2.jpg",
+      "data/custom-product/pnf-sot-09-detailed3.jpg",
+      "data/custom-product/pnf-sot-09-detailed4.jpg"
+    ],
+    "colors": [
+      {
+        "name": "Nâu",
+        "hex": "#9A7C5C"
+      },
+      {
+        "name": "Than",
+        "hex": "#3C3F45"
+      }
+    ],
+    "widths": ["1.58m"],
+    "gsms": ["150g", "430g"],
+    "checks": ["Độ bền cao", "Ít thấm nước", "Thô mộc", "Thân thiện môi trường"],
+    "specs": {
+      "Dệt": "Dệt chặt, độ bền cao; ít thấm nước.",
+      "Chất liệu": "Kết hợp sợi bông tự nhiên (cotton) và sợi gai dầu.",
+      "Ứng dụng": "Túi xách, balo, giày dép thời trang - Bạt che, lều, bọc nội thất - Tranh vẽ nghệ thuật (tranh sơn dầu) - Quần áo (quần tây, áo khoác), rèm cửa, vỏ gối."
+    },
+    "use": "Dùng làm túi xách, balo, giày dép thời trang; bạt che, lều, bọc nội thất; tranh vẽ nghệ thuật (tranh sơn dầu) vì khả năng giữ màu và bảo quản tác phẩm lâu dài; ngoài ra còn làm quần áo (quần tây, áo khoác), rèm cửa, vỏ gối.",
+    "highlights": ["Dày dặn", "Bền màu"],
+    "related": [
+      {
+        "id": "pnf-khong-det",
+        "title": "Vải Không Dệt",
+        "img": "data/product-detail/pnf-khong-det/main.jpg"
+      },
+      {
+        "id": "pnf-vai-gia-day",
+        "title": "Vải Giả Đay",
+        "img": "data/product-detail/pnf-vai-gia-day/main.jpg"
+      }
+    ]
+  },
+  "pnf-sot-10": {
+    "code": "pnf-sot-10",
+    "category": "custom-fabric",
+    "title": "pnf-sot-10",
+    "categoryLabel": "pnf-sot-10",
+    "stock": true,
+    "processing": true,
+    "origin": "Việt Nam",
+    "moq": "Tuỳ mẫu",
+    "lead": "10 - 20 ngày",
+    "images": [
+      "data/custom-product/pnf-sot-10-main.jpg",
+      "data/custom-product/pnf-sot-10-detailed1.jpg",
+      "data/custom-product/pnf-sot-10-detailed2.jpg",
+      "data/custom-product/pnf-sot-10-detailed3.jpg"
+    ],
+    "colors": [
+      {
+        "name": "Nâu",
+        "hex": "#9A7C5C"
+      },
+      {
+        "name": "Than",
+        "hex": "#3C3F45"
+      }
+    ],
+    "widths": ["1.58m"],
+    "gsms": ["150g", "430g"],
+    "checks": ["Độ bền cao", "Ít thấm nước", "Thô mộc", "Thân thiện môi trường"],
+    "specs": {
+      "Dệt": "Dệt chặt, độ bền cao; ít thấm nước.",
+      "Chất liệu": "Kết hợp sợi bông tự nhiên (cotton) và sợi gai dầu.",
+      "Ứng dụng": "Túi xách, balo, giày dép thời trang - Bạt che, lều, bọc nội thất - Tranh vẽ nghệ thuật (tranh sơn dầu) - Quần áo (quần tây, áo khoác), rèm cửa, vỏ gối."
+    },
+    "use": "Dùng làm túi xách, balo, giày dép thời trang; bạt che, lều, bọc nội thất; tranh vẽ nghệ thuật (tranh sơn dầu) vì khả năng giữ màu và bảo quản tác phẩm lâu dài; ngoài ra còn làm quần áo (quần tây, áo khoác), rèm cửa, vỏ gối.",
+    "highlights": ["Dày dặn", "Bền màu"],
+    "related": [
+      {
+        "id": "pnf-khong-det",
+        "title": "Vải Không Dệt",
+        "img": "data/product-detail/pnf-khong-det/main.jpg"
+      },
+      {
+        "id": "pnf-vai-gia-day",
+        "title": "Vải Giả Đay",
+        "img": "data/product-detail/pnf-vai-gia-day/main.jpg"
+      }
+    ]
+  },
+  "pnf-sot-11": {
+    "code": "pnf-sot-11",
+    "category": "custom-fabric",
+    "title": "pnf-sot-11",
+    "categoryLabel": "pnf-sot-11",
+    "stock": true,
+    "processing": true,
+    "origin": "Việt Nam",
+    "moq": "Tuỳ mẫu",
+    "lead": "10 - 20 ngày",
+    "images": [
+      "data/custom-product/pnf-sot-11-main.jpg",
+      "data/custom-product/pnf-sot-11-detailed1.jpg",
+      "data/custom-product/pnf-sot-11-detailed2.jpg",
+      "data/custom-product/pnf-sot-11-detailed3.jpg"
+    ],
+    "colors": [
+      {
+        "name": "Nâu",
+        "hex": "#9A7C5C"
+      },
+      {
+        "name": "Than",
+        "hex": "#3C3F45"
+      }
+    ],
+    "widths": ["1.58m"],
+    "gsms": ["150g", "430g"],
+    "checks": ["Độ bền cao", "Ít thấm nước", "Thô mộc", "Thân thiện môi trường"],
+    "specs": {
+      "Dệt": "Dệt chặt, độ bền cao; ít thấm nước.",
+      "Chất liệu": "Kết hợp sợi bông tự nhiên (cotton) và sợi gai dầu.",
+      "Ứng dụng": "Túi xách, balo, giày dép thời trang - Bạt che, lều, bọc nội thất - Tranh vẽ nghệ thuật (tranh sơn dầu) - Quần áo (quần tây, áo khoác), rèm cửa, vỏ gối."
+    },
+    "use": "Dùng làm túi xách, balo, giày dép thời trang; bạt che, lều, bọc nội thất; tranh vẽ nghệ thuật (tranh sơn dầu) vì khả năng giữ màu và bảo quản tác phẩm lâu dài; ngoài ra còn làm quần áo (quần tây, áo khoác), rèm cửa, vỏ gối.",
+    "highlights": ["Dày dặn", "Bền màu"],
+    "related": [
+      {
+        "id": "pnf-khong-det",
+        "title": "Vải Không Dệt",
+        "img": "data/product-detail/pnf-khong-det/main.jpg"
+      },
+      {
+        "id": "pnf-vai-gia-day",
+        "title": "Vải Giả Đay",
+        "img": "data/product-detail/pnf-vai-gia-day/main.jpg"
+      }
+    ]
+  },
+  "pnf-sot-12": {
+    "code": "pnf-sot-12",
+    "category": "custom-fabric",
+    "title": "pnf-sot-12",
+    "categoryLabel": "pnf-sot-12",
+    "stock": true,
+    "processing": true,
+    "origin": "Việt Nam",
+    "moq": "Tuỳ mẫu",
+    "lead": "10 - 20 ngày",
+    "images": [
+      "data/custom-product/pnf-sot-12-main.png",
+      "data/custom-product/pnf-sot-12-detailed1.png",
+      "data/custom-product/pnf-sot-12-detailed2.png"
+    ],
+    "colors": [
+      {
+        "name": "Nâu",
+        "hex": "#9A7C5C"
+      },
+      {
+        "name": "Than",
+        "hex": "#3C3F45"
+      }
+    ],
+    "widths": ["1.58m"],
+    "gsms": ["150g", "430g"],
+    "checks": ["Độ bền cao", "Ít thấm nước", "Thô mộc", "Thân thiện môi trường"],
+    "specs": {
+      "Dệt": "Dệt chặt, độ bền cao; ít thấm nước.",
+      "Chất liệu": "Kết hợp sợi bông tự nhiên (cotton) và sợi gai dầu.",
+      "Ứng dụng": "Túi xách, balo, giày dép thời trang - Bạt che, lều, bọc nội thất - Tranh vẽ nghệ thuật (tranh sơn dầu) - Quần áo (quần tây, áo khoác), rèm cửa, vỏ gối."
+    },
+    "use": "Dùng làm túi xách, balo, giày dép thời trang; bạt che, lều, bọc nội thất; tranh vẽ nghệ thuật (tranh sơn dầu) vì khả năng giữ màu và bảo quản tác phẩm lâu dài; ngoài ra còn làm quần áo (quần tây, áo khoác), rèm cửa, vỏ gối.",
+    "highlights": ["Dày dặn", "Bền màu"],
+    "related": [
+      {
+        "id": "pnf-khong-det",
+        "title": "Vải Không Dệt",
+        "img": "data/product-detail/pnf-khong-det/main.jpg"
+      },
+      {
+        "id": "pnf-vai-gia-day",
+        "title": "Vải Giả Đay",
+        "img": "data/product-detail/pnf-vai-gia-day/main.jpg"
+      }
+    ]
+  },
+  "pnf-sot-13": {
+    "code": "pnf-sot-13",
+    "category": "custom-fabric",
+    "title": "pnf-sot-13",
+    "categoryLabel": "pnf-sot-13",
+    "stock": true,
+    "processing": true,
+    "origin": "Việt Nam",
+    "moq": "Tuỳ mẫu",
+    "lead": "10 - 20 ngày",
+    "images": [
+      "data/custom-product/pnf-sot-13-main.jpg",
+      "data/custom-product/pnf-sot-13-detailed1.png",
+      "data/custom-product/pnf-sot-13-detailed2.png"
+    ],
+    "colors": [
+      {
+        "name": "Nâu",
+        "hex": "#9A7C5C"
+      },
+      {
+        "name": "Than",
+        "hex": "#3C3F45"
+      }
+    ],
+    "widths": ["1.58m"],
+    "gsms": ["150g", "430g"],
+    "checks": ["Độ bền cao", "Ít thấm nước", "Thô mộc", "Thân thiện môi trường"],
+    "specs": {
+      "Dệt": "Dệt chặt, độ bền cao; ít thấm nước.",
+      "Chất liệu": "Kết hợp sợi bông tự nhiên (cotton) và sợi gai dầu.",
+      "Ứng dụng": "Túi xách, balo, giày dép thời trang - Bạt che, lều, bọc nội thất - Tranh vẽ nghệ thuật (tranh sơn dầu) - Quần áo (quần tây, áo khoác), rèm cửa, vỏ gối."
+    },
+    "use": "Dùng làm túi xách, balo, giày dép thời trang; bạt che, lều, bọc nội thất; tranh vẽ nghệ thuật (tranh sơn dầu) vì khả năng giữ màu và bảo quản tác phẩm lâu dài; ngoài ra còn làm quần áo (quần tây, áo khoác), rèm cửa, vỏ gối.",
+    "highlights": ["Dày dặn", "Bền màu"],
+    "related": [
+      {
+        "id": "pnf-khong-det",
+        "title": "Vải Không Dệt",
+        "img": "data/product-detail/pnf-khong-det/main.jpg"
+      },
+      {
+        "id": "pnf-vai-gia-day",
+        "title": "Vải Giả Đay",
+        "img": "data/product-detail/pnf-vai-gia-day/main.jpg"
+      }
+    ]
+  },
+  "pnf-sot-14": {
+    "code": "pnf-sot-14",
+    "category": "custom-fabric",
+    "title": "pnf-sot-14",
+    "categoryLabel": "pnf-sot-14",
+    "stock": true,
+    "processing": true,
+    "origin": "Việt Nam",
+    "moq": "Tuỳ mẫu",
+    "lead": "10 - 20 ngày",
+    "images": [
+      "data/custom-product/pnf-sot-14-main.png",
+      "data/custom-product/pnf-sot-14-detailed1.jpg",
+      "data/custom-product/pnf-sot-14-detailed2.jpg",
+      "data/custom-product/pnf-sot-14-detailed3.png",
+      "data/custom-product/pnf-sot-14-detailed4.png",
+      "data/custom-product/pnf-sot-14-detailed5.png"
+    ],
+    "colors": [
+      {
+        "name": "Nâu",
+        "hex": "#9A7C5C"
+      },
+      {
+        "name": "Than",
+        "hex": "#3C3F45"
+      }
+    ],
+    "widths": ["1.58m"],
+    "gsms": ["150g", "430g"],
+    "checks": ["Độ bền cao", "Ít thấm nước", "Thô mộc", "Thân thiện môi trường"],
+    "specs": {
+      "Dệt": "Dệt chặt, độ bền cao; ít thấm nước.",
+      "Chất liệu": "Kết hợp sợi bông tự nhiên (cotton) và sợi gai dầu.",
+      "Ứng dụng": "Túi xách, balo, giày dép thời trang - Bạt che, lều, bọc nội thất - Tranh vẽ nghệ thuật (tranh sơn dầu) - Quần áo (quần tây, áo khoác), rèm cửa, vỏ gối."
+    },
+    "use": "Dùng làm túi xách, balo, giày dép thời trang; bạt che, lều, bọc nội thất; tranh vẽ nghệ thuật (tranh sơn dầu) vì khả năng giữ màu và bảo quản tác phẩm lâu dài; ngoài ra còn làm quần áo (quần tây, áo khoác), rèm cửa, vỏ gối.",
+    "highlights": ["Dày dặn", "Bền màu"],
+    "related": [
+      {
+        "id": "pnf-khong-det",
+        "title": "Vải Không Dệt",
+        "img": "data/product-detail/pnf-khong-det/main.jpg"
+      },
+      {
+        "id": "pnf-vai-gia-day",
+        "title": "Vải Giả Đay",
+        "img": "data/product-detail/pnf-vai-gia-day/main.jpg"
+      }
+    ]
+  },
+  "pnf-sot-15": {
+    "code": "pnf-sot-15",
+    "category": "custom-fabric",
+    "title": "pnf-sot-15",
+    "categoryLabel": "pnf-sot-15",
+    "stock": true,
+    "processing": true,
+    "origin": "Việt Nam",
+    "moq": "Tuỳ mẫu",
+    "lead": "10 - 20 ngày",
+    "images": [
+      "data/custom-product/pnf-sot-15-main.png",
+      "data/custom-product/pnf-sot-15-detailed1.png",
+      "data/custom-product/pnf-sot-15-detailed2.png",
+      "data/custom-product/pnf-sot-15-detailed3.png"
+    ],
+    "colors": [
+      {
+        "name": "Nâu",
+        "hex": "#9A7C5C"
+      },
+      {
+        "name": "Than",
+        "hex": "#3C3F45"
+      }
+    ],
+    "widths": ["1.58m"],
+    "gsms": ["150g", "430g"],
+    "checks": ["Độ bền cao", "Ít thấm nước", "Thô mộc", "Thân thiện môi trường"],
+    "specs": {
+      "Dệt": "Dệt chặt, độ bền cao; ít thấm nước.",
+      "Chất liệu": "Kết hợp sợi bông tự nhiên (cotton) và sợi gai dầu.",
+      "Ứng dụng": "Túi xách, balo, giày dép thời trang - Bạt che, lều, bọc nội thất - Tranh vẽ nghệ thuật (tranh sơn dầu) - Quần áo (quần tây, áo khoác), rèm cửa, vỏ gối."
+    },
+    "use": "Dùng làm túi xách, balo, giày dép thời trang; bạt che, lều, bọc nội thất; tranh vẽ nghệ thuật (tranh sơn dầu) vì khả năng giữ màu và bảo quản tác phẩm lâu dài; ngoài ra còn làm quần áo (quần tây, áo khoác), rèm cửa, vỏ gối.",
+    "highlights": ["Dày dặn", "Bền màu"],
+    "related": [
+      {
+        "id": "pnf-khong-det",
+        "title": "Vải Không Dệt",
+        "img": "data/product-detail/pnf-khong-det/main.jpg"
+      },
+      {
+        "id": "pnf-vai-gia-day",
+        "title": "Vải Giả Đay",
+        "img": "data/product-detail/pnf-vai-gia-day/main.jpg"
+      }
+    ]
+  },
+  "pnf-sot-16": {
+    "code": "pnf-sot-16",
+    "category": "custom-fabric",
+    "title": "pnf-sot-16",
+    "categoryLabel": "pnf-sot-16",
+    "stock": true,
+    "processing": true,
+    "origin": "Việt Nam",
+    "moq": "Tuỳ mẫu",
+    "lead": "10 - 20 ngày",
+    "images": [
+      "data/custom-product/pnf-sot-16-main.png",
+      "data/custom-product/pnf-sot-16-detailed1.png",
+      "data/custom-product/pnf-sot-16-detailed2.png",
+      "data/custom-product/pnf-sot-16-detailed3.png"
+    ],
+    "colors": [
+      {
+        "name": "Nâu",
+        "hex": "#9A7C5C"
+      },
+      {
+        "name": "Than",
+        "hex": "#3C3F45"
+      }
+    ],
+    "widths": ["1.58m"],
+    "gsms": ["150g", "430g"],
+    "checks": ["Độ bền cao", "Ít thấm nước", "Thô mộc", "Thân thiện môi trường"],
+    "specs": {
+      "Dệt": "Dệt chặt, độ bền cao; ít thấm nước.",
+      "Chất liệu": "Kết hợp sợi bông tự nhiên (cotton) và sợi gai dầu.",
+      "Ứng dụng": "Túi xách, balo, giày dép thời trang - Bạt che, lều, bọc nội thất - Tranh vẽ nghệ thuật (tranh sơn dầu) - Quần áo (quần tây, áo khoác), rèm cửa, vỏ gối."
+    },
+    "use": "Dùng làm túi xách, balo, giày dép thời trang; bạt che, lều, bọc nội thất; tranh vẽ nghệ thuật (tranh sơn dầu) vì khả năng giữ màu và bảo quản tác phẩm lâu dài; ngoài ra còn làm quần áo (quần tây, áo khoác), rèm cửa, vỏ gối.",
+    "highlights": ["Dày dặn", "Bền màu"],
+    "related": [
+      {
+        "id": "pnf-khong-det",
+        "title": "Vải Không Dệt",
+        "img": "data/product-detail/pnf-khong-det/main.jpg"
+      },
+      {
+        "id": "pnf-vai-gia-day",
+        "title": "Vải Giả Đay",
+        "img": "data/product-detail/pnf-vai-gia-day/main.jpg"
+      }
+    ]
+  },
+  "pnf-sot-17": {
+    "code": "pnf-sot-17",
+    "category": "custom-fabric",
+    "title": "pnf-sot-17",
+    "categoryLabel": "pnf-sot-17",
+    "stock": true,
+    "processing": true,
+    "origin": "Việt Nam",
+    "moq": "Tuỳ mẫu",
+    "lead": "10 - 20 ngày",
+    "images": [
+      "data/custom-product/pnf-sot-17-main.jpg",
+      "data/custom-product/pnf-sot-17-detailed1.jpg",
+      "data/custom-product/pnf-sot-17-detailed2.jpg",
+      "data/custom-product/pnf-sot-17-detailed3.jpg"
+    ],
+    "colors": [
+      {
+        "name": "Nâu",
+        "hex": "#9A7C5C"
+      },
+      {
+        "name": "Than",
+        "hex": "#3C3F45"
+      }
+    ],
+    "widths": ["1.58m"],
+    "gsms": ["150g", "430g"],
+    "checks": ["Độ bền cao", "Ít thấm nước", "Thô mộc", "Thân thiện môi trường"],
+    "specs": {
+      "Dệt": "Dệt chặt, độ bền cao; ít thấm nước.",
+      "Chất liệu": "Kết hợp sợi bông tự nhiên (cotton) và sợi gai dầu.",
+      "Ứng dụng": "Túi xách, balo, giày dép thời trang - Bạt che, lều, bọc nội thất - Tranh vẽ nghệ thuật (tranh sơn dầu) - Quần áo (quần tây, áo khoác), rèm cửa, vỏ gối."
+    },
+    "use": "Dùng làm túi xách, balo, giày dép thời trang; bạt che, lều, bọc nội thất; tranh vẽ nghệ thuật (tranh sơn dầu) vì khả năng giữ màu và bảo quản tác phẩm lâu dài; ngoài ra còn làm quần áo (quần tây, áo khoác), rèm cửa, vỏ gối.",
+    "highlights": ["Dày dặn", "Bền màu"],
+    "related": [
+      {
+        "id": "pnf-khong-det",
+        "title": "Vải Không Dệt",
+        "img": "data/product-detail/pnf-khong-det/main.jpg"
+      },
+      {
+        "id": "pnf-vai-gia-day",
+        "title": "Vải Giả Đay",
+        "img": "data/product-detail/pnf-vai-gia-day/main.jpg"
+      }
+    ]
+  },
+  "pnf-sot-18": {
+    "code": "pnf-sot-18",
+    "category": "custom-fabric",
+    "title": "pnf-sot-18",
+    "categoryLabel": "pnf-sot-18",
+    "stock": true,
+    "processing": true,
+    "origin": "Việt Nam",
+    "moq": "Tuỳ mẫu",
+    "lead": "10 - 20 ngày",
+    "images": [
+      "data/custom-product/pnf-sot-18-main.jpg",
+      "data/custom-product/pnf-sot-18-detailed1.jpg",
+      "data/custom-product/pnf-sot-18-detailed2.jpg",
+      "data/custom-product/pnf-sot-18-detailed3.jpg"
+    ],
+    "colors": [
+      {
+        "name": "Nâu",
+        "hex": "#9A7C5C"
+      },
+      {
+        "name": "Than",
+        "hex": "#3C3F45"
+      }
+    ],
+    "widths": ["1.58m"],
+    "gsms": ["150g", "430g"],
+    "checks": ["Độ bền cao", "Ít thấm nước", "Thô mộc", "Thân thiện môi trường"],
+    "specs": {
+      "Dệt": "Dệt chặt, độ bền cao; ít thấm nước.",
+      "Chất liệu": "Kết hợp sợi bông tự nhiên (cotton) và sợi gai dầu.",
+      "Ứng dụng": "Túi xách, balo, giày dép thời trang - Bạt che, lều, bọc nội thất - Tranh vẽ nghệ thuật (tranh sơn dầu) - Quần áo (quần tây, áo khoác), rèm cửa, vỏ gối."
+    },
+    "use": "Dùng làm túi xách, balo, giày dép thời trang; bạt che, lều, bọc nội thất; tranh vẽ nghệ thuật (tranh sơn dầu) vì khả năng giữ màu và bảo quản tác phẩm lâu dài; ngoài ra còn làm quần áo (quần tây, áo khoác), rèm cửa, vỏ gối.",
+    "highlights": ["Dày dặn", "Bền màu"],
+    "related": [
+      {
+        "id": "pnf-khong-det",
+        "title": "Vải Không Dệt",
+        "img": "data/product-detail/pnf-khong-det/main.jpg"
+      },
+      {
+        "id": "pnf-vai-gia-day",
+        "title": "Vải Giả Đay",
+        "img": "data/product-detail/pnf-vai-gia-day/main.jpg"
+      }
+    ]
+  },
+  "pnf-sot-19": {
+    "code": "pnf-sot-19",
+    "category": "custom-fabric",
+    "title": "pnf-sot-19",
+    "categoryLabel": "pnf-sot-19",
+    "stock": true,
+    "processing": true,
+    "origin": "Việt Nam",
+    "moq": "Tuỳ mẫu",
+    "lead": "10 - 20 ngày",
+    "images": [
+      "data/custom-product/pnf-sot-19-main.png",
+      "data/custom-product/pnf-sot-19-detailed1.png",
+      "data/custom-product/pnf-sot-19-detailed2.png",
+      "data/custom-product/pnf-sot-19-detailed3.png"
+    ],
+    "colors": [
+      {
+        "name": "Nâu",
+        "hex": "#9A7C5C"
+      },
+      {
+        "name": "Than",
+        "hex": "#3C3F45"
+      }
+    ],
+    "widths": ["1.58m"],
+    "gsms": ["150g", "430g"],
+    "checks": ["Độ bền cao", "Ít thấm nước", "Thô mộc", "Thân thiện môi trường"],
+    "specs": {
+      "Dệt": "Dệt chặt, độ bền cao; ít thấm nước.",
+      "Chất liệu": "Kết hợp sợi bông tự nhiên (cotton) và sợi gai dầu.",
+      "Ứng dụng": "Túi xách, balo, giày dép thời trang - Bạt che, lều, bọc nội thất - Tranh vẽ nghệ thuật (tranh sơn dầu) - Quần áo (quần tây, áo khoác), rèm cửa, vỏ gối."
+    },
+    "use": "Dùng làm túi xách, balo, giày dép thời trang; bạt che, lều, bọc nội thất; tranh vẽ nghệ thuật (tranh sơn dầu) vì khả năng giữ màu và bảo quản tác phẩm lâu dài; ngoài ra còn làm quần áo (quần tây, áo khoác), rèm cửa, vỏ gối.",
+    "highlights": ["Dày dặn", "Bền màu"],
+    "related": [
+      {
+        "id": "pnf-khong-det",
+        "title": "Vải Không Dệt",
+        "img": "data/product-detail/pnf-khong-det/main.jpg"
+      },
+      {
+        "id": "pnf-vai-gia-day",
+        "title": "Vải Giả Đay",
+        "img": "data/product-detail/pnf-vai-gia-day/main.jpg"
+      }
+    ]
+  },
+  "pnf-sot-20": {
+    "code": "pnf-sot-20",
+    "category": "custom-fabric",
+    "title": "pnf-sot-20",
+    "categoryLabel": "pnf-sot-20",
+    "stock": true,
+    "processing": true,
+    "origin": "Việt Nam",
+    "moq": "Tuỳ mẫu",
+    "lead": "10 - 20 ngày",
+    "images": [
+      "data/custom-product/pnf-sot-20-main.png",
+      "data/custom-product/pnf-sot-20-detailed1.png",
+      "data/custom-product/pnf-sot-20-detailed2.png",
+      "data/custom-product/pnf-sot-20-detailed3.png"
+    ],
+    "colors": [
+      {
+        "name": "Nâu",
+        "hex": "#9A7C5C"
+      },
+      {
+        "name": "Than",
+        "hex": "#3C3F45"
+      }
+    ],
+    "widths": ["1.58m"],
+    "gsms": ["150g", "430g"],
+    "checks": ["Độ bền cao", "Ít thấm nước", "Thô mộc", "Thân thiện môi trường"],
+    "specs": {
+      "Dệt": "Dệt chặt, độ bền cao; ít thấm nước.",
+      "Chất liệu": "Kết hợp sợi bông tự nhiên (cotton) và sợi gai dầu.",
+      "Ứng dụng": "Túi xách, balo, giày dép thời trang - Bạt che, lều, bọc nội thất - Tranh vẽ nghệ thuật (tranh sơn dầu) - Quần áo (quần tây, áo khoác), rèm cửa, vỏ gối."
+    },
+    "use": "Dùng làm túi xách, balo, giày dép thời trang; bạt che, lều, bọc nội thất; tranh vẽ nghệ thuật (tranh sơn dầu) vì khả năng giữ màu và bảo quản tác phẩm lâu dài; ngoài ra còn làm quần áo (quần tây, áo khoác), rèm cửa, vỏ gối.",
+    "highlights": ["Dày dặn", "Bền màu"],
+    "related": [
+      {
+        "id": "pnf-khong-det",
+        "title": "Vải Không Dệt",
+        "img": "data/product-detail/pnf-khong-det/main.jpg"
+      },
+      {
+        "id": "pnf-vai-gia-day",
+        "title": "Vải Giả Đay",
+        "img": "data/product-detail/pnf-vai-gia-day/main.jpg"
+      }
+    ]
   }
 }
