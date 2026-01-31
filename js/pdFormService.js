@@ -50,10 +50,17 @@ export class PdFormService {
         });
 
         const payload = {
-          subject,
-          html,
+          id: this.uuidv4(),
           client_key: clientKey,
           browser_type: navigator.userAgent || '',
+          full_name: data.fullName,
+          phone: data.phone,
+          email: data.email,
+          product_name: data.productName,
+          quantity: data.quantity,
+          note: data.note,
+          subject,
+          html,
         };
 
         const [response] = await Promise.all([
