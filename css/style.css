@@ -90,7 +90,7 @@ img {
 }
 
 .container {
-  max-width: 1140px;
+  max-width: 95% !important;
   margin: auto;
 }
 
@@ -1530,6 +1530,10 @@ footer .copyright-text {
 
 /*Responsive*/
 @media (min-width: 1120px) and (max-width: 2199px) {
+  .service-section .service-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
   .featured-products {
     display: flex;
     flex-wrap: wrap;
@@ -1545,6 +1549,10 @@ footer .copyright-text {
 }
 
 @media (max-width: 1120px) {
+  .service-section .service-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
   .featured-products {
     gap: 3rem !important;
   }
