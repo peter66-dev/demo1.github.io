@@ -526,24 +526,6 @@ img {
 .btn-primary:hover {
   transform: translateY(-2px);
 }
-.hero-features {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-  color: #fff;
-  margin: 0;
-  padding: 0;
-}
-.hero-features li {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: 600;
-}
-.hero-features li .fa {
-  color: #ffd86b;
-}
 
 .hero-contact-card {
   position: absolute;
@@ -1548,16 +1530,24 @@ footer .copyright-text {
 
 /*Responsive*/
 @media (min-width: 1120px) and (max-width: 2199px) {
+  .featured-products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    margin: 18px auto 8px;
+    padding: 0 12px;
+  }
   .header-social {
     left: 10px;
-  }
-  .featured-products {
-    grid-template-columns: repeat(4, 260px);
-    justify-content: center;
   }
 }
 
 @media (max-width: 1120px) {
+  .featured-products {
+    gap: 3rem !important;
+  }
   .header-social {
     display: none;
   }
@@ -1571,20 +1561,22 @@ footer .copyright-text {
   }
 }
 
-.pd-ctas {
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 10px !important;
-  margin-top: 12px !important;
-}
-
 @media (max-width: 1100px) {
   .featured-products {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.8rem !important;
+    width: 100%;
+    margin: 18px auto 8px;
+    padding: 0 12px;
   }
 }
 
 @media (max-width: 992px) {
+  .featured-products {
+    gap: 2rem !important;
+  }
   .pd-wrap {
     padding-top: 1rem !important;
     padding-left: 1rem;
@@ -1834,6 +1826,14 @@ footer .copyright-text {
 }
 
 @media (max-width: 900px) {
+  .featured-products {
+    gap: 3.5rem !important;
+  }
+  .featured-products .product-card {
+    flex-basis: 48%;
+    max-width: 48%;
+    width: 48%;
+  }
   .hero-title {
     font-size: 1.4rem;
     padding: 10px 14px;
@@ -1864,21 +1864,15 @@ footer .copyright-text {
   .hero-contact-card {
     display: none;
   }
-  .featured-products {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 14px;
-  }
   .product-body {
     padding: 14px;
-  }
-  .featured-products .product-card {
-    flex-basis: 48%;
-    max-width: 48%;
-    width: 48%;
   }
 }
 
 @media (max-width: 880px) {
+  .featured-products {
+    gap: 2.5rem !important;
+  }
   .about-body {
     flex-direction: column;
   }
@@ -1896,11 +1890,11 @@ footer .copyright-text {
   }
 }
 
-/* =========================
-   PRODUCT DETAIL - MOBILE PERFECT LAYOUT
-   ========================= */
 @media (max-width: 820px) {
   /* 1) Make container breathe on mobile */
+  .featured-products {
+    gap: 2.5rem !important;
+  }
   .product-detail-page .pd-wrap .container {
     padding-left: 14px !important;
     padding-right: 14px !important;
@@ -2015,6 +2009,8 @@ footer .copyright-text {
   .pd-cta-secondary {
     width: 100% !important;
     text-align: center !important;
+    background-color: var(--main-color);
+    color: var(--white);
   }
 
   /* 10) MID section: move right form BELOW instead of side-by-side */
@@ -2046,6 +2042,9 @@ footer .copyright-text {
 }
 
 @media (max-width: 767px) {
+  .featured-products {
+    gap: 2rem !important;
+  }
   .section-title .main-title {
     margin-top: 20px;
   }
@@ -2110,11 +2109,12 @@ footer .copyright-text {
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 580px) {
   .featured-products {
-    grid-template-columns: 1fr;
-    gap: 12px;
-    padding: 0 10px;
+    gap: 1.5rem !important;
+  }
+  .featured-products .product-card {
+    max-width: 220px !important;
   }
   .product-card .product-img {
     aspect-ratio: 16 / 10;
@@ -2125,30 +2125,21 @@ footer .copyright-text {
     align-items: center;
     justify-content: center;
   }
-  .featured-products .product-card {
-    flex-basis: 100%;
-    max-width: 100%;
-    width: 100%;
-  }
   .pd-related-grid {
     display: grid;
-    grid-template-columns: 1fr !important; /* ✅ 1 sản phẩm / hàng */
     gap: 16px;
   }
 
-  /* đảm bảo card chiếm full chiều ngang */
   .pd-related-grid .product-card {
     width: 100%;
   }
 
-  /* ảnh đẹp hơn trên mobile */
   .pd-related-grid .product-img img {
     width: 100%;
-    height: 200px; /* chỉnh 180–220 nếu muốn */
+    height: 200px;
     object-fit: cover;
   }
 
-  /* căn giữa nội dung cho giống Home */
   .pd-related-grid .product-body {
     text-align: center;
   }
@@ -2159,7 +2150,38 @@ footer .copyright-text {
   }
 }
 
-/* Reduced motion support */
+@media (max-width: 488px) {
+  .featured-products {
+    gap: 1rem !important;
+  }
+  .featured-products .product-card {
+    max-width: 200px !important;
+  }
+}
+
+@media (max-width: 445px) {
+  .pd-related-grid {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    gap: 8px;
+  }
+  .featured-products {
+    gap: 0.7rem !important;
+  }
+  .featured-products .product-card {
+    max-width: 190px !important;
+  }
+}
+
+@media (max-width: 425px) {
+  .featured-products {
+    gap: 0.5rem !important;
+  }
+  .featured-products .product-card {
+    max-width: 170px !important;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .featured-products .product-card,
   .product-card.reveal {
@@ -2167,9 +2189,6 @@ footer .copyright-text {
   }
 }
 
-/* =========================================================
-   PRODUCT DETAIL PAGE (PN Fabrics)
-========================================================= */
 .product-detail-page {
   background: #f6f4ef;
 }
@@ -2385,6 +2404,13 @@ footer .copyright-text {
 }
 
 .pd-ctas {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+  margin-top: 12px !important;
+}
+
+.pd-ctas {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
@@ -2581,6 +2607,7 @@ footer .copyright-text {
   border-radius: 14px;
   font-weight: 700;
   font-size: 1rem;
+  color: var(--white);
 }
 .pd-form-note {
   margin-top: 10px;
@@ -2660,25 +2687,11 @@ footer .copyright-text {
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
 }
 
+/* card */
 .featured-products .product-card {
   flex: 0 0 260px;
   max-width: 260px;
-  width: 260px;
-}
-
-.featured-products {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* ✅ last row centers */
-  gap: 18px;
-  width: 100%;
-  margin: 18px auto 8px;
-  padding: 0 12px;
-}
-
-/* card */
-.featured-products .product-card {
-  width: auto; /* remove fixed 250px */
+  width: auto;
   border-radius: 16px;
   overflow: hidden;
   border: 1px solid rgba(0, 0, 0, 0.04);
