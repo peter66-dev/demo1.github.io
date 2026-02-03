@@ -1,5 +1,5 @@
 export function buildEmailPayload({ fullName, phone, quantity, productName, note }) {
-  const subject = `[PN Fabrics] Khách hàng yêu cầu báo giá và gửi mẫu – ${productName || 'Sản phẩm'}`;
+  const subject = `[PN Fabrics] Thông báo từ khách hàng – ${productName || 'Sản phẩm'}`;
 
   const html = `
     <div style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 1.6; color:#111;">
