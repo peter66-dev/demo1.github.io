@@ -22,6 +22,8 @@ const RL = {
   MAX_RECORDS: 500,
   STORAGE_PREFIX: 'rl_email_',
   GET_RECORDS_URL: '?action=getRecords',
+  FETCH_FROM_GAS_DEFAULT: false,
+  LOCAL_SYNC_TTL_MS: 10 * 60 * 1000,
 };
 
 export class PdFormService {
@@ -48,11 +50,14 @@ export class PdFormService {
       const requestId = this.uuidv4();
 
       try {
-        console.log('PETER -- publicIp: ', publicIp);
         this._setLoading(true);
 
         // 0) Nếu local cache chưa có/empty => sync từ server (getRecords)
-        await this.ensureRlStateFromServer_(publicIp);
+        if (this.isFetchFromGasEnabled_()) {
+          await this.ensureRlStateFromServer_(publicIp);
+        } else {
+          console.log('PETER -- FETCH_FROM_GAS is OFF, use local RL only');
+        }
 
         // 1) Reserve BEFORE send email
         const reserve = this.rlReserve_(publicIp, requestId);
@@ -181,7 +186,6 @@ export class PdFormService {
     if (state.records.length > RL.MAX_RECORDS) {
       state.records = state.records.slice(state.records.length - RL.MAX_RECORDS);
     }
-    console.log('PETER -- cached records - ', state.records);
     this.saveRlState_(state);
     return { allowed: true, remaining: RL.MAX_PER_DAY - (cur + 1) };
   }
@@ -268,7 +272,7 @@ export class PdFormService {
         return cached.ip;
       }
     } catch (_) {
-      console.log('PETER -- Invalid cached IP');
+      console.log('Invalid cached IP');
     }
 
     const res = await fetch('https://api.ipify.org?format=json', { cache: 'no-store' });
@@ -296,14 +300,22 @@ export class PdFormService {
     localStorage.setItem(this.rlSyncKey_(), String(Date.now()));
   }
 
+  isFetchFromGasEnabled_() {
+    const v = localStorage.getItem(RL.FETCH_FLAG_KEY);
+    if (v === null || v === undefined || v === '') return RL.FETCH_FROM_GAS_DEFAULT;
+    return v === '1' || v === 'true';
+  }
+
+  setFetchFromGasEnabled(enabled) {
+    localStorage.setItem(RL.FETCH_FLAG_KEY, enabled ? '1' : '0');
+  }
+
   async fetchRecordsToday_(publicIp) {
     if (!RL.GET_RECORDS_URL) throw new Error('Missing RL.GET_RECORDS_URL');
 
     const day = this.todayKey_();
     console.log('PETER -- fetching records from server for ', { publicIp, day });
     const url = `${this.endpointUrl}${RL.GET_RECORDS_URL}&public_ip=${encodeURIComponent(publicIp)}&day=${encodeURIComponent(day)}`;
-    console.log('PETER -- fetchRecordsToday_ url=', url);
-    // PETER -- fetchRecordsToday_ url= ?action=getRecords&public_ip=123.21.136.174&day=2026-02-01
 
     const res = await fetch(url, { method: 'GET', cache: 'no-store' });
     if (!res.ok) throw new Error('getRecords API failed');
@@ -340,9 +352,7 @@ export class PdFormService {
 
       this.saveRlState_(state);
       this.markSynced_();
-
       console.log('PETER -- synced from server. data=', { data });
-      state = data;
       return state;
     } catch (e) {
       console.warn('PETER -- sync from server failed, fallback to local', e);

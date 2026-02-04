@@ -175,7 +175,6 @@ function resolveCategorySlug(product) {
 
 function renderProductCard(productId, product) {
   const categorySlug = resolveCategorySlug(product);
-  console.log('Rendering product', productId, 'in category', categorySlug);
   const imgSrc =
     (Array.isArray(product.images) && product.images[0]) ||
     'data/product-detail/pnf-ct100/main.png'; // fallback

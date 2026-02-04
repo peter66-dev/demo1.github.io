@@ -3,7 +3,8 @@ import { PdFormService } from './pdFormService.js';
 const service = new PdFormService({
   formSelector: '#pd-form',
   endpointUrl:
-    'https://script.google.com/macros/s/AKfycbwkOm9ZjnsQzXofXENaSRtG4zfp1aF0OtgoiRbDIiKLs8W0rSB3EoFCTJXhV2WpHVSf/exec',
+    // 'https://script.google.com/macros/s/AKfycbwkOm9ZjnsQzXofXENaSRtG4zfp1aF0OtgoiRbDIiKLs8W0rSB3EoFCTJXhV2WpHVSf/exec', test no send email
+    'https://script.google.com/macros/s/AKfycbz6OxMb48_YsnDxsuSAw_RsJgPvwlnBfMtStk54nUU9HcyGhx_YPW1BLI9ZPznsPbb3/exec',
   deploymentId: 'AKfycbw3_exQfnwQlCOreof9fq7Kp_SCSCDivZI5Pag7o8yRxAexzsbV_kEP4fR4lneh_I2g',
   getProductName: () => product?.title || '',
 });
