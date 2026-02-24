@@ -1,0 +1,14 @@
+# Strict Transport Security (HSTS)
+Header set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+
+# Content Security Policy (CSP)
+Header set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self';"
+
+# X-Frame-Options (Bảo vệ chống clickjacking)
+Header set X-Frame-Options "SAMEORIGIN"
+
+# X-Content-Type-Options (Ngừng MIME sniffing)
+Header set X-Content-Type-Options "nosniff"
+
+# Permissions-Policy (Kiểm soát các tính năng và API của trình duyệt)
+Header set Permissions-Policy "geolocation=(self)"
