@@ -39,6 +39,23 @@ async function loadProductData() {
   setText('#pd-bc-cat', product.categoryLabel);
   setText('#pd-bc-code', product.code);
   setText('#pd-use', product.use);
+  // Hide the 'Công dụng' label for custom-fabric category
+  try {
+    const pdUseEl = qs('#pd-use');
+    if (pdUseEl) {
+      const pdLabelEl = pdUseEl.parentElement && pdUseEl.parentElement.querySelector('.pd-label');
+      if (product.category === 'custom-fabric') {
+        if (pdLabelEl) {
+          pdLabelEl.style.display = 'none';
+          pdUseEl.style.display = 'none';
+        }
+      } else {
+        if (pdLabelEl) pdLabelEl.style.display = '';
+      }
+    }
+  } catch (e) {
+    // ignore
+  }
   setText('#pd-title', product.title);
   qs('#pd-form-product').value = product.title;
 
